@@ -1,9 +1,0 @@
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderSuccRate' at row 77
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderSuccRate' at row 13
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderSuccRate' at row 77
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderSuccRate' at row 13
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderSuccRate' at row 77
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderSuccRate' at row 13
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderDriverRate' at row 23
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderDriverRate' at row 23
-Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'orderDriverRate' at row 23
