@@ -1,6 +1,5 @@
 #!/bin/sh
 
-#/home/xiaoju/sqoop-export/bin/sqoop export --connect 'jdbc:mysql://hdp998.jx:3377/data_mart?zeroDateTimeBehavior=convertToNull' --username app_w --password app_w --table DriverRegOnline --columns 'statDate,area,channel,dayNatureRegOnlineCnt,weekNatureRegOnlineCnt,monthNatureRegOnlineCnt,dayNatureReg6HoursOnlineCnt,dayNatureRegNotOnlineCnt,weekNatureRegOnlineRate,monthNatureRegOnlineRate' --fields-terminated-by '\001' --export-dir /user/xiaoju/data/bi/app/driverregonline/2014/01/09
 if [ ! -e mart_create_table.sql ];then
     echo Conot find file mart_create_table.sql
     exit
