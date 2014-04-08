@@ -1,0 +1,2601 @@
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-02-26
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/02/27 14:35:21 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/02/27 14:35:21 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/02/27 14:35:21 INFO tool.CodeGenTool: Beginning code generation
+14/02/27 14:35:22 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/02/27 14:35:22 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/02/27 14:35:22 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/03642fd5997f0f7905d8aa668232c553/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/02/27 14:35:23 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/03642fd5997f0f7905d8aa668232c553/passenger_account.jar
+14/02/27 14:35:24 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/02/26 deleted.
+14/02/27 14:35:24 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/02/27 14:35:24 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/02/27 14:35:24 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/02/27 14:35:24 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/02/27 14:35:26 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/02/27 14:35:26 INFO mapred.JobClient: Running job: job_201402101551_17718
+14/02/27 14:35:27 INFO mapred.JobClient:  map 0% reduce 0%
+14/02/27 14:36:09 INFO mapred.JobClient:  map 20% reduce 0%
+14/02/27 14:36:15 INFO mapred.JobClient:  map 40% reduce 0%
+14/02/27 14:36:16 INFO mapred.JobClient:  map 60% reduce 0%
+14/02/27 14:36:43 INFO mapred.JobClient:  map 80% reduce 0%
+14/02/27 14:36:48 INFO mapred.JobClient:  map 100% reduce 0%
+14/02/27 14:37:24 INFO mapred.JobClient: Job complete: job_201402101551_17718
+14/02/27 14:37:24 INFO mapred.JobClient: Counters: 18
+14/02/27 14:37:24 INFO mapred.JobClient:   Job Counters 
+14/02/27 14:37:24 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=223406
+14/02/27 14:37:24 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/02/27 14:37:24 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/02/27 14:37:24 INFO mapred.JobClient:     Launched map tasks=7
+14/02/27 14:37:24 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/02/27 14:37:24 INFO mapred.JobClient:   File Output Format Counters 
+14/02/27 14:37:24 INFO mapred.JobClient:     Bytes Written=176
+14/02/27 14:37:24 INFO mapred.JobClient:   FileSystemCounters
+14/02/27 14:37:24 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/02/27 14:37:24 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160328
+14/02/27 14:37:24 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/02/27 14:37:24 INFO mapred.JobClient:   File Input Format Counters 
+14/02/27 14:37:24 INFO mapred.JobClient:     Bytes Read=0
+14/02/27 14:37:24 INFO mapred.JobClient:   Map-Reduce Framework
+14/02/27 14:37:24 INFO mapred.JobClient:     Map input records=8
+14/02/27 14:37:24 INFO mapred.JobClient:     Physical memory (bytes) snapshot=918671360
+14/02/27 14:37:24 INFO mapred.JobClient:     Spilled Records=0
+14/02/27 14:37:24 INFO mapred.JobClient:     CPU time spent (ms)=31630
+14/02/27 14:37:24 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/02/27 14:37:24 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438216192
+14/02/27 14:37:24 INFO mapred.JobClient:     Map output records=8
+14/02/27 14:37:24 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/02/27 14:37:24 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 120.3028 seconds (1.463 bytes/sec)
+14/02/27 14:37:24 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-02-26
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/02/27 14:43:59 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/02/27 14:43:59 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/02/27 14:43:59 INFO tool.CodeGenTool: Beginning code generation
+14/02/27 14:44:00 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/02/27 14:44:00 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/02/27 14:44:00 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/15193fc791383cbe948941c5e830146e/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/02/27 14:44:01 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/15193fc791383cbe948941c5e830146e/passenger_account.jar
+14/02/27 14:44:01 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/02/26 deleted.
+14/02/27 14:44:01 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/02/27 14:44:01 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/02/27 14:44:01 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/02/27 14:44:01 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/02/27 14:44:02 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/02/27 14:44:03 INFO mapred.JobClient: Running job: job_201402101551_17727
+14/02/27 14:44:04 INFO mapred.JobClient:  map 0% reduce 0%
+14/02/27 14:44:17 INFO mapred.JobClient:  map 40% reduce 0%
+14/02/27 14:44:19 INFO mapred.JobClient:  map 60% reduce 0%
+14/02/27 14:44:20 INFO mapred.JobClient:  map 80% reduce 0%
+14/02/27 14:44:21 INFO mapred.JobClient:  map 100% reduce 0%
+14/02/27 14:44:26 INFO mapred.JobClient: Job complete: job_201402101551_17727
+14/02/27 14:44:26 INFO mapred.JobClient: Counters: 18
+14/02/27 14:44:26 INFO mapred.JobClient:   Job Counters 
+14/02/27 14:44:26 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=34463
+14/02/27 14:44:26 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/02/27 14:44:26 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/02/27 14:44:26 INFO mapred.JobClient:     Launched map tasks=5
+14/02/27 14:44:26 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/02/27 14:44:26 INFO mapred.JobClient:   File Output Format Counters 
+14/02/27 14:44:26 INFO mapred.JobClient:     Bytes Written=176
+14/02/27 14:44:26 INFO mapred.JobClient:   FileSystemCounters
+14/02/27 14:44:26 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/02/27 14:44:26 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160338
+14/02/27 14:44:26 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/02/27 14:44:26 INFO mapred.JobClient:   File Input Format Counters 
+14/02/27 14:44:26 INFO mapred.JobClient:     Bytes Read=0
+14/02/27 14:44:26 INFO mapred.JobClient:   Map-Reduce Framework
+14/02/27 14:44:26 INFO mapred.JobClient:     Map input records=8
+14/02/27 14:44:26 INFO mapred.JobClient:     Physical memory (bytes) snapshot=853925888
+14/02/27 14:44:26 INFO mapred.JobClient:     Spilled Records=0
+14/02/27 14:44:26 INFO mapred.JobClient:     CPU time spent (ms)=4530
+14/02/27 14:44:26 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/02/27 14:44:26 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438650368
+14/02/27 14:44:26 INFO mapred.JobClient:     Map output records=8
+14/02/27 14:44:26 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/02/27 14:44:26 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 24.24 seconds (7.2607 bytes/sec)
+14/02/27 14:44:26 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-02-27
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/02/28 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/02/28 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/02/28 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/02/28 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/02/28 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/02/28 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/17ff81037d6e4754f2a50cb198e1b099/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/02/28 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/17ff81037d6e4754f2a50cb198e1b099/passenger_account.jar
+14/02/28 02:30:05 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/02/27 is not present, hence not deleting.
+14/02/28 02:30:05 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/02/28 02:30:05 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/02/28 02:30:05 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/02/28 02:30:05 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/02/28 02:30:05 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/02/28 02:30:06 INFO mapred.JobClient: Running job: job_201402101551_17990
+14/02/28 02:30:07 INFO mapred.JobClient:  map 0% reduce 0%
+14/02/28 02:30:23 INFO mapred.JobClient:  map 20% reduce 0%
+14/02/28 02:30:24 INFO mapred.JobClient:  map 80% reduce 0%
+14/02/28 02:30:29 INFO mapred.JobClient:  map 100% reduce 0%
+14/02/28 02:30:34 INFO mapred.JobClient: Job complete: job_201402101551_17990
+14/02/28 02:30:34 INFO mapred.JobClient: Counters: 18
+14/02/28 02:30:34 INFO mapred.JobClient:   Job Counters 
+14/02/28 02:30:34 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=33643
+14/02/28 02:30:34 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/02/28 02:30:34 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/02/28 02:30:34 INFO mapred.JobClient:     Launched map tasks=5
+14/02/28 02:30:34 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/02/28 02:30:34 INFO mapred.JobClient:   File Output Format Counters 
+14/02/28 02:30:34 INFO mapred.JobClient:     Bytes Written=176
+14/02/28 02:30:34 INFO mapred.JobClient:   FileSystemCounters
+14/02/28 02:30:34 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/02/28 02:30:34 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160289
+14/02/28 02:30:34 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/02/28 02:30:34 INFO mapred.JobClient:   File Input Format Counters 
+14/02/28 02:30:34 INFO mapred.JobClient:     Bytes Read=0
+14/02/28 02:30:34 INFO mapred.JobClient:   Map-Reduce Framework
+14/02/28 02:30:34 INFO mapred.JobClient:     Map input records=8
+14/02/28 02:30:34 INFO mapred.JobClient:     Physical memory (bytes) snapshot=807133184
+14/02/28 02:30:34 INFO mapred.JobClient:     Spilled Records=0
+14/02/28 02:30:34 INFO mapred.JobClient:     CPU time spent (ms)=5740
+14/02/28 02:30:34 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/02/28 02:30:34 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438371840
+14/02/28 02:30:34 INFO mapred.JobClient:     Map output records=8
+14/02/28 02:30:34 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/02/28 02:30:34 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 29.0272 seconds (6.0633 bytes/sec)
+14/02/28 02:30:34 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-02-28
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/01 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/01 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/01 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/01 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/01 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/01 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/3b552b2122b29d95c6155af7c439fc38/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/01 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/3b552b2122b29d95c6155af7c439fc38/passenger_account.jar
+14/03/01 02:30:05 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/02/28 deleted.
+14/03/01 02:30:05 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/01 02:30:05 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/01 02:30:05 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/01 02:30:05 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/01 02:30:05 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/01 02:30:06 INFO mapred.JobClient: Running job: job_201402101551_18872
+14/03/01 02:30:07 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/01 02:30:23 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/01 02:30:24 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/01 02:30:25 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/01 02:30:27 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/01 02:30:32 INFO mapred.JobClient: Job complete: job_201402101551_18872
+14/03/01 02:30:32 INFO mapred.JobClient: Counters: 18
+14/03/01 02:30:32 INFO mapred.JobClient:   Job Counters 
+14/03/01 02:30:32 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=35612
+14/03/01 02:30:32 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/01 02:30:32 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/01 02:30:32 INFO mapred.JobClient:     Launched map tasks=5
+14/03/01 02:30:32 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/01 02:30:32 INFO mapred.JobClient:   File Output Format Counters 
+14/03/01 02:30:32 INFO mapred.JobClient:     Bytes Written=176
+14/03/01 02:30:32 INFO mapred.JobClient:   FileSystemCounters
+14/03/01 02:30:32 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/01 02:30:32 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160299
+14/03/01 02:30:32 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/01 02:30:32 INFO mapred.JobClient:   File Input Format Counters 
+14/03/01 02:30:32 INFO mapred.JobClient:     Bytes Read=0
+14/03/01 02:30:32 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/01 02:30:32 INFO mapred.JobClient:     Map input records=8
+14/03/01 02:30:32 INFO mapred.JobClient:     Physical memory (bytes) snapshot=869998592
+14/03/01 02:30:32 INFO mapred.JobClient:     Spilled Records=0
+14/03/01 02:30:32 INFO mapred.JobClient:     CPU time spent (ms)=5100
+14/03/01 02:30:32 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/01 02:30:32 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438392320
+14/03/01 02:30:32 INFO mapred.JobClient:     Map output records=8
+14/03/01 02:30:32 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/01 02:30:32 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 27.0532 seconds (6.5057 bytes/sec)
+14/03/01 02:30:32 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-01
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/02 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/02 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/02 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/02 02:30:04 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/02 02:30:04 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/02 02:30:04 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/ae56589f68ebe44efe7df0b3cf412ec5/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/02 02:30:09 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/ae56589f68ebe44efe7df0b3cf412ec5/passenger_account.jar
+14/03/02 02:30:15 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/01 deleted.
+14/03/02 02:30:15 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/02 02:30:15 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/02 02:30:15 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/02 02:30:15 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/02 02:30:43 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/02 02:30:44 INFO mapred.JobClient: Running job: job_201402101551_19580
+14/03/02 02:30:45 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/02 02:30:59 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/02 02:31:00 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/02 02:31:02 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/02 02:31:07 INFO mapred.JobClient: Job complete: job_201402101551_19580
+14/03/02 02:31:07 INFO mapred.JobClient: Counters: 18
+14/03/02 02:31:07 INFO mapred.JobClient:   Job Counters 
+14/03/02 02:31:07 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=32495
+14/03/02 02:31:07 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/02 02:31:07 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/02 02:31:07 INFO mapred.JobClient:     Launched map tasks=5
+14/03/02 02:31:07 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/02 02:31:07 INFO mapred.JobClient:   File Output Format Counters 
+14/03/02 02:31:07 INFO mapred.JobClient:     Bytes Written=176
+14/03/02 02:31:07 INFO mapred.JobClient:   FileSystemCounters
+14/03/02 02:31:07 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/02 02:31:07 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160292
+14/03/02 02:31:07 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/02 02:31:07 INFO mapred.JobClient:   File Input Format Counters 
+14/03/02 02:31:07 INFO mapred.JobClient:     Bytes Read=0
+14/03/02 02:31:07 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/02 02:31:07 INFO mapred.JobClient:     Map input records=8
+14/03/02 02:31:07 INFO mapred.JobClient:     Physical memory (bytes) snapshot=826068992
+14/03/02 02:31:07 INFO mapred.JobClient:     Spilled Records=0
+14/03/02 02:31:07 INFO mapred.JobClient:     CPU time spent (ms)=6330
+14/03/02 02:31:07 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/02 02:31:07 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438228480
+14/03/02 02:31:07 INFO mapred.JobClient:     Map output records=8
+14/03/02 02:31:07 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/02 02:31:07 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 51.6307 seconds (3.4088 bytes/sec)
+14/03/02 02:31:07 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-02
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/03 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/03 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/03 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/03 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/03 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/03 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/2b0d12b2d3554b6e983a2ae9b6d0a15d/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/03 02:30:13 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/2b0d12b2d3554b6e983a2ae9b6d0a15d/passenger_account.jar
+14/03/03 02:30:13 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/02 deleted.
+14/03/03 02:30:13 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/03 02:30:13 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/03 02:30:13 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/03 02:30:13 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/03 02:30:23 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/03 02:30:23 INFO mapred.JobClient: Running job: job_201402101551_20249
+14/03/03 02:30:24 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/03 02:30:41 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/03 02:30:44 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/03 02:30:49 INFO mapred.JobClient: Job complete: job_201402101551_20249
+14/03/03 02:30:49 INFO mapred.JobClient: Counters: 18
+14/03/03 02:30:49 INFO mapred.JobClient:   Job Counters 
+14/03/03 02:30:49 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=33088
+14/03/03 02:30:49 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/03 02:30:49 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/03 02:30:49 INFO mapred.JobClient:     Launched map tasks=5
+14/03/03 02:30:49 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/03 02:30:49 INFO mapred.JobClient:   File Output Format Counters 
+14/03/03 02:30:49 INFO mapred.JobClient:     Bytes Written=176
+14/03/03 02:30:49 INFO mapred.JobClient:   FileSystemCounters
+14/03/03 02:30:49 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/03 02:30:49 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160150
+14/03/03 02:30:49 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/03 02:30:49 INFO mapred.JobClient:   File Input Format Counters 
+14/03/03 02:30:49 INFO mapred.JobClient:     Bytes Read=0
+14/03/03 02:30:49 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/03 02:30:49 INFO mapred.JobClient:     Map input records=8
+14/03/03 02:30:49 INFO mapred.JobClient:     Physical memory (bytes) snapshot=829169664
+14/03/03 02:30:49 INFO mapred.JobClient:     Spilled Records=0
+14/03/03 02:30:49 INFO mapred.JobClient:     CPU time spent (ms)=5060
+14/03/03 02:30:49 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/03 02:30:49 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438515200
+14/03/03 02:30:49 INFO mapred.JobClient:     Map output records=8
+14/03/03 02:30:49 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/03 02:30:49 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 35.0232 seconds (5.0252 bytes/sec)
+14/03/03 02:30:49 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-02-28
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/03 10:42:16 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/03 10:42:16 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/03 10:42:16 INFO tool.CodeGenTool: Beginning code generation
+14/03/03 10:42:18 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/03 10:42:18 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/03 10:42:18 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/e4dc2b8dfe1bdd9aad7610143acdae33/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/03 10:42:23 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/e4dc2b8dfe1bdd9aad7610143acdae33/passenger_account.jar
+14/03/03 10:42:24 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/02/28 deleted.
+14/03/03 10:42:24 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/03 10:42:24 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/03 10:42:24 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/03 10:42:24 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/03 10:42:48 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/03 10:42:48 INFO mapred.JobClient: Running job: job_201402101551_20843
+14/03/03 10:42:49 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/03 10:43:05 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/03 10:43:06 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/03 10:43:09 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/03 10:43:14 INFO mapred.JobClient: Job complete: job_201402101551_20843
+14/03/03 10:43:14 INFO mapred.JobClient: Counters: 18
+14/03/03 10:43:14 INFO mapred.JobClient:   Job Counters 
+14/03/03 10:43:14 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=34082
+14/03/03 10:43:14 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/03 10:43:14 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/03 10:43:14 INFO mapred.JobClient:     Launched map tasks=5
+14/03/03 10:43:14 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/03 10:43:14 INFO mapred.JobClient:   File Output Format Counters 
+14/03/03 10:43:14 INFO mapred.JobClient:     Bytes Written=176
+14/03/03 10:43:14 INFO mapred.JobClient:   FileSystemCounters
+14/03/03 10:43:14 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/03 10:43:14 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160158
+14/03/03 10:43:14 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/03 10:43:14 INFO mapred.JobClient:   File Input Format Counters 
+14/03/03 10:43:14 INFO mapred.JobClient:     Bytes Read=0
+14/03/03 10:43:14 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/03 10:43:14 INFO mapred.JobClient:     Map input records=8
+14/03/03 10:43:14 INFO mapred.JobClient:     Physical memory (bytes) snapshot=827793408
+14/03/03 10:43:14 INFO mapred.JobClient:     Spilled Records=0
+14/03/03 10:43:14 INFO mapred.JobClient:     CPU time spent (ms)=4360
+14/03/03 10:43:14 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/03 10:43:14 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438650368
+14/03/03 10:43:14 INFO mapred.JobClient:     Map output records=8
+14/03/03 10:43:14 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/03 10:43:14 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 48.6907 seconds (3.6147 bytes/sec)
+14/03/03 10:43:14 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-01
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/03 10:56:54 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/03 10:56:54 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/03 10:56:54 INFO tool.CodeGenTool: Beginning code generation
+14/03/03 10:56:55 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/03 10:56:55 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/03 10:56:55 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/502b5cc012ec0d48cf83da5ce2b12bbf/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/03 10:56:58 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/502b5cc012ec0d48cf83da5ce2b12bbf/passenger_account.jar
+14/03/03 10:57:03 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/01 deleted.
+14/03/03 10:57:03 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/03 10:57:03 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/03 10:57:03 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/03 10:57:03 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/03 10:57:12 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/03 10:57:12 INFO mapred.JobClient: Running job: job_201402101551_20865
+14/03/03 10:57:13 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/03 10:57:30 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/03 10:57:36 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/03 10:57:41 INFO mapred.JobClient: Job complete: job_201402101551_20865
+14/03/03 10:57:41 INFO mapred.JobClient: Counters: 18
+14/03/03 10:57:41 INFO mapred.JobClient:   Job Counters 
+14/03/03 10:57:41 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=47398
+14/03/03 10:57:41 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/03 10:57:41 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/03 10:57:41 INFO mapred.JobClient:     Launched map tasks=5
+14/03/03 10:57:41 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/03 10:57:41 INFO mapred.JobClient:   File Output Format Counters 
+14/03/03 10:57:41 INFO mapred.JobClient:     Bytes Written=176
+14/03/03 10:57:41 INFO mapred.JobClient:   FileSystemCounters
+14/03/03 10:57:41 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/03 10:57:41 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160175
+14/03/03 10:57:41 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/03 10:57:41 INFO mapred.JobClient:   File Input Format Counters 
+14/03/03 10:57:41 INFO mapred.JobClient:     Bytes Read=0
+14/03/03 10:57:41 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/03 10:57:41 INFO mapred.JobClient:     Map input records=8
+14/03/03 10:57:41 INFO mapred.JobClient:     Physical memory (bytes) snapshot=897708032
+14/03/03 10:57:41 INFO mapred.JobClient:     Spilled Records=0
+14/03/03 10:57:41 INFO mapred.JobClient:     CPU time spent (ms)=9040
+14/03/03 10:57:41 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/03 10:57:41 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438683136
+14/03/03 10:57:41 INFO mapred.JobClient:     Map output records=8
+14/03/03 10:57:41 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/03 10:57:41 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 36.6491 seconds (4.8023 bytes/sec)
+14/03/03 10:57:41 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-03
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/04 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/04 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/04 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/04 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/04 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/04 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/106193f55ad3ac79a3c00483d5130bda/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/04 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/106193f55ad3ac79a3c00483d5130bda/passenger_account.jar
+14/03/04 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/03 deleted.
+14/03/04 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/04 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/04 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/04 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/04 02:30:05 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/04 02:30:05 INFO mapred.JobClient: Running job: job_201402101551_21925
+14/03/04 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/04 02:30:23 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/04 02:30:30 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/04 02:30:35 INFO mapred.JobClient: Job complete: job_201402101551_21925
+14/03/04 02:30:35 INFO mapred.JobClient: Counters: 18
+14/03/04 02:30:35 INFO mapred.JobClient:   Job Counters 
+14/03/04 02:30:35 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=34932
+14/03/04 02:30:35 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/04 02:30:35 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/04 02:30:35 INFO mapred.JobClient:     Launched map tasks=5
+14/03/04 02:30:35 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/04 02:30:35 INFO mapred.JobClient:   File Output Format Counters 
+14/03/04 02:30:35 INFO mapred.JobClient:     Bytes Written=176
+14/03/04 02:30:35 INFO mapred.JobClient:   FileSystemCounters
+14/03/04 02:30:35 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/04 02:30:35 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160237
+14/03/04 02:30:35 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/04 02:30:35 INFO mapred.JobClient:   File Input Format Counters 
+14/03/04 02:30:35 INFO mapred.JobClient:     Bytes Read=0
+14/03/04 02:30:35 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/04 02:30:35 INFO mapred.JobClient:     Map input records=8
+14/03/04 02:30:35 INFO mapred.JobClient:     Physical memory (bytes) snapshot=845250560
+14/03/04 02:30:35 INFO mapred.JobClient:     Spilled Records=0
+14/03/04 02:30:35 INFO mapred.JobClient:     CPU time spent (ms)=7380
+14/03/04 02:30:35 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/04 02:30:35 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438679040
+14/03/04 02:30:35 INFO mapred.JobClient:     Map output records=8
+14/03/04 02:30:35 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/04 02:30:35 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 30.1172 seconds (5.8438 bytes/sec)
+14/03/04 02:30:35 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-04
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/05 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/05 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/05 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/05 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/05 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/05 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/fd0c41e54b039705b232645fb32e0b8d/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/05 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/fd0c41e54b039705b232645fb32e0b8d/passenger_account.jar
+14/03/05 02:30:06 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/04 deleted.
+14/03/05 02:30:06 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/05 02:30:06 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/05 02:30:06 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/05 02:30:06 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/05 02:30:15 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/05 02:30:15 INFO mapred.JobClient: Running job: job_201402101551_22728
+14/03/05 02:30:16 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/05 02:30:29 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/05 02:30:31 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/05 02:30:32 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/05 02:30:33 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/05 02:30:38 INFO mapred.JobClient: Job complete: job_201402101551_22728
+14/03/05 02:30:38 INFO mapred.JobClient: Counters: 18
+14/03/05 02:30:38 INFO mapred.JobClient:   Job Counters 
+14/03/05 02:30:38 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=31468
+14/03/05 02:30:38 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/05 02:30:38 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/05 02:30:38 INFO mapred.JobClient:     Launched map tasks=5
+14/03/05 02:30:38 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/05 02:30:38 INFO mapred.JobClient:   File Output Format Counters 
+14/03/05 02:30:38 INFO mapred.JobClient:     Bytes Written=176
+14/03/05 02:30:38 INFO mapred.JobClient:   FileSystemCounters
+14/03/05 02:30:38 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/05 02:30:38 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160205
+14/03/05 02:30:38 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/05 02:30:38 INFO mapred.JobClient:   File Input Format Counters 
+14/03/05 02:30:38 INFO mapred.JobClient:     Bytes Read=0
+14/03/05 02:30:38 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/05 02:30:38 INFO mapred.JobClient:     Map input records=8
+14/03/05 02:30:38 INFO mapred.JobClient:     Physical memory (bytes) snapshot=867274752
+14/03/05 02:30:38 INFO mapred.JobClient:     Spilled Records=0
+14/03/05 02:30:38 INFO mapred.JobClient:     CPU time spent (ms)=5100
+14/03/05 02:30:38 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/05 02:30:38 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438679040
+14/03/05 02:30:38 INFO mapred.JobClient:     Map output records=8
+14/03/05 02:30:38 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/05 02:30:38 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 31.2242 seconds (5.6367 bytes/sec)
+14/03/05 02:30:38 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-05
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/06 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/06 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/06 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/06 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/06 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/06 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/81c4564b3eb0cb3550372f649383cb98/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/06 02:30:05 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/81c4564b3eb0cb3550372f649383cb98/passenger_account.jar
+14/03/06 02:30:08 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/05 deleted.
+14/03/06 02:30:08 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/06 02:30:08 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/06 02:30:08 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/06 02:30:08 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/06 02:30:21 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/06 02:30:22 INFO mapred.JobClient: Running job: job_201403051733_0357
+14/03/06 02:30:23 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/06 02:30:36 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/06 02:30:39 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/06 02:30:42 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/06 02:30:47 INFO mapred.JobClient: Job complete: job_201403051733_0357
+14/03/06 02:30:47 INFO mapred.JobClient: Counters: 18
+14/03/06 02:30:47 INFO mapred.JobClient:   Job Counters 
+14/03/06 02:30:47 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=41278
+14/03/06 02:30:47 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/06 02:30:47 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/06 02:30:47 INFO mapred.JobClient:     Launched map tasks=5
+14/03/06 02:30:47 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/06 02:30:47 INFO mapred.JobClient:   File Output Format Counters 
+14/03/06 02:30:47 INFO mapred.JobClient:     Bytes Written=176
+14/03/06 02:30:47 INFO mapred.JobClient:   FileSystemCounters
+14/03/06 02:30:47 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/06 02:30:47 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159977
+14/03/06 02:30:47 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/06 02:30:47 INFO mapred.JobClient:   File Input Format Counters 
+14/03/06 02:30:47 INFO mapred.JobClient:     Bytes Read=0
+14/03/06 02:30:47 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/06 02:30:47 INFO mapred.JobClient:     Map input records=8
+14/03/06 02:30:47 INFO mapred.JobClient:     Physical memory (bytes) snapshot=876552192
+14/03/06 02:30:47 INFO mapred.JobClient:     Spilled Records=0
+14/03/06 02:30:47 INFO mapred.JobClient:     CPU time spent (ms)=6740
+14/03/06 02:30:47 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/06 02:30:47 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9735843840
+14/03/06 02:30:47 INFO mapred.JobClient:     Map output records=8
+14/03/06 02:30:47 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/06 02:30:47 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 38.2107 seconds (4.606 bytes/sec)
+14/03/06 02:30:47 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-06
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/07 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/07 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/07 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/07 02:30:04 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/07 02:30:04 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/07 02:30:04 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/ce01e753153489ca2ab57e6c992f47b4/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/07 02:30:09 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/ce01e753153489ca2ab57e6c992f47b4/passenger_account.jar
+14/03/07 02:30:10 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/06 deleted.
+14/03/07 02:30:10 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/07 02:30:10 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/07 02:30:10 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/07 02:30:10 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/07 02:30:22 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/07 02:30:22 INFO mapred.JobClient: Running job: job_201403051733_1059
+14/03/07 02:30:23 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/07 02:30:38 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/07 02:30:41 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/07 02:30:44 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/07 02:30:49 INFO mapred.JobClient: Job complete: job_201403051733_1059
+14/03/07 02:30:49 INFO mapred.JobClient: Counters: 18
+14/03/07 02:30:49 INFO mapred.JobClient:   Job Counters 
+14/03/07 02:30:49 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=31711
+14/03/07 02:30:49 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/07 02:30:49 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/07 02:30:49 INFO mapred.JobClient:     Launched map tasks=5
+14/03/07 02:30:49 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/07 02:30:49 INFO mapred.JobClient:   File Output Format Counters 
+14/03/07 02:30:49 INFO mapred.JobClient:     Bytes Written=176
+14/03/07 02:30:49 INFO mapred.JobClient:   FileSystemCounters
+14/03/07 02:30:49 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/07 02:30:49 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159937
+14/03/07 02:30:49 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/07 02:30:49 INFO mapred.JobClient:   File Input Format Counters 
+14/03/07 02:30:49 INFO mapred.JobClient:     Bytes Read=0
+14/03/07 02:30:49 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/07 02:30:49 INFO mapred.JobClient:     Map input records=8
+14/03/07 02:30:49 INFO mapred.JobClient:     Physical memory (bytes) snapshot=845811712
+14/03/07 02:30:49 INFO mapred.JobClient:     Spilled Records=0
+14/03/07 02:30:49 INFO mapred.JobClient:     CPU time spent (ms)=4530
+14/03/07 02:30:49 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/07 02:30:49 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9636823040
+14/03/07 02:30:49 INFO mapred.JobClient:     Map output records=8
+14/03/07 02:30:49 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/07 02:30:49 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 39.0099 seconds (4.5117 bytes/sec)
+14/03/07 02:30:49 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-07
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/08 01:21:24 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/08 01:21:24 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/08 01:21:24 INFO tool.CodeGenTool: Beginning code generation
+14/03/08 01:21:26 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/08 01:21:26 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/08 01:21:26 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/0806d6237e76196e354a640b8a2a9d66/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/08 01:21:31 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/0806d6237e76196e354a640b8a2a9d66/passenger_account.jar
+14/03/08 01:21:33 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/07 deleted.
+14/03/08 01:21:33 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/08 01:21:33 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/08 01:21:33 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/08 01:21:33 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/08 01:21:41 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/08 01:21:41 INFO mapred.JobClient: Running job: job_201403051733_1782
+14/03/08 01:21:42 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/08 01:22:37 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/08 01:22:39 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/08 01:22:42 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/08 01:22:43 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/08 01:22:48 INFO mapred.JobClient: Job complete: job_201403051733_1782
+14/03/08 01:22:48 INFO mapred.JobClient: Counters: 18
+14/03/08 01:22:48 INFO mapred.JobClient:   Job Counters 
+14/03/08 01:22:48 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=39807
+14/03/08 01:22:48 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/08 01:22:48 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/08 01:22:48 INFO mapred.JobClient:     Launched map tasks=5
+14/03/08 01:22:48 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/08 01:22:48 INFO mapred.JobClient:   File Output Format Counters 
+14/03/08 01:22:48 INFO mapred.JobClient:     Bytes Written=176
+14/03/08 01:22:48 INFO mapred.JobClient:   FileSystemCounters
+14/03/08 01:22:48 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/08 01:22:48 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159965
+14/03/08 01:22:48 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/08 01:22:48 INFO mapred.JobClient:   File Input Format Counters 
+14/03/08 01:22:48 INFO mapred.JobClient:     Bytes Read=0
+14/03/08 01:22:48 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/08 01:22:48 INFO mapred.JobClient:     Map input records=8
+14/03/08 01:22:48 INFO mapred.JobClient:     Physical memory (bytes) snapshot=867340288
+14/03/08 01:22:48 INFO mapred.JobClient:     Spilled Records=0
+14/03/08 01:22:48 INFO mapred.JobClient:     CPU time spent (ms)=6890
+14/03/08 01:22:48 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/08 01:22:48 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438367744
+14/03/08 01:22:48 INFO mapred.JobClient:     Map output records=8
+14/03/08 01:22:48 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/08 01:22:48 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 75.4079 seconds (2.334 bytes/sec)
+14/03/08 01:22:48 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-07
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/08 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/08 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/08 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/08 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/08 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/08 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/6be2cea8286e50f6650376d54e454d18/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/08 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/6be2cea8286e50f6650376d54e454d18/passenger_account.jar
+14/03/08 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/07 deleted.
+14/03/08 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/08 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/08 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/08 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/08 02:30:17 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/08 02:30:17 INFO mapred.JobClient: Running job: job_201403051733_1828
+14/03/08 02:30:18 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/08 02:30:33 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/08 02:30:36 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/08 02:30:41 INFO mapred.JobClient: Job complete: job_201403051733_1828
+14/03/08 02:30:41 INFO mapred.JobClient: Counters: 18
+14/03/08 02:30:41 INFO mapred.JobClient:   Job Counters 
+14/03/08 02:30:41 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=31366
+14/03/08 02:30:41 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/08 02:30:41 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/08 02:30:41 INFO mapred.JobClient:     Launched map tasks=5
+14/03/08 02:30:41 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/08 02:30:41 INFO mapred.JobClient:   File Output Format Counters 
+14/03/08 02:30:41 INFO mapred.JobClient:     Bytes Written=176
+14/03/08 02:30:41 INFO mapred.JobClient:   FileSystemCounters
+14/03/08 02:30:41 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/08 02:30:41 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159946
+14/03/08 02:30:41 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/08 02:30:41 INFO mapred.JobClient:   File Input Format Counters 
+14/03/08 02:30:41 INFO mapred.JobClient:     Bytes Read=0
+14/03/08 02:30:41 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/08 02:30:41 INFO mapred.JobClient:     Map input records=8
+14/03/08 02:30:41 INFO mapred.JobClient:     Physical memory (bytes) snapshot=850276352
+14/03/08 02:30:41 INFO mapred.JobClient:     Spilled Records=0
+14/03/08 02:30:41 INFO mapred.JobClient:     CPU time spent (ms)=4450
+14/03/08 02:30:41 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/08 02:30:41 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438507008
+14/03/08 02:30:41 INFO mapred.JobClient:     Map output records=8
+14/03/08 02:30:41 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/08 02:30:41 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 36.8166 seconds (4.7805 bytes/sec)
+14/03/08 02:30:41 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-08
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/09 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/09 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/09 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/09 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/09 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/09 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/f72da7ae997dd82a28e900440373b76d/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/09 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/f72da7ae997dd82a28e900440373b76d/passenger_account.jar
+14/03/09 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/08 deleted.
+14/03/09 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/09 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/09 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/09 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/09 02:30:14 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/09 02:30:14 INFO mapred.JobClient: Running job: job_201403051733_2462
+14/03/09 02:30:15 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/09 02:30:29 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/09 02:30:32 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/09 02:30:35 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/09 02:30:40 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/09 02:31:00 INFO mapred.JobClient: Job complete: job_201403051733_2462
+14/03/09 02:31:00 INFO mapred.JobClient: Counters: 18
+14/03/09 02:31:00 INFO mapred.JobClient:   Job Counters 
+14/03/09 02:31:00 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=62043
+14/03/09 02:31:00 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/09 02:31:00 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/09 02:31:00 INFO mapred.JobClient:     Launched map tasks=5
+14/03/09 02:31:00 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/09 02:31:00 INFO mapred.JobClient:   File Output Format Counters 
+14/03/09 02:31:00 INFO mapred.JobClient:     Bytes Written=176
+14/03/09 02:31:00 INFO mapred.JobClient:   FileSystemCounters
+14/03/09 02:31:00 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/09 02:31:00 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159919
+14/03/09 02:31:00 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/09 02:31:00 INFO mapred.JobClient:   File Input Format Counters 
+14/03/09 02:31:00 INFO mapred.JobClient:     Bytes Read=0
+14/03/09 02:31:00 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/09 02:31:00 INFO mapred.JobClient:     Map input records=8
+14/03/09 02:31:00 INFO mapred.JobClient:     Physical memory (bytes) snapshot=855703552
+14/03/09 02:31:00 INFO mapred.JobClient:     Spilled Records=0
+14/03/09 02:31:00 INFO mapred.JobClient:     CPU time spent (ms)=13450
+14/03/09 02:31:00 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/09 02:31:00 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438711808
+14/03/09 02:31:00 INFO mapred.JobClient:     Map output records=8
+14/03/09 02:31:00 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/09 02:31:00 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 55.6764 seconds (3.1611 bytes/sec)
+14/03/09 02:31:00 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-09
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/10 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/10 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/10 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/10 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/10 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/10 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/44fd8e2b1e51424d518c24bef97ce131/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/10 02:30:07 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/44fd8e2b1e51424d518c24bef97ce131/passenger_account.jar
+14/03/10 02:30:10 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/09 deleted.
+14/03/10 02:30:10 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/10 02:30:10 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/10 02:30:10 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/10 02:30:10 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/10 02:30:14 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/10 02:30:14 INFO mapred.JobClient: Running job: job_201403051733_3101
+14/03/10 02:30:15 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/10 02:30:28 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/10 02:30:31 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/10 02:30:32 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/10 02:30:34 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/10 02:30:41 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/10 02:30:46 INFO mapred.JobClient: Job complete: job_201403051733_3101
+14/03/10 02:30:46 INFO mapred.JobClient: Counters: 18
+14/03/10 02:30:46 INFO mapred.JobClient:   Job Counters 
+14/03/10 02:30:46 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=51573
+14/03/10 02:30:46 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/10 02:30:46 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/10 02:30:46 INFO mapred.JobClient:     Launched map tasks=5
+14/03/10 02:30:46 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/10 02:30:46 INFO mapred.JobClient:   File Output Format Counters 
+14/03/10 02:30:46 INFO mapred.JobClient:     Bytes Written=176
+14/03/10 02:30:46 INFO mapred.JobClient:   FileSystemCounters
+14/03/10 02:30:46 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/10 02:30:46 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159945
+14/03/10 02:30:46 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/10 02:30:46 INFO mapred.JobClient:   File Input Format Counters 
+14/03/10 02:30:46 INFO mapred.JobClient:     Bytes Read=0
+14/03/10 02:30:46 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/10 02:30:46 INFO mapred.JobClient:     Map input records=8
+14/03/10 02:30:46 INFO mapred.JobClient:     Physical memory (bytes) snapshot=861962240
+14/03/10 02:30:46 INFO mapred.JobClient:     Spilled Records=0
+14/03/10 02:30:46 INFO mapred.JobClient:     CPU time spent (ms)=9880
+14/03/10 02:30:46 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/10 02:30:46 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438371840
+14/03/10 02:30:46 INFO mapred.JobClient:     Map output records=8
+14/03/10 02:30:46 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/10 02:30:46 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 36.0962 seconds (4.8759 bytes/sec)
+14/03/10 02:30:46 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-10
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/11 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/11 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/11 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/11 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/11 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/11 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/0cda979a40bdfd2ee4979ea3e6d6d364/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/11 02:30:05 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/0cda979a40bdfd2ee4979ea3e6d6d364/passenger_account.jar
+14/03/11 02:30:06 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/10 deleted.
+14/03/11 02:30:06 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/11 02:30:06 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/11 02:30:06 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/11 02:30:06 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/11 02:30:14 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/11 02:30:14 INFO mapred.JobClient: Running job: job_201403051733_4110
+14/03/11 02:30:15 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/11 02:30:29 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/11 02:30:31 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/11 02:30:36 INFO mapred.JobClient: Job complete: job_201403051733_4110
+14/03/11 02:30:36 INFO mapred.JobClient: Counters: 18
+14/03/11 02:30:36 INFO mapred.JobClient:   Job Counters 
+14/03/11 02:30:36 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=28345
+14/03/11 02:30:36 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/11 02:30:36 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/11 02:30:36 INFO mapred.JobClient:     Launched map tasks=5
+14/03/11 02:30:36 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/11 02:30:36 INFO mapred.JobClient:   File Output Format Counters 
+14/03/11 02:30:36 INFO mapred.JobClient:     Bytes Written=176
+14/03/11 02:30:36 INFO mapred.JobClient:   FileSystemCounters
+14/03/11 02:30:36 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/11 02:30:36 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159926
+14/03/11 02:30:36 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/11 02:30:36 INFO mapred.JobClient:   File Input Format Counters 
+14/03/11 02:30:36 INFO mapred.JobClient:     Bytes Read=0
+14/03/11 02:30:36 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/11 02:30:36 INFO mapred.JobClient:     Map input records=8
+14/03/11 02:30:36 INFO mapred.JobClient:     Physical memory (bytes) snapshot=844431360
+14/03/11 02:30:36 INFO mapred.JobClient:     Spilled Records=0
+14/03/11 02:30:36 INFO mapred.JobClient:     CPU time spent (ms)=4180
+14/03/11 02:30:36 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/11 02:30:36 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438507008
+14/03/11 02:30:36 INFO mapred.JobClient:     Map output records=8
+14/03/11 02:30:36 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/11 02:30:36 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 30.0107 seconds (5.8646 bytes/sec)
+14/03/11 02:30:36 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-11
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/12 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/12 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/12 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/12 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/12 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/12 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/b4c7382aeb6054725f5dfd5be213ee16/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/12 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/b4c7382aeb6054725f5dfd5be213ee16/passenger_account.jar
+14/03/12 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/11 deleted.
+14/03/12 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/12 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/12 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/12 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/12 02:30:05 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/12 02:30:05 INFO mapred.JobClient: Running job: job_201403051733_5022
+14/03/12 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/12 02:30:19 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/12 02:30:20 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/12 02:30:21 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/12 02:30:22 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/12 02:30:27 INFO mapred.JobClient: Job complete: job_201403051733_5022
+14/03/12 02:30:27 INFO mapred.JobClient: Counters: 18
+14/03/12 02:30:27 INFO mapred.JobClient:   Job Counters 
+14/03/12 02:30:27 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=37233
+14/03/12 02:30:27 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/12 02:30:27 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/12 02:30:27 INFO mapred.JobClient:     Launched map tasks=5
+14/03/12 02:30:27 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/12 02:30:27 INFO mapred.JobClient:   File Output Format Counters 
+14/03/12 02:30:27 INFO mapred.JobClient:     Bytes Written=176
+14/03/12 02:30:27 INFO mapred.JobClient:   FileSystemCounters
+14/03/12 02:30:27 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/12 02:30:27 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159954
+14/03/12 02:30:27 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/12 02:30:27 INFO mapred.JobClient:   File Input Format Counters 
+14/03/12 02:30:27 INFO mapred.JobClient:     Bytes Read=0
+14/03/12 02:30:27 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/12 02:30:27 INFO mapred.JobClient:     Map input records=8
+14/03/12 02:30:27 INFO mapred.JobClient:     Physical memory (bytes) snapshot=844664832
+14/03/12 02:30:27 INFO mapred.JobClient:     Spilled Records=0
+14/03/12 02:30:27 INFO mapred.JobClient:     CPU time spent (ms)=7150
+14/03/12 02:30:27 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/12 02:30:27 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438371840
+14/03/12 02:30:27 INFO mapred.JobClient:     Map output records=8
+14/03/12 02:30:27 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/12 02:30:27 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 23.2717 seconds (7.5628 bytes/sec)
+14/03/12 02:30:27 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-12
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/13 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/13 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/13 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/13 02:30:08 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/13 02:30:08 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/13 02:30:08 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/96a8fa1956714501047164bd49b40152/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/13 02:30:09 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/96a8fa1956714501047164bd49b40152/passenger_account.jar
+14/03/13 02:30:09 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/12 deleted.
+14/03/13 02:30:09 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/13 02:30:09 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/13 02:30:09 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/13 02:30:09 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/13 02:30:15 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/13 02:30:16 INFO mapred.JobClient: Running job: job_201403051733_6026
+14/03/13 02:30:17 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/13 02:30:37 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/13 02:30:40 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/13 02:30:43 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/13 02:30:46 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/13 02:30:51 INFO mapred.JobClient: Job complete: job_201403051733_6026
+14/03/13 02:30:51 INFO mapred.JobClient: Counters: 18
+14/03/13 02:30:51 INFO mapred.JobClient:   Job Counters 
+14/03/13 02:30:51 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=79840
+14/03/13 02:30:51 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/13 02:30:51 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/13 02:30:51 INFO mapred.JobClient:     Launched map tasks=5
+14/03/13 02:30:51 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/13 02:30:51 INFO mapred.JobClient:   File Output Format Counters 
+14/03/13 02:30:51 INFO mapred.JobClient:     Bytes Written=176
+14/03/13 02:30:51 INFO mapred.JobClient:   FileSystemCounters
+14/03/13 02:30:51 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/13 02:30:51 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159942
+14/03/13 02:30:51 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/13 02:30:51 INFO mapred.JobClient:   File Input Format Counters 
+14/03/13 02:30:51 INFO mapred.JobClient:     Bytes Read=0
+14/03/13 02:30:51 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/13 02:30:51 INFO mapred.JobClient:     Map input records=8
+14/03/13 02:30:51 INFO mapred.JobClient:     Physical memory (bytes) snapshot=845402112
+14/03/13 02:30:51 INFO mapred.JobClient:     Spilled Records=0
+14/03/13 02:30:51 INFO mapred.JobClient:     CPU time spent (ms)=10250
+14/03/13 02:30:51 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/13 02:30:51 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438511104
+14/03/13 02:30:51 INFO mapred.JobClient:     Map output records=8
+14/03/13 02:30:51 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/13 02:30:51 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 41.5306 seconds (4.2378 bytes/sec)
+14/03/13 02:30:51 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-13
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/14 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/14 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/6797495173cd966cc4e7af3a4c6391f6/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/6797495173cd966cc4e7af3a4c6391f6/passenger_account.jar
+14/03/14 02:30:03 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/13 deleted.
+14/03/14 02:30:03 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/14 02:30:03 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/14 02:30:03 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/14 02:30:03 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/14 02:30:06 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/14 02:30:06 INFO mapred.JobClient: Running job: job_201403051733_6376
+14/03/14 02:30:07 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 02:30:23 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/14 02:30:24 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 02:30:29 INFO mapred.JobClient: Job complete: job_201403051733_6376
+14/03/14 02:30:29 INFO mapred.JobClient: Counters: 18
+14/03/14 02:30:29 INFO mapred.JobClient:   Job Counters 
+14/03/14 02:30:29 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=28325
+14/03/14 02:30:29 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 02:30:29 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 02:30:29 INFO mapred.JobClient:     Launched map tasks=5
+14/03/14 02:30:29 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 02:30:29 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 02:30:29 INFO mapred.JobClient:     Bytes Written=176
+14/03/14 02:30:29 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 02:30:29 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/14 02:30:29 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160054
+14/03/14 02:30:29 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=176
+14/03/14 02:30:29 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 02:30:29 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 02:30:29 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 02:30:29 INFO mapred.JobClient:     Map input records=8
+14/03/14 02:30:29 INFO mapred.JobClient:     Physical memory (bytes) snapshot=829976576
+14/03/14 02:30:29 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 02:30:29 INFO mapred.JobClient:     CPU time spent (ms)=4100
+14/03/14 02:30:29 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/14 02:30:29 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438371840
+14/03/14 02:30:29 INFO mapred.JobClient:     Map output records=8
+14/03/14 02:30:29 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/14 02:30:29 INFO mapreduce.ImportJobBase: Transferred 176 bytes in 25.9197 seconds (6.7902 bytes/sec)
+14/03/14 02:30:29 INFO mapreduce.ImportJobBase: Retrieved 8 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-14
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/15 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/15 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/15 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/15 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/15 02:30:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/15 02:30:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/c8d4e80ab6302b4423f3e0c34f7456c7/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/15 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/c8d4e80ab6302b4423f3e0c34f7456c7/passenger_account.jar
+14/03/15 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/14 deleted.
+14/03/15 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/15 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/15 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/15 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/15 02:30:07 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/15 02:30:08 INFO mapred.JobClient: Running job: job_201403051733_6850
+14/03/15 02:30:09 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/15 02:30:22 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/15 02:30:23 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/15 02:30:28 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/15 02:30:34 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/15 02:30:39 INFO mapred.JobClient: Job complete: job_201403051733_6850
+14/03/15 02:30:39 INFO mapred.JobClient: Counters: 18
+14/03/15 02:30:39 INFO mapred.JobClient:   Job Counters 
+14/03/15 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=42047
+14/03/15 02:30:39 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/15 02:30:39 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/15 02:30:39 INFO mapred.JobClient:     Launched map tasks=5
+14/03/15 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/15 02:30:39 INFO mapred.JobClient:   File Output Format Counters 
+14/03/15 02:30:39 INFO mapred.JobClient:     Bytes Written=199
+14/03/15 02:30:39 INFO mapred.JobClient:   FileSystemCounters
+14/03/15 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/15 02:30:39 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160021
+14/03/15 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=199
+14/03/15 02:30:39 INFO mapred.JobClient:   File Input Format Counters 
+14/03/15 02:30:39 INFO mapred.JobClient:     Bytes Read=0
+14/03/15 02:30:39 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/15 02:30:39 INFO mapred.JobClient:     Map input records=9
+14/03/15 02:30:39 INFO mapred.JobClient:     Physical memory (bytes) snapshot=839254016
+14/03/15 02:30:39 INFO mapred.JobClient:     Spilled Records=0
+14/03/15 02:30:39 INFO mapred.JobClient:     CPU time spent (ms)=9000
+14/03/15 02:30:39 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/15 02:30:39 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438228480
+14/03/15 02:30:39 INFO mapred.JobClient:     Map output records=9
+14/03/15 02:30:39 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/15 02:30:39 INFO mapreduce.ImportJobBase: Transferred 199 bytes in 34.2391 seconds (5.8121 bytes/sec)
+14/03/15 02:30:39 INFO mapreduce.ImportJobBase: Retrieved 9 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-15
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/16 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/16 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/16 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/16 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/16 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/16 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/b0a5909a53bdf24d9f0c1fdba464cd57/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/16 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/b0a5909a53bdf24d9f0c1fdba464cd57/passenger_account.jar
+14/03/16 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/15 deleted.
+14/03/16 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/16 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/16 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/16 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/16 02:30:08 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/16 02:30:08 INFO mapred.JobClient: Running job: job_201403051733_7293
+14/03/16 02:30:09 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/16 02:30:23 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/16 02:30:26 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/16 02:30:28 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/16 02:30:32 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/16 02:30:37 INFO mapred.JobClient: Job complete: job_201403051733_7293
+14/03/16 02:30:37 INFO mapred.JobClient: Counters: 18
+14/03/16 02:30:37 INFO mapred.JobClient:   Job Counters 
+14/03/16 02:30:37 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=39837
+14/03/16 02:30:37 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/16 02:30:37 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/16 02:30:37 INFO mapred.JobClient:     Launched map tasks=5
+14/03/16 02:30:37 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/16 02:30:37 INFO mapred.JobClient:   File Output Format Counters 
+14/03/16 02:30:37 INFO mapred.JobClient:     Bytes Written=199
+14/03/16 02:30:37 INFO mapred.JobClient:   FileSystemCounters
+14/03/16 02:30:37 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/16 02:30:37 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160039
+14/03/16 02:30:37 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=199
+14/03/16 02:30:37 INFO mapred.JobClient:   File Input Format Counters 
+14/03/16 02:30:37 INFO mapred.JobClient:     Bytes Read=0
+14/03/16 02:30:37 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/16 02:30:37 INFO mapred.JobClient:     Map input records=9
+14/03/16 02:30:37 INFO mapred.JobClient:     Physical memory (bytes) snapshot=769986560
+14/03/16 02:30:37 INFO mapred.JobClient:     Spilled Records=0
+14/03/16 02:30:37 INFO mapred.JobClient:     CPU time spent (ms)=6480
+14/03/16 02:30:37 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/16 02:30:37 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438224384
+14/03/16 02:30:37 INFO mapred.JobClient:     Map output records=9
+14/03/16 02:30:37 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/16 02:30:37 INFO mapreduce.ImportJobBase: Transferred 199 bytes in 31.9995 seconds (6.2188 bytes/sec)
+14/03/16 02:30:37 INFO mapreduce.ImportJobBase: Retrieved 9 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-16
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/17 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/17 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/17 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/17 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/17 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/17 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/faeca811108565c53b6380743a692477/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/17 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/faeca811108565c53b6380743a692477/passenger_account.jar
+14/03/17 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/16 deleted.
+14/03/17 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/17 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/17 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/17 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/17 02:30:05 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/17 02:30:05 INFO mapred.JobClient: Running job: job_201403051733_7636
+14/03/17 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/17 02:30:23 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/17 02:30:26 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/17 02:30:27 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/17 02:30:32 INFO mapred.JobClient: Job complete: job_201403051733_7636
+14/03/17 02:30:32 INFO mapred.JobClient: Counters: 18
+14/03/17 02:30:32 INFO mapred.JobClient:   Job Counters 
+14/03/17 02:30:32 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=48317
+14/03/17 02:30:32 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/17 02:30:32 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/17 02:30:32 INFO mapred.JobClient:     Launched map tasks=5
+14/03/17 02:30:32 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/17 02:30:32 INFO mapred.JobClient:   File Output Format Counters 
+14/03/17 02:30:32 INFO mapred.JobClient:     Bytes Written=199
+14/03/17 02:30:32 INFO mapred.JobClient:   FileSystemCounters
+14/03/17 02:30:32 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/17 02:30:32 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160029
+14/03/17 02:30:32 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=199
+14/03/17 02:30:32 INFO mapred.JobClient:   File Input Format Counters 
+14/03/17 02:30:32 INFO mapred.JobClient:     Bytes Read=0
+14/03/17 02:30:32 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/17 02:30:32 INFO mapred.JobClient:     Map input records=9
+14/03/17 02:30:32 INFO mapred.JobClient:     Physical memory (bytes) snapshot=803008512
+14/03/17 02:30:32 INFO mapred.JobClient:     Spilled Records=0
+14/03/17 02:30:32 INFO mapred.JobClient:     CPU time spent (ms)=12120
+14/03/17 02:30:32 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/17 02:30:32 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438511104
+14/03/17 02:30:32 INFO mapred.JobClient:     Map output records=9
+14/03/17 02:30:32 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/17 02:30:32 INFO mapreduce.ImportJobBase: Transferred 199 bytes in 27.8835 seconds (7.1368 bytes/sec)
+14/03/17 02:30:32 INFO mapreduce.ImportJobBase: Retrieved 9 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-17
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/18 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/18 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/18 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/18 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/18 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/18 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/1ad604c84b4488656d1deb7a831f355c/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/18 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/1ad604c84b4488656d1deb7a831f355c/passenger_account.jar
+14/03/18 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/17 deleted.
+14/03/18 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/18 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/18 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/18 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/18 02:30:04 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/18 02:30:05 INFO mapred.JobClient: Running job: job_201403051733_8037
+14/03/18 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/18 02:30:22 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/18 02:30:25 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/18 02:30:28 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/18 02:30:33 INFO mapred.JobClient: Job complete: job_201403051733_8037
+14/03/18 02:30:33 INFO mapred.JobClient: Counters: 18
+14/03/18 02:30:33 INFO mapred.JobClient:   Job Counters 
+14/03/18 02:30:33 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=39491
+14/03/18 02:30:33 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/18 02:30:33 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/18 02:30:33 INFO mapred.JobClient:     Launched map tasks=5
+14/03/18 02:30:33 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/18 02:30:33 INFO mapred.JobClient:   File Output Format Counters 
+14/03/18 02:30:33 INFO mapred.JobClient:     Bytes Written=199
+14/03/18 02:30:33 INFO mapred.JobClient:   FileSystemCounters
+14/03/18 02:30:33 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/18 02:30:33 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160045
+14/03/18 02:30:33 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=199
+14/03/18 02:30:33 INFO mapred.JobClient:   File Input Format Counters 
+14/03/18 02:30:33 INFO mapred.JobClient:     Bytes Read=0
+14/03/18 02:30:33 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/18 02:30:33 INFO mapred.JobClient:     Map input records=9
+14/03/18 02:30:33 INFO mapred.JobClient:     Physical memory (bytes) snapshot=827645952
+14/03/18 02:30:33 INFO mapred.JobClient:     Spilled Records=0
+14/03/18 02:30:33 INFO mapred.JobClient:     CPU time spent (ms)=7890
+14/03/18 02:30:33 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/18 02:30:33 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438367744
+14/03/18 02:30:33 INFO mapred.JobClient:     Map output records=9
+14/03/18 02:30:33 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/18 02:30:33 INFO mapreduce.ImportJobBase: Transferred 199 bytes in 28.8849 seconds (6.8894 bytes/sec)
+14/03/18 02:30:33 INFO mapreduce.ImportJobBase: Retrieved 9 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-18
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/19 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/19 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/19 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/19 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/19 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/19 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/c73759d6fe48b217b86e4e00a69e3350/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/19 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/c73759d6fe48b217b86e4e00a69e3350/passenger_account.jar
+14/03/19 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/18 deleted.
+14/03/19 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/19 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/19 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/19 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/19 02:30:05 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/19 02:30:05 INFO mapred.JobClient: Running job: job_201403051733_8342
+14/03/19 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/19 02:30:20 INFO mapred.JobClient:  map 20% reduce 0%
+14/03/19 02:30:22 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/19 02:30:25 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/19 02:30:27 INFO mapred.JobClient:  map 80% reduce 0%
+14/03/19 02:30:28 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/19 02:30:33 INFO mapred.JobClient: Job complete: job_201403051733_8342
+14/03/19 02:30:33 INFO mapred.JobClient: Counters: 18
+14/03/19 02:30:33 INFO mapred.JobClient:   Job Counters 
+14/03/19 02:30:33 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=46079
+14/03/19 02:30:33 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/19 02:30:33 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/19 02:30:33 INFO mapred.JobClient:     Launched map tasks=5
+14/03/19 02:30:33 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/19 02:30:33 INFO mapred.JobClient:   File Output Format Counters 
+14/03/19 02:30:33 INFO mapred.JobClient:     Bytes Written=199
+14/03/19 02:30:33 INFO mapred.JobClient:   FileSystemCounters
+14/03/19 02:30:33 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/19 02:30:33 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=160043
+14/03/19 02:30:33 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=199
+14/03/19 02:30:33 INFO mapred.JobClient:   File Input Format Counters 
+14/03/19 02:30:33 INFO mapred.JobClient:     Bytes Read=0
+14/03/19 02:30:33 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/19 02:30:33 INFO mapred.JobClient:     Map input records=9
+14/03/19 02:30:33 INFO mapred.JobClient:     Physical memory (bytes) snapshot=859828224
+14/03/19 02:30:33 INFO mapred.JobClient:     Spilled Records=0
+14/03/19 02:30:33 INFO mapred.JobClient:     CPU time spent (ms)=10020
+14/03/19 02:30:33 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/19 02:30:33 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9438539776
+14/03/19 02:30:33 INFO mapred.JobClient:     Map output records=9
+14/03/19 02:30:33 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/19 02:30:33 INFO mapreduce.ImportJobBase: Transferred 199 bytes in 28.9028 seconds (6.8851 bytes/sec)
+14/03/19 02:30:33 INFO mapreduce.ImportJobBase: Retrieved 9 records.
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-19
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/20 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/20 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/20 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/20 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/20 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/20 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/337570d169d306754c0a5569b0f43f35/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/20 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/337570d169d306754c0a5569b0f43f35/passenger_account.jar
+14/03/20 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/19 deleted.
+14/03/20 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/20 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/20 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/20 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/20 02:30:04 ERROR security.UserGroupInformation: PriviledgedActionException as:xiaoju cause:java.io.IOException: The ownership/permissions on the staging directory hdfs://hdp0.jx:8020/home/disk1/hadoop-tmp/mapred/staging/xiaoju/.staging is not as expected. It is owned by xiaoju and permissions are rwxrwxrwx. The directory must be owned by the submitter xiaoju or by xiaoju and permissions must be rwx------
+14/03/20 02:30:04 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: The ownership/permissions on the staging directory hdfs://hdp0.jx:8020/home/disk1/hadoop-tmp/mapred/staging/xiaoju/.staging is not as expected. It is owned by xiaoju and permissions are rwxrwxrwx. The directory must be owned by the submitter xiaoju or by xiaoju and permissions must be rwx------
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:108)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:856)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:850)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1121)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:850)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:500)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:530)
+	at org.apache.sqoop.mapreduce.ImportJobBase.doSubmitJob(ImportJobBase.java:186)
+	at org.apache.sqoop.mapreduce.ImportJobBase.runJob(ImportJobBase.java:159)
+	at org.apache.sqoop.mapreduce.ImportJobBase.runImport(ImportJobBase.java:239)
+	at org.apache.sqoop.manager.SqlManager.importTable(SqlManager.java:600)
+	at org.apache.sqoop.manager.MySQLManager.importTable(MySQLManager.java:118)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:413)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:65)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+
+Connection to 113.11.197.199:3366?transaction&username=app_r&password=app_r
+executeDate:2014-03-19
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/20 10:22:12 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/20 10:22:12 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/20 10:22:12 INFO tool.CodeGenTool: Beginning code generation
+14/03/20 10:22:12 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/20 10:22:12 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/20 10:22:12 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/1900cda90696ca564e9cc883144d2fbe/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/20 10:22:14 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/1900cda90696ca564e9cc883144d2fbe/passenger_account.jar
+14/03/20 10:22:14 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/19 is not present, hence not deleting.
+14/03/20 10:22:14 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/20 10:22:14 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/20 10:22:14 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/20 10:22:14 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/20 10:22:17 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`accountid`), MAX(`accountid`) FROM `passenger_account`
+14/03/20 10:22:17 INFO mapred.JobClient: Running job: job_201403201015_0013
+14/03/20 10:22:18 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/20 10:25:00 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/20 10:25:03 INFO mapred.JobClient:  map 60% reduce 0%
+14/03/20 10:25:06 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/20 10:25:11 INFO mapred.JobClient: Job complete: job_201403201015_0013
+14/03/20 10:25:11 INFO mapred.JobClient: Counters: 18
+14/03/20 10:25:11 INFO mapred.JobClient:   Job Counters 
+14/03/20 10:25:11 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=32464
+14/03/20 10:25:11 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/20 10:25:11 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/20 10:25:11 INFO mapred.JobClient:     Launched map tasks=7
+14/03/20 10:25:11 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/20 10:25:11 INFO mapred.JobClient:   File Output Format Counters 
+14/03/20 10:25:11 INFO mapred.JobClient:     Bytes Written=199
+14/03/20 10:25:11 INFO mapred.JobClient:   FileSystemCounters
+14/03/20 10:25:11 INFO mapred.JobClient:     HDFS_BYTES_READ=566
+14/03/20 10:25:11 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=159943
+14/03/20 10:25:11 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=199
+14/03/20 10:25:11 INFO mapred.JobClient:   File Input Format Counters 
+14/03/20 10:25:11 INFO mapred.JobClient:     Bytes Read=0
+14/03/20 10:25:11 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/20 10:25:11 INFO mapred.JobClient:     Map input records=9
+14/03/20 10:25:11 INFO mapred.JobClient:     Physical memory (bytes) snapshot=846827520
+14/03/20 10:25:11 INFO mapred.JobClient:     Spilled Records=0
+14/03/20 10:25:11 INFO mapred.JobClient:     CPU time spent (ms)=4430
+14/03/20 10:25:11 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/20 10:25:11 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9933881344
+14/03/20 10:25:11 INFO mapred.JobClient:     Map output records=9
+14/03/20 10:25:11 INFO mapred.JobClient:     SPLIT_RAW_BYTES=566
+14/03/20 10:25:11 INFO mapreduce.ImportJobBase: Transferred 199 bytes in 176.3709 seconds (1.1283 bytes/sec)
+14/03/20 10:25:11 INFO mapreduce.ImportJobBase: Retrieved 9 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-20
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/21 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/21 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/21 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/21 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/21 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/21 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/bfc67a039d4628c568ff8a8fc13c5e2d/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/21 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/bfc67a039d4628c568ff8a8fc13c5e2d/passenger_account.jar
+14/03/21 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/20 deleted.
+14/03/21 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/21 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/21 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/21 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/21 02:30:06 INFO mapred.JobClient: Running job: job_201403201015_0505
+14/03/21 02:30:07 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/21 02:30:26 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/21 02:30:31 INFO mapred.JobClient: Job complete: job_201403201015_0505
+14/03/21 02:30:31 INFO mapred.JobClient: Counters: 18
+14/03/21 02:30:31 INFO mapred.JobClient:   Job Counters 
+14/03/21 02:30:31 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=19105
+14/03/21 02:30:31 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/21 02:30:31 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/21 02:30:31 INFO mapred.JobClient:     Launched map tasks=1
+14/03/21 02:30:31 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/21 02:30:31 INFO mapred.JobClient:   File Output Format Counters 
+14/03/21 02:30:31 INFO mapred.JobClient:     Bytes Written=3472616
+14/03/21 02:30:31 INFO mapred.JobClient:   FileSystemCounters
+14/03/21 02:30:31 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/21 02:30:31 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31980
+14/03/21 02:30:31 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=3472616
+14/03/21 02:30:31 INFO mapred.JobClient:   File Input Format Counters 
+14/03/21 02:30:31 INFO mapred.JobClient:     Bytes Read=0
+14/03/21 02:30:31 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/21 02:30:31 INFO mapred.JobClient:     Map input records=127144
+14/03/21 02:30:31 INFO mapred.JobClient:     Physical memory (bytes) snapshot=343609344
+14/03/21 02:30:31 INFO mapred.JobClient:     Spilled Records=0
+14/03/21 02:30:31 INFO mapred.JobClient:     CPU time spent (ms)=11750
+14/03/21 02:30:31 INFO mapred.JobClient:     Total committed heap usage (bytes)=1017184256
+14/03/21 02:30:31 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1988083712
+14/03/21 02:30:31 INFO mapred.JobClient:     Map output records=127144
+14/03/21 02:30:31 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/21 02:30:31 INFO mapreduce.ImportJobBase: Transferred 3.3117 MB in 26.5422 seconds (127.7673 KB/sec)
+14/03/21 02:30:31 INFO mapreduce.ImportJobBase: Retrieved 127144 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-21
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/22 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/22 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/22 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/22 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/22 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/22 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/1c989c5921f509efd284ea721c5b5bb8/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/22 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/1c989c5921f509efd284ea721c5b5bb8/passenger_account.jar
+14/03/22 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/21 deleted.
+14/03/22 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/22 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/22 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/22 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/22 02:30:05 INFO mapred.JobClient: Running job: job_201403201015_1069
+14/03/22 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/22 02:30:26 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/22 02:30:31 INFO mapred.JobClient: Job complete: job_201403201015_1069
+14/03/22 02:30:31 INFO mapred.JobClient: Counters: 18
+14/03/22 02:30:31 INFO mapred.JobClient:   Job Counters 
+14/03/22 02:30:31 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=18241
+14/03/22 02:30:31 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/22 02:30:31 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/22 02:30:31 INFO mapred.JobClient:     Launched map tasks=1
+14/03/22 02:30:31 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/22 02:30:31 INFO mapred.JobClient:   File Output Format Counters 
+14/03/22 02:30:31 INFO mapred.JobClient:     Bytes Written=12519644
+14/03/22 02:30:31 INFO mapred.JobClient:   FileSystemCounters
+14/03/22 02:30:31 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/22 02:30:31 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31987
+14/03/22 02:30:31 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12519644
+14/03/22 02:30:31 INFO mapred.JobClient:   File Input Format Counters 
+14/03/22 02:30:31 INFO mapred.JobClient:     Bytes Read=0
+14/03/22 02:30:31 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/22 02:30:31 INFO mapred.JobClient:     Map input records=445265
+14/03/22 02:30:31 INFO mapred.JobClient:     Physical memory (bytes) snapshot=343801856
+14/03/22 02:30:31 INFO mapred.JobClient:     Spilled Records=0
+14/03/22 02:30:31 INFO mapred.JobClient:     CPU time spent (ms)=10780
+14/03/22 02:30:31 INFO mapred.JobClient:     Total committed heap usage (bytes)=975306752
+14/03/22 02:30:31 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888890880
+14/03/22 02:30:31 INFO mapred.JobClient:     Map output records=445265
+14/03/22 02:30:31 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/22 02:30:31 INFO mapreduce.ImportJobBase: Transferred 11.9397 MB in 27.0563 seconds (451.8804 KB/sec)
+14/03/22 02:30:31 INFO mapreduce.ImportJobBase: Retrieved 445265 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-22
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/23 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/23 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/23 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/23 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/23 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/23 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/93c54994de5cb8a43a3ab828cc9ad67b/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/23 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/93c54994de5cb8a43a3ab828cc9ad67b/passenger_account.jar
+14/03/23 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/22 deleted.
+14/03/23 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/23 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/23 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/23 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/23 02:30:09 INFO mapred.JobClient: Running job: job_201403201015_1412
+14/03/23 02:30:10 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/23 02:30:30 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/23 02:30:35 INFO mapred.JobClient: Job complete: job_201403201015_1412
+14/03/23 02:30:36 INFO mapred.JobClient: Counters: 18
+14/03/23 02:30:36 INFO mapred.JobClient:   Job Counters 
+14/03/23 02:30:36 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=19048
+14/03/23 02:30:36 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/23 02:30:36 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/23 02:30:36 INFO mapred.JobClient:     Launched map tasks=1
+14/03/23 02:30:36 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/23 02:30:36 INFO mapred.JobClient:   File Output Format Counters 
+14/03/23 02:30:36 INFO mapred.JobClient:     Bytes Written=12488360
+14/03/23 02:30:36 INFO mapred.JobClient:   FileSystemCounters
+14/03/23 02:30:36 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/23 02:30:36 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31983
+14/03/23 02:30:36 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12488360
+14/03/23 02:30:36 INFO mapred.JobClient:   File Input Format Counters 
+14/03/23 02:30:36 INFO mapred.JobClient:     Bytes Read=0
+14/03/23 02:30:36 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/23 02:30:36 INFO mapred.JobClient:     Map input records=445267
+14/03/23 02:30:36 INFO mapred.JobClient:     Physical memory (bytes) snapshot=341180416
+14/03/23 02:30:36 INFO mapred.JobClient:     Spilled Records=0
+14/03/23 02:30:36 INFO mapred.JobClient:     CPU time spent (ms)=6740
+14/03/23 02:30:36 INFO mapred.JobClient:     Total committed heap usage (bytes)=962461696
+14/03/23 02:30:36 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888956416
+14/03/23 02:30:36 INFO mapred.JobClient:     Map output records=445267
+14/03/23 02:30:36 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/23 02:30:36 INFO mapreduce.ImportJobBase: Transferred 11.9098 MB in 31.337 seconds (389.1772 KB/sec)
+14/03/23 02:30:36 INFO mapreduce.ImportJobBase: Retrieved 445267 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-23
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/24 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/24 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/24 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/24 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/24 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/24 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/71a91696e07f71ef4f1887da3837495c/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/24 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/71a91696e07f71ef4f1887da3837495c/passenger_account.jar
+14/03/24 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/23 deleted.
+14/03/24 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/24 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/24 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/24 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/24 02:30:07 INFO mapred.JobClient: Running job: job_201403201015_1726
+14/03/24 02:30:08 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/24 02:30:34 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/24 02:30:39 INFO mapred.JobClient: Job complete: job_201403201015_1726
+14/03/24 02:30:39 INFO mapred.JobClient: Counters: 18
+14/03/24 02:30:39 INFO mapred.JobClient:   Job Counters 
+14/03/24 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=26401
+14/03/24 02:30:39 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/24 02:30:39 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/24 02:30:39 INFO mapred.JobClient:     Launched map tasks=1
+14/03/24 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/24 02:30:39 INFO mapred.JobClient:   File Output Format Counters 
+14/03/24 02:30:39 INFO mapred.JobClient:     Bytes Written=12464351
+14/03/24 02:30:39 INFO mapred.JobClient:   FileSystemCounters
+14/03/24 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/24 02:30:39 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31983
+14/03/24 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12464351
+14/03/24 02:30:39 INFO mapred.JobClient:   File Input Format Counters 
+14/03/24 02:30:39 INFO mapred.JobClient:     Bytes Read=0
+14/03/24 02:30:39 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/24 02:30:39 INFO mapred.JobClient:     Map input records=445267
+14/03/24 02:30:39 INFO mapred.JobClient:     Physical memory (bytes) snapshot=345669632
+14/03/24 02:30:39 INFO mapred.JobClient:     Spilled Records=0
+14/03/24 02:30:39 INFO mapred.JobClient:     CPU time spent (ms)=25350
+14/03/24 02:30:39 INFO mapred.JobClient:     Total committed heap usage (bytes)=975306752
+14/03/24 02:30:39 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888919552
+14/03/24 02:30:39 INFO mapred.JobClient:     Map output records=445267
+14/03/24 02:30:39 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/24 02:30:39 INFO mapreduce.ImportJobBase: Transferred 11.8869 MB in 34.3811 seconds (354.0378 KB/sec)
+14/03/24 02:30:39 INFO mapreduce.ImportJobBase: Retrieved 445267 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-24
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/25 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/25 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/25 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/25 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/25 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/25 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/5abcc15adbcb20814cde2d0c37d9fb52/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/25 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/5abcc15adbcb20814cde2d0c37d9fb52/passenger_account.jar
+14/03/25 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/24 deleted.
+14/03/25 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/25 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/25 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/25 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/25 02:30:05 INFO mapred.JobClient: Running job: job_201403201015_2269
+14/03/25 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/25 02:30:26 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/25 02:30:31 INFO mapred.JobClient: Job complete: job_201403201015_2269
+14/03/25 02:30:31 INFO mapred.JobClient: Counters: 18
+14/03/25 02:30:31 INFO mapred.JobClient:   Job Counters 
+14/03/25 02:30:31 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=18327
+14/03/25 02:30:31 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/25 02:30:31 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/25 02:30:31 INFO mapred.JobClient:     Launched map tasks=1
+14/03/25 02:30:31 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/25 02:30:31 INFO mapred.JobClient:   File Output Format Counters 
+14/03/25 02:30:31 INFO mapred.JobClient:     Bytes Written=12446186
+14/03/25 02:30:31 INFO mapred.JobClient:   FileSystemCounters
+14/03/25 02:30:31 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/25 02:30:31 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31983
+14/03/25 02:30:31 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12446186
+14/03/25 02:30:31 INFO mapred.JobClient:   File Input Format Counters 
+14/03/25 02:30:31 INFO mapred.JobClient:     Bytes Read=0
+14/03/25 02:30:31 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/25 02:30:31 INFO mapred.JobClient:     Map input records=445274
+14/03/25 02:30:31 INFO mapred.JobClient:     Physical memory (bytes) snapshot=342999040
+14/03/25 02:30:31 INFO mapred.JobClient:     Spilled Records=0
+14/03/25 02:30:31 INFO mapred.JobClient:     CPU time spent (ms)=13640
+14/03/25 02:30:31 INFO mapred.JobClient:     Total committed heap usage (bytes)=975372288
+14/03/25 02:30:31 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888755712
+14/03/25 02:30:31 INFO mapred.JobClient:     Map output records=445274
+14/03/25 02:30:31 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/25 02:30:31 INFO mapreduce.ImportJobBase: Transferred 11.8696 MB in 26.8901 seconds (452.0049 KB/sec)
+14/03/25 02:30:31 INFO mapreduce.ImportJobBase: Retrieved 445274 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-25
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/26 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/26 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/26 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/26 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/26 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/26 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/c154fdb7afc921813318cabc0a9b5a26/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/26 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/c154fdb7afc921813318cabc0a9b5a26/passenger_account.jar
+14/03/26 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/25 deleted.
+14/03/26 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/26 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/26 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/26 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/26 02:30:05 INFO mapred.JobClient: Running job: job_201403201015_2735
+14/03/26 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/26 02:30:22 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/26 02:30:27 INFO mapred.JobClient: Job complete: job_201403201015_2735
+14/03/26 02:30:27 INFO mapred.JobClient: Counters: 18
+14/03/26 02:30:27 INFO mapred.JobClient:   Job Counters 
+14/03/26 02:30:27 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=15183
+14/03/26 02:30:27 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/26 02:30:27 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/26 02:30:27 INFO mapred.JobClient:     Launched map tasks=1
+14/03/26 02:30:27 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/26 02:30:27 INFO mapred.JobClient:   File Output Format Counters 
+14/03/26 02:30:27 INFO mapred.JobClient:     Bytes Written=12430436
+14/03/26 02:30:27 INFO mapred.JobClient:   FileSystemCounters
+14/03/26 02:30:27 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/26 02:30:27 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31989
+14/03/26 02:30:27 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12430436
+14/03/26 02:30:27 INFO mapred.JobClient:   File Input Format Counters 
+14/03/26 02:30:27 INFO mapred.JobClient:     Bytes Read=0
+14/03/26 02:30:27 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/26 02:30:27 INFO mapred.JobClient:     Map input records=445274
+14/03/26 02:30:27 INFO mapred.JobClient:     Physical memory (bytes) snapshot=339333120
+14/03/26 02:30:27 INFO mapred.JobClient:     Spilled Records=0
+14/03/26 02:30:27 INFO mapred.JobClient:     CPU time spent (ms)=5160
+14/03/26 02:30:27 INFO mapred.JobClient:     Total committed heap usage (bytes)=962396160
+14/03/26 02:30:27 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888755712
+14/03/26 02:30:27 INFO mapred.JobClient:     Map output records=445274
+14/03/26 02:30:27 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/26 02:30:27 INFO mapreduce.ImportJobBase: Transferred 11.8546 MB in 23.0285 seconds (527.1335 KB/sec)
+14/03/26 02:30:27 INFO mapreduce.ImportJobBase: Retrieved 445274 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-26
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/27 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/27 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/27 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/27 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/27 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/27 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/df098e2a5819b8c47678648baf079103/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/27 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/df098e2a5819b8c47678648baf079103/passenger_account.jar
+14/03/27 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/26 deleted.
+14/03/27 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/27 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/27 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/27 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/27 02:30:06 INFO mapred.JobClient: Running job: job_201403201015_3194
+14/03/27 02:30:07 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/27 02:30:25 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/27 02:30:30 INFO mapred.JobClient: Job complete: job_201403201015_3194
+14/03/27 02:30:30 INFO mapred.JobClient: Counters: 18
+14/03/27 02:30:30 INFO mapred.JobClient:   Job Counters 
+14/03/27 02:30:30 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=15172
+14/03/27 02:30:30 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/27 02:30:30 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/27 02:30:30 INFO mapred.JobClient:     Launched map tasks=1
+14/03/27 02:30:30 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/27 02:30:30 INFO mapred.JobClient:   File Output Format Counters 
+14/03/27 02:30:30 INFO mapred.JobClient:     Bytes Written=12416068
+14/03/27 02:30:30 INFO mapred.JobClient:   FileSystemCounters
+14/03/27 02:30:30 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/27 02:30:30 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31986
+14/03/27 02:30:30 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12416068
+14/03/27 02:30:30 INFO mapred.JobClient:   File Input Format Counters 
+14/03/27 02:30:30 INFO mapred.JobClient:     Bytes Read=0
+14/03/27 02:30:30 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/27 02:30:30 INFO mapred.JobClient:     Map input records=445275
+14/03/27 02:30:30 INFO mapred.JobClient:     Physical memory (bytes) snapshot=338526208
+14/03/27 02:30:30 INFO mapred.JobClient:     Spilled Records=0
+14/03/27 02:30:30 INFO mapred.JobClient:     CPU time spent (ms)=6390
+14/03/27 02:30:30 INFO mapred.JobClient:     Total committed heap usage (bytes)=962527232
+14/03/27 02:30:30 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888989184
+14/03/27 02:30:30 INFO mapred.JobClient:     Map output records=445275
+14/03/27 02:30:30 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/27 02:30:30 INFO mapreduce.ImportJobBase: Transferred 11.8409 MB in 25.3649 seconds (478.0255 KB/sec)
+14/03/27 02:30:30 INFO mapreduce.ImportJobBase: Retrieved 445275 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-27
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/28 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/28 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/28 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/28 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/28 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/28 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/ea2c0138328b03de3e6a9a349a30a736/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/28 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/ea2c0138328b03de3e6a9a349a30a736/passenger_account.jar
+14/03/28 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/27 deleted.
+14/03/28 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/28 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/28 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/28 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/28 02:30:05 INFO mapred.JobClient: Running job: job_201403201015_3673
+14/03/28 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/28 02:30:22 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/28 02:30:27 INFO mapred.JobClient: Job complete: job_201403201015_3673
+14/03/28 02:30:27 INFO mapred.JobClient: Counters: 18
+14/03/28 02:30:27 INFO mapred.JobClient:   Job Counters 
+14/03/28 02:30:27 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=15218
+14/03/28 02:30:27 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/28 02:30:27 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/28 02:30:27 INFO mapred.JobClient:     Launched map tasks=1
+14/03/28 02:30:27 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/28 02:30:27 INFO mapred.JobClient:   File Output Format Counters 
+14/03/28 02:30:27 INFO mapred.JobClient:     Bytes Written=12621010
+14/03/28 02:30:27 INFO mapred.JobClient:   FileSystemCounters
+14/03/28 02:30:27 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/28 02:30:27 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31954
+14/03/28 02:30:27 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12621010
+14/03/28 02:30:27 INFO mapred.JobClient:   File Input Format Counters 
+14/03/28 02:30:27 INFO mapred.JobClient:     Bytes Read=0
+14/03/28 02:30:27 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/28 02:30:27 INFO mapred.JobClient:     Map input records=452769
+14/03/28 02:30:27 INFO mapred.JobClient:     Physical memory (bytes) snapshot=340365312
+14/03/28 02:30:27 INFO mapred.JobClient:     Spilled Records=0
+14/03/28 02:30:27 INFO mapred.JobClient:     CPU time spent (ms)=5230
+14/03/28 02:30:27 INFO mapred.JobClient:     Total committed heap usage (bytes)=962461696
+14/03/28 02:30:27 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888755712
+14/03/28 02:30:27 INFO mapred.JobClient:     Map output records=452769
+14/03/28 02:30:27 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/28 02:30:27 INFO mapreduce.ImportJobBase: Transferred 12.0363 MB in 23.1205 seconds (533.0854 KB/sec)
+14/03/28 02:30:27 INFO mapreduce.ImportJobBase: Retrieved 452769 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-28
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/29 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/29 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/29 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/29 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/29 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/29 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/db6ff4b5c34bbed513636524c2fd0e93/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/29 02:30:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/db6ff4b5c34bbed513636524c2fd0e93/passenger_account.jar
+14/03/29 02:30:09 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/28 deleted.
+14/03/29 02:30:09 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/29 02:30:09 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/29 02:30:09 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/29 02:30:09 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/29 02:30:10 INFO mapred.JobClient: Running job: job_201403201015_4175
+14/03/29 02:30:11 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/29 02:30:34 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/29 02:30:39 INFO mapred.JobClient: Job complete: job_201403201015_4175
+14/03/29 02:30:39 INFO mapred.JobClient: Counters: 18
+14/03/29 02:30:39 INFO mapred.JobClient:   Job Counters 
+14/03/29 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=20851
+14/03/29 02:30:39 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/29 02:30:39 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/29 02:30:39 INFO mapred.JobClient:     Launched map tasks=1
+14/03/29 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/29 02:30:39 INFO mapred.JobClient:   File Output Format Counters 
+14/03/29 02:30:39 INFO mapred.JobClient:     Bytes Written=12604219
+14/03/29 02:30:39 INFO mapred.JobClient:   FileSystemCounters
+14/03/29 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/29 02:30:39 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31972
+14/03/29 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12604219
+14/03/29 02:30:39 INFO mapred.JobClient:   File Input Format Counters 
+14/03/29 02:30:39 INFO mapred.JobClient:     Bytes Read=0
+14/03/29 02:30:39 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/29 02:30:39 INFO mapred.JobClient:     Map input records=452769
+14/03/29 02:30:39 INFO mapred.JobClient:     Physical memory (bytes) snapshot=337981440
+14/03/29 02:30:39 INFO mapred.JobClient:     Spilled Records=0
+14/03/29 02:30:39 INFO mapred.JobClient:     CPU time spent (ms)=8940
+14/03/29 02:30:39 INFO mapred.JobClient:     Total committed heap usage (bytes)=956170240
+14/03/29 02:30:39 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888792576
+14/03/29 02:30:39 INFO mapred.JobClient:     Map output records=452769
+14/03/29 02:30:39 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/29 02:30:39 INFO mapreduce.ImportJobBase: Transferred 12.0203 MB in 30.0943 seconds (409.0079 KB/sec)
+14/03/29 02:30:39 INFO mapreduce.ImportJobBase: Retrieved 452769 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-29
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/30 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/30 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/30 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/30 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/30 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/30 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/af72d007aea3bc2030b3a581d69c38ff/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/30 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/af72d007aea3bc2030b3a581d69c38ff/passenger_account.jar
+14/03/30 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/29 deleted.
+14/03/30 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/30 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/30 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/30 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/30 02:30:05 INFO mapred.JobClient: Running job: job_201403201015_4492
+14/03/30 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/30 02:30:31 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/30 02:30:36 INFO mapred.JobClient: Job complete: job_201403201015_4492
+14/03/30 02:30:36 INFO mapred.JobClient: Counters: 18
+14/03/30 02:30:36 INFO mapred.JobClient:   Job Counters 
+14/03/30 02:30:36 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=23575
+14/03/30 02:30:36 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/30 02:30:36 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/30 02:30:36 INFO mapred.JobClient:     Launched map tasks=1
+14/03/30 02:30:36 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/30 02:30:36 INFO mapred.JobClient:   File Output Format Counters 
+14/03/30 02:30:36 INFO mapred.JobClient:     Bytes Written=12586107
+14/03/30 02:30:36 INFO mapred.JobClient:   FileSystemCounters
+14/03/30 02:30:36 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/30 02:30:36 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31972
+14/03/30 02:30:36 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12586107
+14/03/30 02:30:36 INFO mapred.JobClient:   File Input Format Counters 
+14/03/30 02:30:36 INFO mapred.JobClient:     Bytes Read=0
+14/03/30 02:30:36 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/30 02:30:36 INFO mapred.JobClient:     Map input records=452769
+14/03/30 02:30:36 INFO mapred.JobClient:     Physical memory (bytes) snapshot=342736896
+14/03/30 02:30:36 INFO mapred.JobClient:     Spilled Records=0
+14/03/30 02:30:36 INFO mapred.JobClient:     CPU time spent (ms)=17180
+14/03/30 02:30:36 INFO mapred.JobClient:     Total committed heap usage (bytes)=1014956032
+14/03/30 02:30:36 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888923648
+14/03/30 02:30:36 INFO mapred.JobClient:     Map output records=452769
+14/03/30 02:30:36 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/30 02:30:36 INFO mapreduce.ImportJobBase: Transferred 12.003 MB in 32.3481 seconds (379.9636 KB/sec)
+14/03/30 02:30:36 INFO mapreduce.ImportJobBase: Retrieved 452769 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-30
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/31 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/31 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/31 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/03/31 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/31 02:30:02 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_account` AS t LIMIT 1
+14/03/31 02:30:02 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/007bcb5a52367a3e9bee278e69ec6071/passenger_account.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/31 02:30:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/007bcb5a52367a3e9bee278e69ec6071/passenger_account.jar
+14/03/31 02:30:04 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/passenger_account/2014/03/30 deleted.
+14/03/31 02:30:04 WARN manager.MySQLManager: It looks like you are importing from mysql.
+14/03/31 02:30:04 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+14/03/31 02:30:04 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+14/03/31 02:30:04 INFO mapreduce.ImportJobBase: Beginning import of passenger_account
+14/03/31 02:30:05 INFO mapred.JobClient: Running job: job_201403201015_4875
+14/03/31 02:30:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/31 02:30:34 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/31 02:30:39 INFO mapred.JobClient: Job complete: job_201403201015_4875
+14/03/31 02:30:39 INFO mapred.JobClient: Counters: 18
+14/03/31 02:30:39 INFO mapred.JobClient:   Job Counters 
+14/03/31 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24788
+14/03/31 02:30:39 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/31 02:30:39 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/31 02:30:39 INFO mapred.JobClient:     Launched map tasks=1
+14/03/31 02:30:39 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/31 02:30:39 INFO mapred.JobClient:   File Output Format Counters 
+14/03/31 02:30:39 INFO mapred.JobClient:     Bytes Written=12572129
+14/03/31 02:30:39 INFO mapred.JobClient:   FileSystemCounters
+14/03/31 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/03/31 02:30:39 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31963
+14/03/31 02:30:39 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12572129
+14/03/31 02:30:39 INFO mapred.JobClient:   File Input Format Counters 
+14/03/31 02:30:39 INFO mapred.JobClient:     Bytes Read=0
+14/03/31 02:30:39 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/31 02:30:39 INFO mapred.JobClient:     Map input records=452769
+14/03/31 02:30:39 INFO mapred.JobClient:     Physical memory (bytes) snapshot=348979200
+14/03/31 02:30:39 INFO mapred.JobClient:     Spilled Records=0
+14/03/31 02:30:39 INFO mapred.JobClient:     CPU time spent (ms)=18920
+14/03/31 02:30:39 INFO mapred.JobClient:     Total committed heap usage (bytes)=1014824960
+14/03/31 02:30:39 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1888612352
+14/03/31 02:30:39 INFO mapred.JobClient:     Map output records=452769
+14/03/31 02:30:39 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/03/31 02:30:39 INFO mapreduce.ImportJobBase: Transferred 11.9897 MB in 35.2398 seconds (348.3978 KB/sec)
+14/03/31 02:30:39 INFO mapreduce.ImportJobBase: Retrieved 452769 records.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-31
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/04/01 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/04/01 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/04/01 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/04/01 02:30:02 ERROR manager.SqlManager: Error executing statement: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:801)
+	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:52)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:660)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:683)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:240)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:223)
+	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:347)
+	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1277)
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1089)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:65)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 29 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 30 more
+14/04/01 02:30:02 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: No columns to generate for ClassWriter
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1095)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:65)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-01
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/04/02 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/04/02 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/04/02 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/04/02 02:30:05 ERROR manager.SqlManager: Error executing statement: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:801)
+	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:52)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:660)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:683)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:240)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:223)
+	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:347)
+	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1277)
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1089)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:65)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 29 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 30 more
+14/04/02 02:30:05 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: No columns to generate for ClassWriter
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1095)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:65)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-02
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Error: JAVA_HOME is not set and could not be found.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-03
+Error: /usr/lib/hadoop does not exist!
+Please set $HADOOP_COMMON_HOME to the root of your Hadoop installation.
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-04
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+14/04/05 02:30:08 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/04/05 02:30:11 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/04/05 02:30:11 INFO tool.CodeGenTool: Beginning code generation
+14/04/05 02:30:16 ERROR manager.SqlManager: Error executing statement: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:801)
+	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:52)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:660)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:683)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:240)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:223)
+	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:347)
+	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1277)
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1089)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 29 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 30 more
+14/04/05 02:30:16 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: No columns to generate for ClassWriter
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1095)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-05
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+14/04/06 02:30:01 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/04/06 02:30:01 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/04/06 02:30:01 INFO tool.CodeGenTool: Beginning code generation
+14/04/06 02:30:05 ERROR manager.SqlManager: Error executing statement: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:801)
+	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:52)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:660)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:683)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:240)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:223)
+	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:347)
+	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1277)
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1089)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 29 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 30 more
+14/04/06 02:30:05 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: No columns to generate for ClassWriter
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1095)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-06
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+14/04/07 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/04/07 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/04/07 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/04/07 02:30:05 ERROR manager.SqlManager: Error executing statement: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:801)
+	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:52)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:660)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:683)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:240)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:223)
+	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:347)
+	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1277)
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1089)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 29 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 30 more
+14/04/07 02:30:05 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: No columns to generate for ClassWriter
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1095)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-07
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+14/04/08 02:30:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/04/08 02:30:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/04/08 02:30:02 INFO tool.CodeGenTool: Beginning code generation
+14/04/08 02:30:05 ERROR manager.SqlManager: Error executing statement: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at org.apache.sqoop.manager.SqlManager.makeConnection(SqlManager.java:801)
+	at org.apache.sqoop.manager.GenericJdbcManager.getConnection(GenericJdbcManager.java:52)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:660)
+	at org.apache.sqoop.manager.SqlManager.execute(SqlManager.java:683)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypesForRawQuery(SqlManager.java:240)
+	at org.apache.sqoop.manager.SqlManager.getColumnTypes(SqlManager.java:223)
+	at org.apache.sqoop.manager.ConnManager.getColumnTypes(ConnManager.java:347)
+	at org.apache.sqoop.orm.ClassWriter.getColumnTypes(ClassWriter.java:1277)
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1089)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 29 more
+Caused by: java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 30 more
+14/04/08 02:30:05 ERROR tool.ImportTool: Encountered IOException running import job: java.io.IOException: No columns to generate for ClassWriter
+	at org.apache.sqoop.orm.ClassWriter.generate(ClassWriter.java:1095)
+	at org.apache.sqoop.tool.CodeGenTool.generateORM(CodeGenTool.java:96)
+	at org.apache.sqoop.tool.ImportTool.importTable(ImportTool.java:396)
+	at org.apache.sqoop.tool.ImportTool.run(ImportTool.java:502)
+	at org.apache.sqoop.Sqoop.run(Sqoop.java:145)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.sqoop.Sqoop.runSqoop(Sqoop.java:181)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:220)
+	at org.apache.sqoop.Sqoop.runTool(Sqoop.java:229)
+	at org.apache.sqoop.Sqoop.main(Sqoop.java:238)
+

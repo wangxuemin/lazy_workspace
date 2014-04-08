@@ -1,0 +1,5 @@
+mysql_masterdb_ip=113.11.197.199
+mysql_masterdb_port=3366
+app_dbname=transaction
+db_username=app_r
+db_password=app_r

@@ -1,0 +1,2173 @@
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM driverrecommend WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:35:03 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:35:03 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:35:03 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:35:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `driverrecommend` AS t LIMIT 1
+14/03/14 09:35:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `driverrecommend` AS t LIMIT 1
+14/03/14 09:35:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/1d49c1d6662fb37b2316b26a5b460b08/driverrecommend.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:35:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/1d49c1d6662fb37b2316b26a5b460b08/driverrecommend.jar
+14/03/14 09:35:04 INFO mapreduce.ExportJobBase: Beginning export of driverrecommend
+14/03/14 09:35:05 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:35:05 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:35:05 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:35:05 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:35:05 INFO mapred.JobClient: Running job: job_201403051733_6699
+14/03/14 09:35:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:35:22 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:35:23 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:35:28 INFO mapred.JobClient: Job complete: job_201403051733_6699
+14/03/14 09:35:28 INFO mapred.JobClient: Counters: 19
+14/03/14 09:35:28 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:35:28 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=27136
+14/03/14 09:35:28 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:35:28 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:35:28 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:35:28 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:35:28 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:35:28 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:35:28 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:35:28 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:35:28 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:35:28 INFO mapred.JobClient:     HDFS_BYTES_READ=13739
+14/03/14 09:35:28 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126392
+14/03/14 09:35:28 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:35:28 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:35:28 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:35:28 INFO mapred.JobClient:     Map input records=184
+14/03/14 09:35:28 INFO mapred.JobClient:     Physical memory (bytes) snapshot=580911104
+14/03/14 09:35:28 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:35:28 INFO mapred.JobClient:     CPU time spent (ms)=4710
+14/03/14 09:35:28 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:35:28 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7544209408
+14/03/14 09:35:28 INFO mapred.JobClient:     Map output records=184
+14/03/14 09:35:28 INFO mapred.JobClient:     SPLIT_RAW_BYTES=640
+14/03/14 09:35:28 INFO mapreduce.ExportJobBase: Transferred 13.417 KB in 23.8313 seconds (576.5115 bytes/sec)
+14/03/14 09:35:28 INFO mapreduce.ExportJobBase: Exported 184 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerCall WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:35:29 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:35:29 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:35:29 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:35:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCall` AS t LIMIT 1
+14/03/14 09:35:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCall` AS t LIMIT 1
+14/03/14 09:35:29 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/ad649597b237e951da2c1053528e91b6/PassengerCall.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:35:30 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/ad649597b237e951da2c1053528e91b6/PassengerCall.jar
+14/03/14 09:35:30 INFO mapreduce.ExportJobBase: Beginning export of PassengerCall
+14/03/14 09:35:31 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:35:31 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:35:31 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:35:31 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:35:31 INFO mapred.JobClient: Running job: job_201403051733_6700
+14/03/14 09:35:32 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:35:46 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:35:47 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:35:52 INFO mapred.JobClient: Job complete: job_201403051733_6700
+14/03/14 09:35:52 INFO mapred.JobClient: Counters: 19
+14/03/14 09:35:52 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:35:52 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24546
+14/03/14 09:35:52 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:35:52 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:35:52 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:35:52 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:35:52 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:35:52 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:35:52 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:35:52 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:35:52 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:35:52 INFO mapred.JobClient:     HDFS_BYTES_READ=117065
+14/03/14 09:35:52 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126902
+14/03/14 09:35:52 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:35:52 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:35:52 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:35:52 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:35:52 INFO mapred.JobClient:     Physical memory (bytes) snapshot=624275456
+14/03/14 09:35:52 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:35:52 INFO mapred.JobClient:     CPU time spent (ms)=5870
+14/03/14 09:35:52 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:35:52 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546621952
+14/03/14 09:35:52 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:35:52 INFO mapred.JobClient:     SPLIT_RAW_BYTES=726
+14/03/14 09:35:52 INFO mapreduce.ExportJobBase: Transferred 114.3213 KB in 21.7254 seconds (5.2621 KB/sec)
+14/03/14 09:35:52 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM wx_money_pay WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:35:53 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:35:53 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:35:53 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:35:54 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wx_money_pay` AS t LIMIT 1
+14/03/14 09:35:54 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wx_money_pay` AS t LIMIT 1
+14/03/14 09:35:54 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/9442168f2ec39c3ceb07cbd5979e83fa/wx_money_pay.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:35:54 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/9442168f2ec39c3ceb07cbd5979e83fa/wx_money_pay.jar
+14/03/14 09:35:54 INFO mapreduce.ExportJobBase: Beginning export of wx_money_pay
+14/03/14 09:35:55 WARN mapreduce.ExportJobBase: IOException checking input file header: java.io.EOFException
+14/03/14 09:35:55 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:35:55 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:35:55 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:35:55 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:35:55 INFO mapred.JobClient: Running job: job_201403051733_6701
+14/03/14 09:35:56 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:36:09 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:36:14 INFO mapred.JobClient: Job complete: job_201403051733_6701
+14/03/14 09:36:14 INFO mapred.JobClient: Counters: 17
+14/03/14 09:36:14 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:36:14 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=12342
+14/03/14 09:36:14 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:36:14 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:36:14 INFO mapred.JobClient:     Launched map tasks=1
+14/03/14 09:36:14 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:36:14 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:36:14 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:36:14 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:36:14 INFO mapred.JobClient:     HDFS_BYTES_READ=157
+14/03/14 09:36:14 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31550
+14/03/14 09:36:14 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:36:14 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:36:14 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:36:14 INFO mapred.JobClient:     Map input records=0
+14/03/14 09:36:14 INFO mapred.JobClient:     Physical memory (bytes) snapshot=154918912
+14/03/14 09:36:14 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:36:14 INFO mapred.JobClient:     CPU time spent (ms)=620
+14/03/14 09:36:14 INFO mapred.JobClient:     Total committed heap usage (bytes)=1010892800
+14/03/14 09:36:14 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1886650368
+14/03/14 09:36:14 INFO mapred.JobClient:     Map output records=0
+14/03/14 09:36:14 INFO mapred.JobClient:     SPLIT_RAW_BYTES=157
+14/03/14 09:36:14 INFO mapreduce.ExportJobBase: Transferred 157 bytes in 19.614 seconds (8.0045 bytes/sec)
+14/03/14 09:36:14 INFO mapreduce.ExportJobBase: Exported 0 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderPre WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:36:16 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:36:16 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:36:16 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:36:16 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderPre` AS t LIMIT 1
+14/03/14 09:36:16 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderPre` AS t LIMIT 1
+14/03/14 09:36:16 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/737c214b2a5b1c0a67bcb580a2e51039/OrderPre.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:36:17 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/737c214b2a5b1c0a67bcb580a2e51039/OrderPre.jar
+14/03/14 09:36:17 INFO mapreduce.ExportJobBase: Beginning export of OrderPre
+14/03/14 09:36:18 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:36:18 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:36:18 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:36:18 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:36:18 INFO mapred.JobClient: Running job: job_201403051733_6702
+14/03/14 09:36:19 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:36:32 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:36:37 INFO mapred.JobClient: Job complete: job_201403051733_6702
+14/03/14 09:36:37 INFO mapred.JobClient: Counters: 19
+14/03/14 09:36:37 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:36:37 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24431
+14/03/14 09:36:37 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:36:37 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:36:37 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:36:37 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:36:37 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:36:37 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:36:37 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:36:37 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:36:37 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:36:37 INFO mapred.JobClient:     HDFS_BYTES_READ=97352
+14/03/14 09:36:37 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126427
+14/03/14 09:36:37 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:36:37 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:36:37 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:36:37 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:36:37 INFO mapred.JobClient:     Physical memory (bytes) snapshot=618364928
+14/03/14 09:36:37 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:36:37 INFO mapred.JobClient:     CPU time spent (ms)=5140
+14/03/14 09:36:37 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:36:37 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546458112
+14/03/14 09:36:37 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:36:37 INFO mapred.JobClient:     SPLIT_RAW_BYTES=701
+14/03/14 09:36:37 INFO mapreduce.ExportJobBase: Transferred 95.0703 KB in 19.8786 seconds (4.7825 KB/sec)
+14/03/14 09:36:37 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverbdregthreeweek/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverregperiod3weeks/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderDay WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:36:40 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:36:40 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:36:40 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:36:40 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderDay` AS t LIMIT 1
+14/03/14 09:36:40 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderDay` AS t LIMIT 1
+14/03/14 09:36:40 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/4f060c3871fcd228a2ee8353cb5762b5/OrderDay.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:36:41 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/4f060c3871fcd228a2ee8353cb5762b5/OrderDay.jar
+14/03/14 09:36:41 INFO mapreduce.ExportJobBase: Beginning export of OrderDay
+14/03/14 09:36:41 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:36:41 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:36:42 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:36:42 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:36:42 INFO mapred.JobClient: Running job: job_201403051733_6703
+14/03/14 09:36:43 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:36:56 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:36:57 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:37:02 INFO mapred.JobClient: Job complete: job_201403051733_6703
+14/03/14 09:37:02 INFO mapred.JobClient: Counters: 19
+14/03/14 09:37:02 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:37:02 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24364
+14/03/14 09:37:02 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:37:02 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:37:02 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:37:02 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:37:02 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:37:02 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:37:02 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:37:02 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:37:02 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:37:02 INFO mapred.JobClient:     HDFS_BYTES_READ=83702
+14/03/14 09:37:02 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126354
+14/03/14 09:37:02 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:37:02 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:37:02 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:37:02 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:37:02 INFO mapred.JobClient:     Physical memory (bytes) snapshot=629387264
+14/03/14 09:37:02 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:37:02 INFO mapred.JobClient:     CPU time spent (ms)=4720
+14/03/14 09:37:02 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:37:02 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546765312
+14/03/14 09:37:02 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:37:02 INFO mapred.JobClient:     SPLIT_RAW_BYTES=701
+14/03/14 09:37:02 INFO mapreduce.ExportJobBase: Transferred 81.7402 KB in 20.6618 seconds (3.9561 KB/sec)
+14/03/14 09:37:02 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM mis_order WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:37:03 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:37:03 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:37:03 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:37:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `mis_order` AS t LIMIT 1
+14/03/14 09:37:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `mis_order` AS t LIMIT 1
+14/03/14 09:37:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/55e80d1ef32d00307e299d8ace001118/mis_order.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:37:04 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/55e80d1ef32d00307e299d8ace001118/mis_order.jar
+14/03/14 09:37:04 INFO mapreduce.ExportJobBase: Beginning export of mis_order
+14/03/14 09:37:05 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:37:05 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:37:05 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:37:05 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:37:05 INFO mapred.JobClient: Running job: job_201403051733_6704
+14/03/14 09:37:06 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:37:19 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:37:20 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:37:25 INFO mapred.JobClient: Job complete: job_201403051733_6704
+14/03/14 09:37:25 INFO mapred.JobClient: Counters: 18
+14/03/14 09:37:25 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:37:25 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24275
+14/03/14 09:37:25 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:37:25 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:37:25 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:37:25 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:37:25 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:37:25 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:37:25 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:37:25 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:37:25 INFO mapred.JobClient:     HDFS_BYTES_READ=17015
+14/03/14 09:37:25 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126593
+14/03/14 09:37:25 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:37:25 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:37:25 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:37:25 INFO mapred.JobClient:     Map input records=128
+14/03/14 09:37:25 INFO mapred.JobClient:     Physical memory (bytes) snapshot=612048896
+14/03/14 09:37:25 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:37:25 INFO mapred.JobClient:     CPU time spent (ms)=3180
+14/03/14 09:37:25 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:37:25 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7543574528
+14/03/14 09:37:25 INFO mapred.JobClient:     Map output records=128
+14/03/14 09:37:25 INFO mapred.JobClient:     SPLIT_RAW_BYTES=706
+14/03/14 09:37:25 INFO mapreduce.ExportJobBase: Transferred 16.6162 KB in 20.6031 seconds (825.8453 bytes/sec)
+14/03/14 09:37:25 INFO mapreduce.ExportJobBase: Exported 128 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderText WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:37:26 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:37:26 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:37:26 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:37:26 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderText` AS t LIMIT 1
+14/03/14 09:37:26 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderText` AS t LIMIT 1
+14/03/14 09:37:26 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/d85adcd6a1269618f57ae25465c30d41/OrderText.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:37:27 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/d85adcd6a1269618f57ae25465c30d41/OrderText.jar
+14/03/14 09:37:27 INFO mapreduce.ExportJobBase: Beginning export of OrderText
+14/03/14 09:37:28 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:37:28 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:37:28 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:37:28 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:37:28 INFO mapred.JobClient: Running job: job_201403051733_6705
+14/03/14 09:37:29 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:37:43 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:37:44 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:37:49 INFO mapred.JobClient: Job complete: job_201403051733_6705
+14/03/14 09:37:49 INFO mapred.JobClient: Counters: 18
+14/03/14 09:37:49 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:37:49 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24245
+14/03/14 09:37:49 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:37:49 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:37:49 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:37:49 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:37:49 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:37:49 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:37:49 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:37:49 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:37:49 INFO mapred.JobClient:     HDFS_BYTES_READ=83181
+14/03/14 09:37:49 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126234
+14/03/14 09:37:49 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:37:49 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:37:49 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:37:49 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:37:49 INFO mapred.JobClient:     Physical memory (bytes) snapshot=620584960
+14/03/14 09:37:49 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:37:49 INFO mapred.JobClient:     CPU time spent (ms)=4590
+14/03/14 09:37:49 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:37:49 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:37:49 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:37:49 INFO mapred.JobClient:     SPLIT_RAW_BYTES=706
+14/03/14 09:37:49 INFO mapreduce.ExportJobBase: Transferred 81.2314 KB in 21.6908 seconds (3.745 KB/sec)
+14/03/14 09:37:49 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/wechat_senditem_total/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/wx_usebalance_data/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/wechat_robenvelope_statistical/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerCallMonth WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:37:53 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:37:53 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:37:53 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:37:53 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCallMonth` AS t LIMIT 1
+14/03/14 09:37:53 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCallMonth` AS t LIMIT 1
+14/03/14 09:37:53 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/9799658a0c4635e72768c2687ba0a4b2/PassengerCallMonth.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:37:54 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/9799658a0c4635e72768c2687ba0a4b2/PassengerCallMonth.jar
+14/03/14 09:37:54 INFO mapreduce.ExportJobBase: Beginning export of PassengerCallMonth
+14/03/14 09:37:55 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:37:55 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:37:55 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:37:55 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:37:55 INFO mapred.JobClient: Running job: job_201403051733_6706
+14/03/14 09:37:56 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:38:09 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/14 09:38:10 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:38:11 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:38:16 INFO mapred.JobClient: Job complete: job_201403051733_6706
+14/03/14 09:38:16 INFO mapred.JobClient: Counters: 19
+14/03/14 09:38:16 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:38:16 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24272
+14/03/14 09:38:16 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:38:16 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:38:16 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:38:16 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:38:16 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:38:16 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:38:16 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:38:16 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:38:16 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:38:16 INFO mapred.JobClient:     HDFS_BYTES_READ=63183
+14/03/14 09:38:16 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126307
+14/03/14 09:38:16 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:38:16 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:38:16 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:38:16 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:38:16 INFO mapred.JobClient:     Physical memory (bytes) snapshot=605122560
+14/03/14 09:38:16 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:38:16 INFO mapred.JobClient:     CPU time spent (ms)=4740
+14/03/14 09:38:16 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:38:16 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546458112
+14/03/14 09:38:16 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:38:16 INFO mapred.JobClient:     SPLIT_RAW_BYTES=652
+14/03/14 09:38:16 INFO mapreduce.ExportJobBase: Transferred 61.7021 KB in 21.6431 seconds (2.8509 KB/sec)
+14/03/14 09:38:16 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerReg WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:38:17 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:38:17 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:38:17 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:38:17 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerReg` AS t LIMIT 1
+14/03/14 09:38:17 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerReg` AS t LIMIT 1
+14/03/14 09:38:17 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/92c840f8013c4869cd3d810552c16876/PassengerReg.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:38:18 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/92c840f8013c4869cd3d810552c16876/PassengerReg.jar
+14/03/14 09:38:18 INFO mapreduce.ExportJobBase: Beginning export of PassengerReg
+14/03/14 09:38:19 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:38:19 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:38:19 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:38:19 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:38:19 INFO mapred.JobClient: Running job: job_201403051733_6707
+14/03/14 09:38:20 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:38:34 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:38:35 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:38:40 INFO mapred.JobClient: Job complete: job_201403051733_6707
+14/03/14 09:38:40 INFO mapred.JobClient: Counters: 18
+14/03/14 09:38:40 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:38:40 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24380
+14/03/14 09:38:40 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:38:40 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:38:40 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:38:40 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:38:40 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:38:40 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:38:40 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:38:40 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:38:40 INFO mapred.JobClient:     HDFS_BYTES_READ=65488
+14/03/14 09:38:40 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126225
+14/03/14 09:38:40 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:38:40 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:38:40 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:38:40 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:38:40 INFO mapred.JobClient:     Physical memory (bytes) snapshot=615710720
+14/03/14 09:38:40 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:38:40 INFO mapred.JobClient:     CPU time spent (ms)=4500
+14/03/14 09:38:40 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:38:40 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546765312
+14/03/14 09:38:40 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:38:40 INFO mapred.JobClient:     SPLIT_RAW_BYTES=721
+14/03/14 09:38:40 INFO mapreduce.ExportJobBase: Transferred 63.9531 KB in 21.5734 seconds (2.9644 KB/sec)
+14/03/14 09:38:40 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/newdrivercheckdata/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM recommended_passenger WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:38:42 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:38:42 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:38:42 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:38:42 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `recommended_passenger` AS t LIMIT 1
+14/03/14 09:38:42 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `recommended_passenger` AS t LIMIT 1
+14/03/14 09:38:42 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/545ae8ea9b1ae27a55ae7a99d8ba7b44/recommended_passenger.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:38:43 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/545ae8ea9b1ae27a55ae7a99d8ba7b44/recommended_passenger.jar
+14/03/14 09:38:43 INFO mapreduce.ExportJobBase: Beginning export of recommended_passenger
+14/03/14 09:38:44 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:38:44 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:38:44 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:38:44 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:38:44 INFO mapred.JobClient: Running job: job_201403051733_6708
+14/03/14 09:38:45 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:38:58 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:38:59 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:39:04 INFO mapred.JobClient: Job complete: job_201403051733_6708
+14/03/14 09:39:04 INFO mapred.JobClient: Counters: 19
+14/03/14 09:39:04 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:39:04 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24388
+14/03/14 09:39:04 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:39:04 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:39:04 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:39:04 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:39:04 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:39:04 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:39:04 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:39:04 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:39:04 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:39:04 INFO mapred.JobClient:     HDFS_BYTES_READ=17490
+14/03/14 09:39:04 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=127001
+14/03/14 09:39:04 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:39:04 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:39:04 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:39:04 INFO mapred.JobClient:     Map input records=184
+14/03/14 09:39:04 INFO mapred.JobClient:     Physical memory (bytes) snapshot=614735872
+14/03/14 09:39:04 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:39:04 INFO mapred.JobClient:     CPU time spent (ms)=3510
+14/03/14 09:39:04 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:39:04 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7543443456
+14/03/14 09:39:04 INFO mapred.JobClient:     Map output records=184
+14/03/14 09:39:04 INFO mapred.JobClient:     SPLIT_RAW_BYTES=766
+14/03/14 09:39:04 INFO mapreduce.ExportJobBase: Transferred 17.0801 KB in 20.5733 seconds (850.1291 bytes/sec)
+14/03/14 09:39:04 INFO mapreduce.ExportJobBase: Exported 184 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverapprovedthreeweeks/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerRegAndCall WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:39:06 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:39:06 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:39:06 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:39:06 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerRegAndCall` AS t LIMIT 1
+14/03/14 09:39:06 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerRegAndCall` AS t LIMIT 1
+14/03/14 09:39:06 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/73fa296b014425b287cd972438ef5d7a/PassengerRegAndCall.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:39:07 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/73fa296b014425b287cd972438ef5d7a/PassengerRegAndCall.jar
+14/03/14 09:39:07 INFO mapreduce.ExportJobBase: Beginning export of PassengerRegAndCall
+14/03/14 09:39:08 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:39:08 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:39:08 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:39:08 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:39:08 INFO mapred.JobClient: Running job: job_201403051733_6709
+14/03/14 09:39:09 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:39:22 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:39:23 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:39:28 INFO mapred.JobClient: Job complete: job_201403051733_6709
+14/03/14 09:39:28 INFO mapred.JobClient: Counters: 19
+14/03/14 09:39:28 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:39:28 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24402
+14/03/14 09:39:28 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:39:28 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:39:28 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:39:28 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:39:28 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:39:28 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:39:28 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:39:28 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:39:28 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:39:28 INFO mapred.JobClient:     HDFS_BYTES_READ=63654
+14/03/14 09:39:28 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126355
+14/03/14 09:39:28 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:39:28 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:39:28 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:39:28 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:39:28 INFO mapred.JobClient:     Physical memory (bytes) snapshot=613920768
+14/03/14 09:39:28 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:39:28 INFO mapred.JobClient:     CPU time spent (ms)=4650
+14/03/14 09:39:28 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:39:28 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:39:28 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:39:28 INFO mapred.JobClient:     SPLIT_RAW_BYTES=656
+14/03/14 09:39:28 INFO mapreduce.ExportJobBase: Transferred 62.1621 KB in 20.88 seconds (2.9771 KB/sec)
+14/03/14 09:39:28 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerCallFirst WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:39:29 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:39:29 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:39:29 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:39:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCallFirst` AS t LIMIT 1
+14/03/14 09:39:30 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCallFirst` AS t LIMIT 1
+14/03/14 09:39:30 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/a4d50f4fa7071ecaf8636d9cbf49c478/PassengerCallFirst.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:39:30 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/a4d50f4fa7071ecaf8636d9cbf49c478/PassengerCallFirst.jar
+14/03/14 09:39:30 INFO mapreduce.ExportJobBase: Beginning export of PassengerCallFirst
+14/03/14 09:39:31 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:39:31 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:39:31 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:39:31 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:39:31 INFO mapred.JobClient: Running job: job_201403051733_6710
+14/03/14 09:39:32 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:39:46 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:39:51 INFO mapred.JobClient: Job complete: job_201403051733_6710
+14/03/14 09:39:51 INFO mapred.JobClient: Counters: 19
+14/03/14 09:39:51 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:39:51 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24250
+14/03/14 09:39:51 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:39:51 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:39:51 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:39:51 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:39:51 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:39:51 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:39:51 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:39:51 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:39:51 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:39:51 INFO mapred.JobClient:     HDFS_BYTES_READ=83866
+14/03/14 09:39:51 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126403
+14/03/14 09:39:51 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:39:51 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:39:51 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:39:51 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:39:51 INFO mapred.JobClient:     Physical memory (bytes) snapshot=618921984
+14/03/14 09:39:51 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:39:51 INFO mapred.JobClient:     CPU time spent (ms)=4610
+14/03/14 09:39:51 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:39:51 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546765312
+14/03/14 09:39:51 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:39:51 INFO mapred.JobClient:     SPLIT_RAW_BYTES=751
+14/03/14 09:39:51 INFO mapreduce.ExportJobBase: Transferred 81.9004 KB in 20.6889 seconds (3.9587 KB/sec)
+14/03/14 09:39:51 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverretentionrates/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM wx_lj WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:39:53 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:39:53 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:39:53 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:39:54 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wx_lj` AS t LIMIT 1
+14/03/14 09:39:54 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wx_lj` AS t LIMIT 1
+14/03/14 09:39:54 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/3a455eef8ad8e203aa336ad4ba78e1fb/wx_lj.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:39:55 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/3a455eef8ad8e203aa336ad4ba78e1fb/wx_lj.jar
+14/03/14 09:39:55 INFO mapreduce.ExportJobBase: Beginning export of wx_lj
+14/03/14 09:39:55 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:39:55 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:39:55 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:39:55 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:39:55 INFO mapred.JobClient: Running job: job_201403051733_6711
+14/03/14 09:39:56 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:40:10 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:40:15 INFO mapred.JobClient: Job complete: job_201403051733_6711
+14/03/14 09:40:15 INFO mapred.JobClient: Counters: 19
+14/03/14 09:40:15 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:40:15 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24299
+14/03/14 09:40:15 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:40:15 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:40:15 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:40:15 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:40:15 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:40:15 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:40:15 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:40:15 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:40:15 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:40:15 INFO mapred.JobClient:     HDFS_BYTES_READ=17460
+14/03/14 09:40:15 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126574
+14/03/14 09:40:15 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:40:15 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:40:15 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:40:15 INFO mapred.JobClient:     Map input records=119
+14/03/14 09:40:15 INFO mapred.JobClient:     Physical memory (bytes) snapshot=608501760
+14/03/14 09:40:15 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:40:15 INFO mapred.JobClient:     CPU time spent (ms)=3190
+14/03/14 09:40:15 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:40:15 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7542390784
+14/03/14 09:40:15 INFO mapred.JobClient:     Map output records=119
+14/03/14 09:40:15 INFO mapred.JobClient:     SPLIT_RAW_BYTES=686
+14/03/14 09:40:16 INFO mapreduce.ExportJobBase: Transferred 17.0508 KB in 20.6455 seconds (845.7069 bytes/sec)
+14/03/14 09:40:16 INFO mapreduce.ExportJobBase: Exported 119 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM passenger_needdata WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:40:17 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:40:17 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:40:17 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:40:17 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_needdata` AS t LIMIT 1
+14/03/14 09:40:17 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `passenger_needdata` AS t LIMIT 1
+14/03/14 09:40:17 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/41a75d10f3ebecefaf727354c64966df/passenger_needdata.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:40:18 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/41a75d10f3ebecefaf727354c64966df/passenger_needdata.jar
+14/03/14 09:40:18 INFO mapreduce.ExportJobBase: Beginning export of passenger_needdata
+14/03/14 09:40:19 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:40:19 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:40:19 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:40:19 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:40:19 INFO mapred.JobClient: Running job: job_201403051733_6712
+14/03/14 09:40:20 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:40:33 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/14 09:40:34 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:40:35 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:40:40 INFO mapred.JobClient: Job complete: job_201403051733_6712
+14/03/14 09:40:40 INFO mapred.JobClient: Counters: 18
+14/03/14 09:40:40 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:40:40 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24338
+14/03/14 09:40:40 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:40:40 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:40:40 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:40:40 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:40:40 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:40:40 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:40:40 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:40:40 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:40:40 INFO mapred.JobClient:     HDFS_BYTES_READ=13598
+14/03/14 09:40:40 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126565
+14/03/14 09:40:40 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:40:40 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:40:40 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:40:40 INFO mapred.JobClient:     Map input records=128
+14/03/14 09:40:40 INFO mapred.JobClient:     Physical memory (bytes) snapshot=609427456
+14/03/14 09:40:40 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:40:40 INFO mapred.JobClient:     CPU time spent (ms)=3090
+14/03/14 09:40:40 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:40:40 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7543443456
+14/03/14 09:40:40 INFO mapred.JobClient:     Map output records=128
+14/03/14 09:40:40 INFO mapred.JobClient:     SPLIT_RAW_BYTES=652
+14/03/14 09:40:40 INFO mapreduce.ExportJobBase: Transferred 13.2793 KB in 21.6203 seconds (628.9461 bytes/sec)
+14/03/14 09:40:40 INFO mapreduce.ExportJobBase: Exported 128 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverweek/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverregperiod3weeksand3months/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverregperiodbefore6months/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM webapp_wechathistory WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:40:43 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:40:43 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:40:43 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:40:43 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `webapp_wechathistory` AS t LIMIT 1
+14/03/14 09:40:43 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `webapp_wechathistory` AS t LIMIT 1
+14/03/14 09:40:43 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/1c9e9c13ca1a9bc254b904858569c70f/webapp_wechathistory.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:40:44 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/1c9e9c13ca1a9bc254b904858569c70f/webapp_wechathistory.jar
+14/03/14 09:40:44 INFO mapreduce.ExportJobBase: Beginning export of webapp_wechathistory
+14/03/14 09:40:45 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:40:45 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:40:45 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:40:45 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:40:45 INFO mapred.JobClient: Running job: job_201403051733_6713
+14/03/14 09:40:46 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:40:59 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:41:01 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:41:06 INFO mapred.JobClient: Job complete: job_201403051733_6713
+14/03/14 09:41:06 INFO mapred.JobClient: Counters: 18
+14/03/14 09:41:06 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:41:06 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24405
+14/03/14 09:41:06 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:41:06 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:41:06 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:41:06 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:41:06 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:41:06 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:41:06 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:41:06 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:41:06 INFO mapred.JobClient:     HDFS_BYTES_READ=11551
+14/03/14 09:41:06 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126404
+14/03/14 09:41:06 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:41:06 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:41:06 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:41:06 INFO mapred.JobClient:     Map input records=115
+14/03/14 09:41:06 INFO mapred.JobClient:     Physical memory (bytes) snapshot=597368832
+14/03/14 09:41:06 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:41:06 INFO mapred.JobClient:     CPU time spent (ms)=4660
+14/03/14 09:41:06 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:41:06 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7543443456
+14/03/14 09:41:06 INFO mapred.JobClient:     Map output records=115
+14/03/14 09:41:06 INFO mapred.JobClient:     SPLIT_RAW_BYTES=660
+14/03/14 09:41:06 INFO mapreduce.ExportJobBase: Transferred 11.2803 KB in 21.7265 seconds (531.6537 bytes/sec)
+14/03/14 09:41:06 INFO mapreduce.ExportJobBase: Exported 115 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driveronlineday/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/drivernewoneday/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerCallHistory WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:41:09 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:41:09 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:41:09 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:41:09 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCallHistory` AS t LIMIT 1
+14/03/14 09:41:09 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerCallHistory` AS t LIMIT 1
+14/03/14 09:41:09 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/1535e93d7c0d3266669093a7b5473f0d/PassengerCallHistory.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:41:10 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/1535e93d7c0d3266669093a7b5473f0d/PassengerCallHistory.jar
+14/03/14 09:41:10 INFO mapreduce.ExportJobBase: Beginning export of PassengerCallHistory
+14/03/14 09:41:11 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:41:11 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:41:11 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:41:11 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:41:11 INFO mapred.JobClient: Running job: job_201403051733_6714
+14/03/14 09:41:12 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:41:25 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:41:26 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:41:31 INFO mapred.JobClient: Job complete: job_201403051733_6714
+14/03/14 09:41:31 INFO mapred.JobClient: Counters: 19
+14/03/14 09:41:31 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:41:31 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24277
+14/03/14 09:41:31 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:41:31 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:41:31 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:41:31 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:41:31 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:41:31 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:41:31 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:41:31 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:41:31 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:41:31 INFO mapred.JobClient:     HDFS_BYTES_READ=65033
+14/03/14 09:41:31 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126321
+14/03/14 09:41:31 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:41:31 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:41:31 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:41:31 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:41:31 INFO mapred.JobClient:     Physical memory (bytes) snapshot=608534528
+14/03/14 09:41:31 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:41:31 INFO mapred.JobClient:     CPU time spent (ms)=4480
+14/03/14 09:41:31 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:41:31 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:41:31 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:41:31 INFO mapred.JobClient:     SPLIT_RAW_BYTES=761
+14/03/14 09:41:31 INFO mapreduce.ExportJobBase: Transferred 63.5088 KB in 20.6859 seconds (3.0701 KB/sec)
+14/03/14 09:41:31 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM wx_money_data WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:41:32 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:41:32 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:41:32 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:41:32 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wx_money_data` AS t LIMIT 1
+14/03/14 09:41:32 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wx_money_data` AS t LIMIT 1
+14/03/14 09:41:32 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/cd107d91df86933250c6a990e125a312/wx_money_data.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:41:33 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/cd107d91df86933250c6a990e125a312/wx_money_data.jar
+14/03/14 09:41:33 INFO mapreduce.ExportJobBase: Beginning export of wx_money_data
+14/03/14 09:41:34 WARN mapreduce.ExportJobBase: IOException checking input file header: java.io.EOFException
+14/03/14 09:41:34 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:41:34 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:41:34 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:41:34 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:41:34 INFO mapred.JobClient: Running job: job_201403051733_6715
+14/03/14 09:41:35 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:41:49 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:41:54 INFO mapred.JobClient: Job complete: job_201403051733_6715
+14/03/14 09:41:54 INFO mapred.JobClient: Counters: 17
+14/03/14 09:41:54 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:41:54 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=12117
+14/03/14 09:41:54 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:41:54 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:41:54 INFO mapred.JobClient:     Launched map tasks=1
+14/03/14 09:41:54 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:41:54 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:41:54 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:41:54 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:41:54 INFO mapred.JobClient:     HDFS_BYTES_READ=158
+14/03/14 09:41:54 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=32221
+14/03/14 09:41:54 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:41:54 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:41:54 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:41:54 INFO mapred.JobClient:     Map input records=0
+14/03/14 09:41:54 INFO mapred.JobClient:     Physical memory (bytes) snapshot=154042368
+14/03/14 09:41:54 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:41:54 INFO mapred.JobClient:     CPU time spent (ms)=630
+14/03/14 09:41:54 INFO mapred.JobClient:     Total committed heap usage (bytes)=1010892800
+14/03/14 09:41:54 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1885597696
+14/03/14 09:41:54 INFO mapred.JobClient:     Map output records=0
+14/03/14 09:41:54 INFO mapred.JobClient:     SPLIT_RAW_BYTES=158
+14/03/14 09:41:54 INFO mapreduce.ExportJobBase: Transferred 158 bytes in 20.6091 seconds (7.6665 bytes/sec)
+14/03/14 09:41:54 INFO mapreduce.ExportJobBase: Exported 0 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderReal WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:41:56 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:41:56 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:41:56 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:41:56 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderReal` AS t LIMIT 1
+14/03/14 09:41:56 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderReal` AS t LIMIT 1
+14/03/14 09:41:56 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/b45e93c10204668088d894a61122e0a7/OrderReal.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:41:57 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/b45e93c10204668088d894a61122e0a7/OrderReal.jar
+14/03/14 09:41:57 INFO mapreduce.ExportJobBase: Beginning export of OrderReal
+14/03/14 09:41:57 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:41:57 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:41:57 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:41:57 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:41:58 INFO mapred.JobClient: Running job: job_201403051733_6716
+14/03/14 09:41:59 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:42:12 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/14 09:42:14 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:42:19 INFO mapred.JobClient: Job complete: job_201403051733_6716
+14/03/14 09:42:19 INFO mapred.JobClient: Counters: 18
+14/03/14 09:42:19 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:42:19 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24277
+14/03/14 09:42:19 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:42:19 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:42:19 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:42:19 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:42:19 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:42:19 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:42:19 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:42:19 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:42:19 INFO mapred.JobClient:     HDFS_BYTES_READ=96555
+14/03/14 09:42:19 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126448
+14/03/14 09:42:19 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:42:19 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:42:19 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:42:19 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:42:19 INFO mapred.JobClient:     Physical memory (bytes) snapshot=621899776
+14/03/14 09:42:19 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:42:19 INFO mapred.JobClient:     CPU time spent (ms)=4680
+14/03/14 09:42:19 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:42:19 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:42:19 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:42:19 INFO mapred.JobClient:     SPLIT_RAW_BYTES=616
+14/03/14 09:42:19 INFO mapreduce.ExportJobBase: Transferred 94.292 KB in 21.6019 seconds (4.365 KB/sec)
+14/03/14 09:42:19 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driver_updateapp/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderVoice WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:42:21 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:42:21 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:42:21 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:42:21 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderVoice` AS t LIMIT 1
+14/03/14 09:42:21 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderVoice` AS t LIMIT 1
+14/03/14 09:42:21 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/368173992f00bdf39def6c9e5b89fbda/OrderVoice.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:42:22 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/368173992f00bdf39def6c9e5b89fbda/OrderVoice.jar
+14/03/14 09:42:22 INFO mapreduce.ExportJobBase: Beginning export of OrderVoice
+14/03/14 09:42:22 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:42:22 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:42:22 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:42:22 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:42:23 INFO mapred.JobClient: Running job: job_201403051733_6717
+14/03/14 09:42:24 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:42:38 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:42:43 INFO mapred.JobClient: Job complete: job_201403051733_6717
+14/03/14 09:42:43 INFO mapred.JobClient: Counters: 19
+14/03/14 09:42:43 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:42:43 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24491
+14/03/14 09:42:43 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:42:43 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:42:43 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:42:43 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:42:43 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:42:43 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:42:43 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:42:43 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:42:43 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:42:43 INFO mapred.JobClient:     HDFS_BYTES_READ=83025
+14/03/14 09:42:43 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126262
+14/03/14 09:42:43 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:42:43 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:42:43 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:42:43 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:42:43 INFO mapred.JobClient:     Physical memory (bytes) snapshot=609071104
+14/03/14 09:42:43 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:42:43 INFO mapred.JobClient:     CPU time spent (ms)=5090
+14/03/14 09:42:43 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:42:43 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:42:43 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:42:43 INFO mapred.JobClient:     SPLIT_RAW_BYTES=711
+14/03/14 09:42:43 INFO mapreduce.ExportJobBase: Transferred 81.0791 KB in 20.6322 seconds (3.9297 KB/sec)
+14/03/14 09:42:43 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderComplaint WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:42:44 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:42:44 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:42:44 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:42:44 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderComplaint` AS t LIMIT 1
+14/03/14 09:42:44 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderComplaint` AS t LIMIT 1
+14/03/14 09:42:44 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/0a177116ec41da5eca0297bf8d77f2f0/OrderComplaint.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:42:45 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/0a177116ec41da5eca0297bf8d77f2f0/OrderComplaint.jar
+14/03/14 09:42:45 INFO mapreduce.ExportJobBase: Beginning export of OrderComplaint
+14/03/14 09:42:46 INFO input.FileInputFormat: Total input paths to process : 18
+14/03/14 09:42:46 INFO input.FileInputFormat: Total input paths to process : 18
+14/03/14 09:42:46 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:42:46 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:42:46 INFO mapred.JobClient: Running job: job_201403051733_6718
+14/03/14 09:42:47 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:43:00 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/14 09:43:01 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:43:02 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:43:07 INFO mapred.JobClient: Job complete: job_201403051733_6718
+14/03/14 09:43:07 INFO mapred.JobClient: Counters: 19
+14/03/14 09:43:07 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:43:07 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24305
+14/03/14 09:43:07 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:43:07 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:43:07 INFO mapred.JobClient:     Rack-local map tasks=2
+14/03/14 09:43:07 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:43:07 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:43:07 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:43:07 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:43:07 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:43:07 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:43:07 INFO mapred.JobClient:     HDFS_BYTES_READ=110331
+14/03/14 09:43:07 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=127005
+14/03/14 09:43:07 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:43:07 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:43:07 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:43:07 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:43:07 INFO mapred.JobClient:     Physical memory (bytes) snapshot=626532352
+14/03/14 09:43:07 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:43:07 INFO mapred.JobClient:     CPU time spent (ms)=5030
+14/03/14 09:43:07 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:43:07 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546765312
+14/03/14 09:43:07 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:43:07 INFO mapred.JobClient:     SPLIT_RAW_BYTES=2038
+14/03/14 09:43:07 INFO mapreduce.ExportJobBase: Transferred 107.7451 KB in 21.647 seconds (4.9774 KB/sec)
+14/03/14 09:43:07 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverreg/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/wechat_getenvelope/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerNotTodayReg WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:43:10 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:43:10 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:43:10 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:43:10 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerNotTodayReg` AS t LIMIT 1
+14/03/14 09:43:10 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerNotTodayReg` AS t LIMIT 1
+14/03/14 09:43:10 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/73d4d2280c27cc3f8954e3e57c6076b0/PassengerNotTodayReg.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:43:11 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/73d4d2280c27cc3f8954e3e57c6076b0/PassengerNotTodayReg.jar
+14/03/14 09:43:11 INFO mapreduce.ExportJobBase: Beginning export of PassengerNotTodayReg
+14/03/14 09:43:12 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:43:12 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:43:12 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:43:12 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:43:12 INFO mapred.JobClient: Running job: job_201403051733_6719
+14/03/14 09:43:13 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:43:28 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/14 09:43:29 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:43:34 INFO mapred.JobClient: Job complete: job_201403051733_6719
+14/03/14 09:43:34 INFO mapred.JobClient: Counters: 19
+14/03/14 09:43:34 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:43:34 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24301
+14/03/14 09:43:34 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:43:34 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:43:34 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:43:34 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:43:34 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:43:34 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:43:34 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:43:34 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:43:34 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:43:34 INFO mapred.JobClient:     HDFS_BYTES_READ=95254
+14/03/14 09:43:34 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126559
+14/03/14 09:43:34 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:43:34 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:43:34 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:43:34 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:43:34 INFO mapred.JobClient:     Physical memory (bytes) snapshot=622292992
+14/03/14 09:43:34 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:43:34 INFO mapred.JobClient:     CPU time spent (ms)=5080
+14/03/14 09:43:34 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:43:34 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:43:34 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:43:34 INFO mapred.JobClient:     SPLIT_RAW_BYTES=660
+14/03/14 09:43:34 INFO mapreduce.ExportJobBase: Transferred 93.0215 KB in 22.7334 seconds (4.0918 KB/sec)
+14/03/14 09:43:34 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/drivertotalreg/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/drivernewthreedays/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM lj_passenger WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:43:36 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:43:36 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:43:36 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:43:37 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `lj_passenger` AS t LIMIT 1
+14/03/14 09:43:37 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `lj_passenger` AS t LIMIT 1
+14/03/14 09:43:37 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/f47c5d80c4740ae5f889f0f8b1c8f809/lj_passenger.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:43:38 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/f47c5d80c4740ae5f889f0f8b1c8f809/lj_passenger.jar
+14/03/14 09:43:38 INFO mapreduce.ExportJobBase: Beginning export of lj_passenger
+14/03/14 09:43:38 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:43:38 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:43:38 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:43:38 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:43:39 INFO mapred.JobClient: Running job: job_201403051733_6720
+14/03/14 09:43:40 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:43:53 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:43:58 INFO mapred.JobClient: Job complete: job_201403051733_6720
+14/03/14 09:43:58 INFO mapred.JobClient: Counters: 19
+14/03/14 09:43:58 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:43:58 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24356
+14/03/14 09:43:58 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:43:58 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:43:58 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:43:58 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:43:58 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:43:58 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:43:58 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:43:58 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:43:58 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:43:58 INFO mapred.JobClient:     HDFS_BYTES_READ=16652
+14/03/14 09:43:58 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126636
+14/03/14 09:43:58 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:43:58 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:43:58 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:43:58 INFO mapred.JobClient:     Map input records=119
+14/03/14 09:43:58 INFO mapred.JobClient:     Physical memory (bytes) snapshot=614948864
+14/03/14 09:43:58 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:43:58 INFO mapred.JobClient:     CPU time spent (ms)=3150
+14/03/14 09:43:58 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:43:58 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7542247424
+14/03/14 09:43:58 INFO mapred.JobClient:     Map output records=119
+14/03/14 09:43:58 INFO mapred.JobClient:     SPLIT_RAW_BYTES=721
+14/03/14 09:43:58 INFO mapreduce.ExportJobBase: Transferred 16.2617 KB in 19.7439 seconds (843.3998 bytes/sec)
+14/03/14 09:43:58 INFO mapreduce.ExportJobBase: Exported 119 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM webapp_wechat WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:43:59 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:43:59 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:43:59 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:43:59 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `webapp_wechat` AS t LIMIT 1
+14/03/14 09:43:59 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `webapp_wechat` AS t LIMIT 1
+14/03/14 09:43:59 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/b4c48cad222218308e2fec8b407deaee/webapp_wechat.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:44:00 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/b4c48cad222218308e2fec8b407deaee/webapp_wechat.jar
+14/03/14 09:44:00 INFO mapreduce.ExportJobBase: Beginning export of webapp_wechat
+14/03/14 09:44:01 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:44:01 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:44:01 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:44:01 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:44:01 INFO mapred.JobClient: Running job: job_201403051733_6721
+14/03/14 09:44:02 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:44:15 INFO mapred.JobClient:  map 25% reduce 0%
+14/03/14 09:44:16 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:44:17 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:44:22 INFO mapred.JobClient: Job complete: job_201403051733_6721
+14/03/14 09:44:22 INFO mapred.JobClient: Counters: 19
+14/03/14 09:44:22 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:44:22 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24379
+14/03/14 09:44:22 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:44:22 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:44:22 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:44:22 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:44:22 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:44:22 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:44:22 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:44:22 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:44:22 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:44:22 INFO mapred.JobClient:     HDFS_BYTES_READ=29573
+14/03/14 09:44:22 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=127317
+14/03/14 09:44:22 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:44:22 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:44:22 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:44:22 INFO mapred.JobClient:     Map input records=128
+14/03/14 09:44:22 INFO mapred.JobClient:     Physical memory (bytes) snapshot=619192320
+14/03/14 09:44:22 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:44:22 INFO mapred.JobClient:     CPU time spent (ms)=3350
+14/03/14 09:44:22 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:44:22 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7542390784
+14/03/14 09:44:22 INFO mapred.JobClient:     Map output records=128
+14/03/14 09:44:22 INFO mapred.JobClient:     SPLIT_RAW_BYTES=632
+14/03/14 09:44:22 INFO mapreduce.ExportJobBase: Transferred 28.8799 KB in 21.8674 seconds (1.3207 KB/sec)
+14/03/14 09:44:22 INFO mapreduce.ExportJobBase: Exported 128 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM lj_driver WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:44:23 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:44:23 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:44:23 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:44:24 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `lj_driver` AS t LIMIT 1
+14/03/14 09:44:24 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `lj_driver` AS t LIMIT 1
+14/03/14 09:44:24 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/b34a18767261c420a77a0515dee107f9/lj_driver.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:44:24 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/b34a18767261c420a77a0515dee107f9/lj_driver.jar
+14/03/14 09:44:24 INFO mapreduce.ExportJobBase: Beginning export of lj_driver
+14/03/14 09:44:25 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:44:25 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:44:25 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:44:25 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:44:25 INFO mapred.JobClient: Running job: job_201403051733_6722
+14/03/14 09:44:26 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:44:40 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:44:41 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:44:46 INFO mapred.JobClient: Job complete: job_201403051733_6722
+14/03/14 09:44:46 INFO mapred.JobClient: Counters: 18
+14/03/14 09:44:46 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:44:46 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24249
+14/03/14 09:44:46 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:44:46 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:44:46 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:44:46 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:44:46 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:44:46 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:44:46 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:44:46 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:44:46 INFO mapred.JobClient:     HDFS_BYTES_READ=15052
+14/03/14 09:44:46 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126428
+14/03/14 09:44:46 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:44:46 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:44:46 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:44:46 INFO mapred.JobClient:     Map input records=184
+14/03/14 09:44:46 INFO mapred.JobClient:     Physical memory (bytes) snapshot=626655232
+14/03/14 09:44:46 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:44:46 INFO mapred.JobClient:     CPU time spent (ms)=3200
+14/03/14 09:44:46 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:44:46 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7543156736
+14/03/14 09:44:46 INFO mapred.JobClient:     Map output records=184
+14/03/14 09:44:46 INFO mapred.JobClient:     SPLIT_RAW_BYTES=616
+14/03/14 09:44:46 INFO mapreduce.ExportJobBase: Transferred 14.6992 KB in 21.7143 seconds (693.1835 bytes/sec)
+14/03/14 09:44:46 INFO mapreduce.ExportJobBase: Exported 184 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM BIStrategy WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:44:48 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:44:48 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:44:48 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:44:48 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `BIStrategy` AS t LIMIT 1
+14/03/14 09:44:48 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `BIStrategy` AS t LIMIT 1
+14/03/14 09:44:48 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/ece766a5113bae239a5e600d4c68e5bc/BIStrategy.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:44:49 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/ece766a5113bae239a5e600d4c68e5bc/BIStrategy.jar
+14/03/14 09:44:49 INFO mapreduce.ExportJobBase: Beginning export of BIStrategy
+14/03/14 09:44:50 INFO input.FileInputFormat: Total input paths to process : 10
+14/03/14 09:44:50 INFO input.FileInputFormat: Total input paths to process : 10
+14/03/14 09:44:50 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:44:50 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:44:50 INFO mapred.JobClient: Running job: job_201403051733_6723
+14/03/14 09:44:51 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:45:04 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:45:05 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:45:10 INFO mapred.JobClient: Job complete: job_201403051733_6723
+14/03/14 09:45:10 INFO mapred.JobClient: Counters: 19
+14/03/14 09:45:10 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:45:10 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24257
+14/03/14 09:45:10 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:45:10 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:45:10 INFO mapred.JobClient:     Rack-local map tasks=1
+14/03/14 09:45:10 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:45:10 INFO mapred.JobClient:     Data-local map tasks=2
+14/03/14 09:45:10 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:45:10 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:45:10 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:45:10 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:45:10 INFO mapred.JobClient:     HDFS_BYTES_READ=198984
+14/03/14 09:45:10 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=128550
+14/03/14 09:45:10 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:45:10 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:45:10 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:45:10 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:45:10 INFO mapred.JobClient:     Physical memory (bytes) snapshot=664264704
+14/03/14 09:45:10 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:45:10 INFO mapred.JobClient:     CPU time spent (ms)=5690
+14/03/14 09:45:10 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:45:10 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:45:10 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:45:10 INFO mapred.JobClient:     SPLIT_RAW_BYTES=1206
+14/03/14 09:45:10 INFO mapreduce.ExportJobBase: Transferred 194.3203 KB in 20.8904 seconds (9.3019 KB/sec)
+14/03/14 09:45:10 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverapprovedtwoweeks/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverregonline/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerTodayReg WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:45:13 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:45:13 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:45:13 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:45:13 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerTodayReg` AS t LIMIT 1
+14/03/14 09:45:13 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerTodayReg` AS t LIMIT 1
+14/03/14 09:45:13 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/fa96e49f1e0a29eab01912e958de0fa3/PassengerTodayReg.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:45:14 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/fa96e49f1e0a29eab01912e958de0fa3/PassengerTodayReg.jar
+14/03/14 09:45:14 INFO mapreduce.ExportJobBase: Beginning export of PassengerTodayReg
+14/03/14 09:45:15 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:45:15 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:45:15 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:45:15 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:45:15 INFO mapred.JobClient: Running job: job_201403051733_6724
+14/03/14 09:45:16 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:45:29 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:45:30 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:45:35 INFO mapred.JobClient: Job complete: job_201403051733_6724
+14/03/14 09:45:35 INFO mapred.JobClient: Counters: 19
+14/03/14 09:45:35 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:45:35 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24501
+14/03/14 09:45:35 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:45:35 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:45:35 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:45:35 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:45:35 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:45:35 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:45:35 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:45:35 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:45:35 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:45:35 INFO mapred.JobClient:     HDFS_BYTES_READ=84648
+14/03/14 09:45:35 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126511
+14/03/14 09:45:35 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:45:35 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:45:35 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:45:35 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:45:35 INFO mapred.JobClient:     Physical memory (bytes) snapshot=625250304
+14/03/14 09:45:35 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:45:35 INFO mapred.JobClient:     CPU time spent (ms)=5720
+14/03/14 09:45:35 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:45:35 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:45:35 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:45:35 INFO mapred.JobClient:     SPLIT_RAW_BYTES=746
+14/03/14 09:45:35 INFO mapreduce.ExportJobBase: Transferred 82.6641 KB in 20.8807 seconds (3.9589 KB/sec)
+14/03/14 09:45:35 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM TodayCallPassenger WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:45:36 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:45:36 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:45:36 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:45:36 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `TodayCallPassenger` AS t LIMIT 1
+14/03/14 09:45:37 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `TodayCallPassenger` AS t LIMIT 1
+14/03/14 09:45:37 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/572e0266210f7df91fc9dd3b8503f48c/TodayCallPassenger.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:45:37 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/572e0266210f7df91fc9dd3b8503f48c/TodayCallPassenger.jar
+14/03/14 09:45:37 INFO mapreduce.ExportJobBase: Beginning export of TodayCallPassenger
+14/03/14 09:45:38 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:45:38 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:45:38 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:45:38 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:45:38 INFO mapred.JobClient: Running job: job_201403051733_6725
+14/03/14 09:45:39 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:45:52 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:45:53 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:45:58 INFO mapred.JobClient: Job complete: job_201403051733_6725
+14/03/14 09:45:58 INFO mapred.JobClient: Counters: 19
+14/03/14 09:45:58 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:45:58 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24259
+14/03/14 09:45:58 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:45:58 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:45:58 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:45:58 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:45:58 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:45:58 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:45:58 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:45:58 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:45:58 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:45:58 INFO mapred.JobClient:     HDFS_BYTES_READ=65308
+14/03/14 09:45:58 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126429
+14/03/14 09:45:58 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:45:58 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:45:58 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:45:58 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:45:58 INFO mapred.JobClient:     Physical memory (bytes) snapshot=632127488
+14/03/14 09:45:58 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:45:58 INFO mapred.JobClient:     CPU time spent (ms)=4480
+14/03/14 09:45:58 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:45:58 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:45:58 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:45:58 INFO mapred.JobClient:     SPLIT_RAW_BYTES=751
+14/03/14 09:45:58 INFO mapreduce.ExportJobBase: Transferred 63.7773 KB in 20.5849 seconds (3.0983 KB/sec)
+14/03/14 09:45:58 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderAirport WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:45:59 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:45:59 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:45:59 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:46:00 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderAirport` AS t LIMIT 1
+14/03/14 09:46:00 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderAirport` AS t LIMIT 1
+14/03/14 09:46:00 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/c84120519441d9380de02fb7a30500c4/OrderAirport.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:46:00 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/c84120519441d9380de02fb7a30500c4/OrderAirport.jar
+14/03/14 09:46:00 INFO mapreduce.ExportJobBase: Beginning export of OrderAirport
+14/03/14 09:46:01 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:46:01 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:46:01 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:46:01 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:46:01 INFO mapred.JobClient: Running job: job_201403051733_6726
+14/03/14 09:46:02 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:46:16 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:46:17 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:46:22 INFO mapred.JobClient: Job complete: job_201403051733_6726
+14/03/14 09:46:22 INFO mapred.JobClient: Counters: 19
+14/03/14 09:46:22 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:46:22 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24335
+14/03/14 09:46:22 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:46:22 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:46:22 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:46:22 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:46:22 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:46:22 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:46:22 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:46:22 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:46:22 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:46:22 INFO mapred.JobClient:     HDFS_BYTES_READ=82660
+14/03/14 09:46:22 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126280
+14/03/14 09:46:22 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:46:22 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:46:22 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:46:22 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:46:22 INFO mapred.JobClient:     Physical memory (bytes) snapshot=635723776
+14/03/14 09:46:22 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:46:22 INFO mapred.JobClient:     CPU time spent (ms)=4720
+14/03/14 09:46:22 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:46:22 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546458112
+14/03/14 09:46:22 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:46:22 INFO mapred.JobClient:     SPLIT_RAW_BYTES=721
+14/03/14 09:46:22 INFO mapreduce.ExportJobBase: Transferred 80.7227 KB in 21.6018 seconds (3.7368 KB/sec)
+14/03/14 09:46:22 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderNeed WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:46:24 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:46:24 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:46:24 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:46:24 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderNeed` AS t LIMIT 1
+14/03/14 09:46:24 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderNeed` AS t LIMIT 1
+14/03/14 09:46:24 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/bdac6ea9a2f460051c901356ba89b60f/OrderNeed.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:46:25 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/bdac6ea9a2f460051c901356ba89b60f/OrderNeed.jar
+14/03/14 09:46:25 INFO mapreduce.ExportJobBase: Beginning export of OrderNeed
+14/03/14 09:46:25 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:46:25 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:46:25 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:46:25 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:46:26 INFO mapred.JobClient: Running job: job_201403051733_6727
+14/03/14 09:46:27 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:46:41 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:46:46 INFO mapred.JobClient: Job complete: job_201403051733_6727
+14/03/14 09:46:46 INFO mapred.JobClient: Counters: 19
+14/03/14 09:46:46 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:46:46 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24312
+14/03/14 09:46:46 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:46:46 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:46:46 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:46:46 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:46:46 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:46:46 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:46:46 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:46:46 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:46:46 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:46:46 INFO mapred.JobClient:     HDFS_BYTES_READ=65644
+14/03/14 09:46:46 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126277
+14/03/14 09:46:46 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:46:46 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:46:46 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:46:46 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:46:46 INFO mapred.JobClient:     Physical memory (bytes) snapshot=629043200
+14/03/14 09:46:46 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:46:46 INFO mapred.JobClient:     CPU time spent (ms)=5030
+14/03/14 09:46:46 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:46:46 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546314752
+14/03/14 09:46:46 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:46:46 INFO mapred.JobClient:     SPLIT_RAW_BYTES=706
+14/03/14 09:46:46 INFO mapreduce.ExportJobBase: Transferred 64.1055 KB in 20.6048 seconds (3.1112 KB/sec)
+14/03/14 09:46:46 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverday/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverstay/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverorder/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM wechat_passenger WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:46:49 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:46:49 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:46:49 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:46:49 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wechat_passenger` AS t LIMIT 1
+14/03/14 09:46:49 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `wechat_passenger` AS t LIMIT 1
+14/03/14 09:46:49 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/6de54d8eb38e5f72d38777b213f5ab9a/wechat_passenger.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:46:50 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/6de54d8eb38e5f72d38777b213f5ab9a/wechat_passenger.jar
+14/03/14 09:46:50 INFO mapreduce.ExportJobBase: Beginning export of wechat_passenger
+14/03/14 09:46:51 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:46:51 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:46:51 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:46:51 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:46:51 INFO mapred.JobClient: Running job: job_201403051733_6728
+14/03/14 09:46:52 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:47:05 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:47:07 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:47:12 INFO mapred.JobClient: Job complete: job_201403051733_6728
+14/03/14 09:47:12 INFO mapred.JobClient: Counters: 19
+14/03/14 09:47:12 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:47:12 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=25536
+14/03/14 09:47:12 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:47:12 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:47:12 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:47:12 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:47:12 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:47:12 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:47:12 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:47:12 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:47:12 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:47:12 INFO mapred.JobClient:     HDFS_BYTES_READ=32112
+14/03/14 09:47:12 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=127845
+14/03/14 09:47:12 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:47:12 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:47:12 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:47:12 INFO mapred.JobClient:     Map input records=128
+14/03/14 09:47:12 INFO mapred.JobClient:     Physical memory (bytes) snapshot=627281920
+14/03/14 09:47:12 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:47:12 INFO mapred.JobClient:     CPU time spent (ms)=4100
+14/03/14 09:47:12 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:47:12 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7542104064
+14/03/14 09:47:12 INFO mapred.JobClient:     Map output records=128
+14/03/14 09:47:12 INFO mapred.JobClient:     SPLIT_RAW_BYTES=741
+14/03/14 09:47:12 INFO mapreduce.ExportJobBase: Transferred 31.3594 KB in 21.8167 seconds (1.4374 KB/sec)
+14/03/14 09:47:12 INFO mapreduce.ExportJobBase: Exported 128 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/ordercall/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driveronlineweek/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerOrder WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:47:15 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:47:15 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:47:15 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:47:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerOrder` AS t LIMIT 1
+14/03/14 09:47:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerOrder` AS t LIMIT 1
+14/03/14 09:47:15 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/61156814ad5ae744851c5cd84bd16416/PassengerOrder.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:47:16 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/61156814ad5ae744851c5cd84bd16416/PassengerOrder.jar
+14/03/14 09:47:16 INFO mapreduce.ExportJobBase: Beginning export of PassengerOrder
+14/03/14 09:47:16 WARN mapreduce.ExportJobBase: IOException checking input file header: java.io.EOFException
+14/03/14 09:47:17 INFO input.FileInputFormat: Total input paths to process : 18
+14/03/14 09:47:17 INFO input.FileInputFormat: Total input paths to process : 18
+14/03/14 09:47:17 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:47:17 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:47:17 INFO mapred.JobClient: Running job: job_201403051733_6729
+14/03/14 09:47:18 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:47:31 INFO mapred.JobClient:  map 40% reduce 0%
+14/03/14 09:47:32 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:47:37 INFO mapred.JobClient: Job complete: job_201403051733_6729
+14/03/14 09:47:37 INFO mapred.JobClient: Counters: 18
+14/03/14 09:47:37 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:47:37 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=28356
+14/03/14 09:47:37 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:47:37 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:47:37 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:47:37 INFO mapred.JobClient:     Launched map tasks=5
+14/03/14 09:47:37 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:47:37 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:47:37 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:47:37 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:47:37 INFO mapred.JobClient:     HDFS_BYTES_READ=19926
+14/03/14 09:47:37 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=158742
+14/03/14 09:47:37 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:47:37 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:47:37 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:47:37 INFO mapred.JobClient:     Map input records=128
+14/03/14 09:47:37 INFO mapred.JobClient:     Physical memory (bytes) snapshot=788582400
+14/03/14 09:47:37 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:47:37 INFO mapred.JobClient:     CPU time spent (ms)=4250
+14/03/14 09:47:37 INFO mapred.JobClient:     Total committed heap usage (bytes)=5054464000
+14/03/14 09:47:37 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=9429041152
+14/03/14 09:47:37 INFO mapred.JobClient:     Map output records=128
+14/03/14 09:47:37 INFO mapred.JobClient:     SPLIT_RAW_BYTES=2498
+14/03/14 09:47:37 INFO mapreduce.ExportJobBase: Transferred 19.459 KB in 20.6543 seconds (964.7382 bytes/sec)
+14/03/14 09:47:37 INFO mapreduce.ExportJobBase: Exported 128 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverapprovedweek/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM PassengerOrderHistory WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:47:39 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:47:39 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:47:39 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:47:39 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerOrderHistory` AS t LIMIT 1
+14/03/14 09:47:39 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `PassengerOrderHistory` AS t LIMIT 1
+14/03/14 09:47:39 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/8b785d5ed4ed8e56aeb914443bac6dc4/PassengerOrderHistory.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:47:40 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/8b785d5ed4ed8e56aeb914443bac6dc4/PassengerOrderHistory.jar
+14/03/14 09:47:40 INFO mapreduce.ExportJobBase: Beginning export of PassengerOrderHistory
+14/03/14 09:47:41 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:47:41 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:47:41 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:47:41 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:47:41 INFO mapred.JobClient: Running job: job_201403051733_6730
+14/03/14 09:47:42 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:47:55 INFO mapred.JobClient:  map 50% reduce 0%
+14/03/14 09:47:56 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:48:01 INFO mapred.JobClient: Job complete: job_201403051733_6730
+14/03/14 09:48:01 INFO mapred.JobClient: Counters: 19
+14/03/14 09:48:01 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:48:01 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24266
+14/03/14 09:48:01 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:48:01 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:48:01 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:48:01 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:48:01 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:48:01 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:48:01 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:48:01 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:48:01 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:48:01 INFO mapred.JobClient:     HDFS_BYTES_READ=66164
+14/03/14 09:48:01 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126517
+14/03/14 09:48:01 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:48:01 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:48:01 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:48:01 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:48:01 INFO mapred.JobClient:     Physical memory (bytes) snapshot=633659392
+14/03/14 09:48:01 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:48:01 INFO mapred.JobClient:     CPU time spent (ms)=4800
+14/03/14 09:48:01 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:48:01 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:48:01 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:48:01 INFO mapred.JobClient:     SPLIT_RAW_BYTES=766
+14/03/14 09:48:01 INFO mapreduce.ExportJobBase: Transferred 64.6133 KB in 20.6165 seconds (3.1341 KB/sec)
+14/03/14 09:48:01 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderTip WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:48:02 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:48:02 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:48:02 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:48:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderTip` AS t LIMIT 1
+14/03/14 09:48:03 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderTip` AS t LIMIT 1
+14/03/14 09:48:03 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/8288f6bd609575e2825042c3dc92ae7f/OrderTip.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:48:03 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/8288f6bd609575e2825042c3dc92ae7f/OrderTip.jar
+14/03/14 09:48:03 INFO mapreduce.ExportJobBase: Beginning export of OrderTip
+14/03/14 09:48:04 INFO input.FileInputFormat: Total input paths to process : 18
+14/03/14 09:48:04 INFO input.FileInputFormat: Total input paths to process : 18
+14/03/14 09:48:04 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:48:04 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:48:04 INFO mapred.JobClient: Running job: job_201403051733_6731
+14/03/14 09:48:05 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:48:19 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:48:20 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:48:25 INFO mapred.JobClient: Job complete: job_201403051733_6731
+14/03/14 09:48:25 INFO mapred.JobClient: Counters: 18
+14/03/14 09:48:25 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:48:25 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24385
+14/03/14 09:48:25 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:48:25 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:48:25 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:48:25 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:48:25 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:48:25 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:48:25 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:48:25 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:48:25 INFO mapred.JobClient:     HDFS_BYTES_READ=151035
+14/03/14 09:48:25 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=127341
+14/03/14 09:48:25 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:48:25 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:48:25 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:48:25 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:48:25 INFO mapred.JobClient:     Physical memory (bytes) snapshot=662716416
+14/03/14 09:48:25 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:48:25 INFO mapred.JobClient:     CPU time spent (ms)=5480
+14/03/14 09:48:25 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:48:25 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:48:25 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:48:25 INFO mapred.JobClient:     SPLIT_RAW_BYTES=1930
+14/03/14 09:48:25 INFO mapreduce.ExportJobBase: Transferred 147.4951 KB in 21.6821 seconds (6.8026 KB/sec)
+14/03/14 09:48:25 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driverregperiod3monthsand6months/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM kd_info WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:48:27 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:48:27 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:48:27 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:48:28 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `kd_info` AS t LIMIT 1
+14/03/14 09:48:28 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `kd_info` AS t LIMIT 1
+14/03/14 09:48:28 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/4e83112a11a81c57d1b071f00606404e/kd_info.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:48:28 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/4e83112a11a81c57d1b071f00606404e/kd_info.jar
+14/03/14 09:48:28 INFO mapreduce.ExportJobBase: Beginning export of kd_info
+14/03/14 09:48:29 WARN mapreduce.ExportJobBase: IOException checking input file header: java.io.EOFException
+14/03/14 09:48:29 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:48:29 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:48:29 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:48:29 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:48:29 INFO mapred.JobClient: Running job: job_201403051733_6732
+14/03/14 09:48:30 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:48:43 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:48:48 INFO mapred.JobClient: Job complete: job_201403051733_6732
+14/03/14 09:48:48 INFO mapred.JobClient: Counters: 17
+14/03/14 09:48:48 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:48:48 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=12163
+14/03/14 09:48:48 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:48:48 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:48:48 INFO mapred.JobClient:     Launched map tasks=1
+14/03/14 09:48:48 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:48:48 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:48:48 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:48:48 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:48:48 INFO mapred.JobClient:     HDFS_BYTES_READ=152
+14/03/14 09:48:48 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31546
+14/03/14 09:48:48 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:48:48 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:48:48 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:48:48 INFO mapred.JobClient:     Map input records=0
+14/03/14 09:48:48 INFO mapred.JobClient:     Physical memory (bytes) snapshot=161255424
+14/03/14 09:48:48 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:48:48 INFO mapred.JobClient:     CPU time spent (ms)=660
+14/03/14 09:48:48 INFO mapred.JobClient:     Total committed heap usage (bytes)=1010892800
+14/03/14 09:48:48 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1885454336
+14/03/14 09:48:48 INFO mapred.JobClient:     Map output records=0
+14/03/14 09:48:48 INFO mapred.JobClient:     SPLIT_RAW_BYTES=152
+14/03/14 09:48:48 INFO mapreduce.ExportJobBase: Transferred 152 bytes in 19.6175 seconds (7.7482 bytes/sec)
+14/03/14 09:48:48 INFO mapreduce.ExportJobBase: Exported 0 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driveronlinemonth/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM TodayDriver6HourOnline_dpRate WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:48:50 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:48:50 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:48:50 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:48:51 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `TodayDriver6HourOnline_dpRate` AS t LIMIT 1
+14/03/14 09:48:51 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `TodayDriver6HourOnline_dpRate` AS t LIMIT 1
+14/03/14 09:48:51 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/c31fd62ce9df9e75d614e2f733c3ba5d/TodayDriver6HourOnline_dpRate.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:48:51 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/c31fd62ce9df9e75d614e2f733c3ba5d/TodayDriver6HourOnline_dpRate.jar
+14/03/14 09:48:51 INFO mapreduce.ExportJobBase: Beginning export of TodayDriver6HourOnline_dpRate
+14/03/14 09:48:52 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:48:52 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:48:52 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:48:52 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:48:52 INFO mapred.JobClient: Running job: job_201403051733_6733
+14/03/14 09:48:53 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:49:07 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:49:13 INFO mapred.JobClient: Job complete: job_201403051733_6733
+14/03/14 09:49:13 INFO mapred.JobClient: Counters: 18
+14/03/14 09:49:13 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:49:13 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24300
+14/03/14 09:49:13 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:49:13 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:49:13 INFO mapred.JobClient:     Rack-local map tasks=4
+14/03/14 09:49:13 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:49:13 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:49:13 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:49:13 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:49:13 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:49:13 INFO mapred.JobClient:     HDFS_BYTES_READ=13999
+14/03/14 09:49:13 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126415
+14/03/14 09:49:13 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:49:13 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:49:13 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:49:13 INFO mapred.JobClient:     Map input records=184
+14/03/14 09:49:13 INFO mapred.JobClient:     Physical memory (bytes) snapshot=628883456
+14/03/14 09:49:13 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:49:13 INFO mapred.JobClient:     CPU time spent (ms)=3760
+14/03/14 09:49:13 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:49:13 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7542247424
+14/03/14 09:49:13 INFO mapred.JobClient:     Map output records=184
+14/03/14 09:49:13 INFO mapred.JobClient:     SPLIT_RAW_BYTES=806
+14/03/14 09:49:13 INFO mapreduce.ExportJobBase: Transferred 13.6709 KB in 20.7763 seconds (673.7958 bytes/sec)
+14/03/14 09:49:13 INFO mapreduce.ExportJobBase: Exported 184 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/driver_wechat_collection/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/wechat_senditem_day/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderTotal WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:49:15 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:49:15 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:49:15 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:49:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderTotal` AS t LIMIT 1
+14/03/14 09:49:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderTotal` AS t LIMIT 1
+14/03/14 09:49:15 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/4b0679c75a9065bf3d0373a7ac08931f/OrderTotal.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:49:16 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/4b0679c75a9065bf3d0373a7ac08931f/OrderTotal.jar
+14/03/14 09:49:16 INFO mapreduce.ExportJobBase: Beginning export of OrderTotal
+14/03/14 09:49:17 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:49:17 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:49:17 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:49:17 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:49:17 INFO mapred.JobClient: Running job: job_201403051733_6734
+14/03/14 09:49:18 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:49:31 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:49:32 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:49:37 INFO mapred.JobClient: Job complete: job_201403051733_6734
+14/03/14 09:49:37 INFO mapred.JobClient: Counters: 19
+14/03/14 09:49:37 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:49:37 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24584
+14/03/14 09:49:37 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:49:37 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:49:37 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:49:37 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:49:37 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:49:37 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:49:37 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:49:37 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:49:37 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:49:37 INFO mapred.JobClient:     HDFS_BYTES_READ=81471
+14/03/14 09:49:37 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126448
+14/03/14 09:49:37 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:49:37 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:49:37 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:49:37 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:49:37 INFO mapred.JobClient:     Physical memory (bytes) snapshot=638259200
+14/03/14 09:49:37 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:49:37 INFO mapred.JobClient:     CPU time spent (ms)=4810
+14/03/14 09:49:37 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:49:37 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546458112
+14/03/14 09:49:37 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:49:37 INFO mapred.JobClient:     SPLIT_RAW_BYTES=620
+14/03/14 09:49:37 INFO mapreduce.ExportJobBase: Transferred 79.5615 KB in 20.6313 seconds (3.8564 KB/sec)
+14/03/14 09:49:37 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM OrderDayCallTip WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:49:38 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:49:38 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:49:38 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:49:39 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderDayCallTip` AS t LIMIT 1
+14/03/14 09:49:39 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `OrderDayCallTip` AS t LIMIT 1
+14/03/14 09:49:39 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/0570df992db31ccca127e47bf8385af6/OrderDayCallTip.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:49:40 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/0570df992db31ccca127e47bf8385af6/OrderDayCallTip.jar
+14/03/14 09:49:40 INFO mapreduce.ExportJobBase: Beginning export of OrderDayCallTip
+14/03/14 09:49:40 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:49:40 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:49:40 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:49:40 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:49:40 INFO mapred.JobClient: Running job: job_201403051733_6735
+14/03/14 09:49:41 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:49:55 INFO mapred.JobClient:  map 75% reduce 0%
+14/03/14 09:49:56 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:50:01 INFO mapred.JobClient: Job complete: job_201403051733_6735
+14/03/14 09:50:01 INFO mapred.JobClient: Counters: 19
+14/03/14 09:50:01 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:50:01 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24308
+14/03/14 09:50:02 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:50:02 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:50:02 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:50:02 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:50:02 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:50:02 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:50:02 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:50:02 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:50:02 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:50:02 INFO mapred.JobClient:     HDFS_BYTES_READ=163979
+14/03/14 09:50:02 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=127688
+14/03/14 09:50:02 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:50:02 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:50:02 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:50:02 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:50:02 INFO mapred.JobClient:     Physical memory (bytes) snapshot=666124288
+14/03/14 09:50:02 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:50:02 INFO mapred.JobClient:     CPU time spent (ms)=6800
+14/03/14 09:50:02 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:50:02 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546601472
+14/03/14 09:50:02 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:50:02 INFO mapred.JobClient:     SPLIT_RAW_BYTES=736
+14/03/14 09:50:02 INFO mapreduce.ExportJobBase: Transferred 160.1357 KB in 21.6142 seconds (7.4088 KB/sec)
+14/03/14 09:50:02 INFO mapreduce.ExportJobBase: Exported 1656 records.
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/drivernatureregthreeweek/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/drivermonth/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/wechat_robenvelope_taxi/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+Cannot find /user/xiaoju/data/bi/app/biorder/2014/03/13/_SUCCESS
+Warning: $HADOOP_HOME is deprecated.
+
+DELETE FROM FirstCallPassengerReplay WHERE statDate='2014-03-13';
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/03/14 09:50:06 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/03/14 09:50:06 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/03/14 09:50:06 INFO tool.CodeGenTool: Beginning code generation
+14/03/14 09:50:06 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `FirstCallPassengerReplay` AS t LIMIT 1
+14/03/14 09:50:06 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `FirstCallPassengerReplay` AS t LIMIT 1
+14/03/14 09:50:06 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/dff841be7c4753bad354b20b42bf5f35/FirstCallPassengerReplay.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/03/14 09:50:07 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/dff841be7c4753bad354b20b42bf5f35/FirstCallPassengerReplay.jar
+14/03/14 09:50:07 INFO mapreduce.ExportJobBase: Beginning export of FirstCallPassengerReplay
+14/03/14 09:50:07 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:50:07 INFO input.FileInputFormat: Total input paths to process : 1
+14/03/14 09:50:07 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+14/03/14 09:50:07 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/03/14 09:50:08 INFO mapred.JobClient: Running job: job_201403051733_6736
+14/03/14 09:50:09 INFO mapred.JobClient:  map 0% reduce 0%
+14/03/14 09:50:23 INFO mapred.JobClient:  map 100% reduce 0%
+14/03/14 09:50:28 INFO mapred.JobClient: Job complete: job_201403051733_6736
+14/03/14 09:50:28 INFO mapred.JobClient: Counters: 19
+14/03/14 09:50:28 INFO mapred.JobClient:   Job Counters 
+14/03/14 09:50:28 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=24246
+14/03/14 09:50:28 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/03/14 09:50:28 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/03/14 09:50:28 INFO mapred.JobClient:     Rack-local map tasks=3
+14/03/14 09:50:28 INFO mapred.JobClient:     Launched map tasks=4
+14/03/14 09:50:28 INFO mapred.JobClient:     Data-local map tasks=1
+14/03/14 09:50:28 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/03/14 09:50:28 INFO mapred.JobClient:   File Output Format Counters 
+14/03/14 09:50:28 INFO mapred.JobClient:     Bytes Written=0
+14/03/14 09:50:28 INFO mapred.JobClient:   FileSystemCounters
+14/03/14 09:50:28 INFO mapred.JobClient:     HDFS_BYTES_READ=51035
+14/03/14 09:50:28 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=126308
+14/03/14 09:50:28 INFO mapred.JobClient:   File Input Format Counters 
+14/03/14 09:50:28 INFO mapred.JobClient:     Bytes Read=0
+14/03/14 09:50:28 INFO mapred.JobClient:   Map-Reduce Framework
+14/03/14 09:50:28 INFO mapred.JobClient:     Map input records=1656
+14/03/14 09:50:28 INFO mapred.JobClient:     Physical memory (bytes) snapshot=629301248
+14/03/14 09:50:28 INFO mapred.JobClient:     Spilled Records=0
+14/03/14 09:50:28 INFO mapred.JobClient:     CPU time spent (ms)=4420
+14/03/14 09:50:28 INFO mapred.JobClient:     Total committed heap usage (bytes)=4043571200
+14/03/14 09:50:28 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=7546765312
+14/03/14 09:50:28 INFO mapred.JobClient:     Map output records=1656
+14/03/14 09:50:28 INFO mapred.JobClient:     SPLIT_RAW_BYTES=781
+14/03/14 09:50:28 INFO mapreduce.ExportJobBase: Transferred 49.8389 KB in 20.5858 seconds (2.421 KB/sec)
+14/03/14 09:50:28 INFO mapreduce.ExportJobBase: Exported 1656 records.

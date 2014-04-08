@@ -1,0 +1,9 @@
+#!/bin/sh
+
+enddate='2013-12-22'
+mkdir -p log 
+
+sh order_comment_sqoop_import.sh ${enddate} >>log/order_comment_sqoop_import.log 2>&1
+sh order_sqoop_import.sh ${enddate} >>log/order_sqoop_import.log 2>&1
+sh spam_order_sqoop_import.sh ${enddate} >>log/spam_order_sqoop_import.log 2>&1
+sh staticstic_driver_sqoop_import.sh ${enddate} >>log/staticstic_driver_sqoop_import.log 2>&1

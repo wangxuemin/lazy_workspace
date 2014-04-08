@@ -1,0 +1,14 @@
+#!/bin/sh
+
+begdate='2013-12-23'
+enddate='2014-01-02'
+
+for(( i=0; ; i++ ));do
+        
+    if [[ ${end} = ${enddate} ]];then
+        break;
+    fi
+
+    end=`date +%Y-%m-%d -d "+${i}days ${begdate}"`
+    echo $end
+done

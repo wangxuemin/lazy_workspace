@@ -1,0 +1,47 @@
+#!/bin/sh
+
+v_currentDate=`date +%Y-%m-%d`
+v_paramDate=$1
+v_executeDate=""
+if [ -z "$v_paramDate" ];then
+    v_executeDate=`date --date="$v_currentDate-1 day" +%Y-%m-%d`
+#    echo v_executeDate:"$v_executeDate"
+else
+    flag=`echo $v_paramDate|grep -e '^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}$'`   
+    if [ -z "$flag" ];then
+        echo "date format is illege! please rewrite!eg:2013-12-12"
+        exit 0
+    else
+        v_executeDate="$v_paramDate"
+#       echo v_executeDate:"$v_executeDate"
+    fi  
+fi
+echo executeDate:"$v_executeDate"
+
+mkdir -p log
+
+v_time==`date -d now '+%F %T'`
+
+echo "start...quanliang $v_time"
+# 全量
+sh stat_passenger_sqoop_import.sh ${v_executeDate} >>log/stat_passenger_sqoop_import.log 2>&1 &
+sh newstatinfo_sqoop_import.sh ${v_executeDate} >>log/newstatinfo_sqoop_import.log 2>&1 &
+sh driver_account_sqoop_import.sh ${v_executeDate} >>log/driver_account_sqoop_import.log 2>&1 &
+      # 微信三期
+sh passenger_account_sqoop_import.sh ${v_executeDate} >>log/passenger_account_sqoop_import.log 2>&1 &
+sh r_bind_relation_sqoop_import.sh ${v_executeDate} >>log/r_bind_relation_sqoop_import.log 2>&1 &
+sh r_openid_amount_sqoop_import.sh ${v_executeDate} >>log/r_openid_amount_sqoop_import.log 2>&1 &
+
+wait
+v_time==`date -d now '+%F %T'`
+echo "start ...zengliang $v_time"
+# 增量
+sh didi_transaction_sqoop_import.sh ${v_executeDate} >>log/didi_transaction_sqoop_import.log 2>&1 &
+sh driver_transaction_sqoop_import.sh  ${v_executeDate} >>log/driver_transaction_sqoop_import.log 2>&1 &
+      # 微信三期
+sh passenger_transaction_sqoop_import.p100.sh ${v_executeDate} 
+sh r_item_info_sqoop_import.sh ${v_executeDate} >>log/r_item_info_sqoop_import.log 2>&1 
+sh r_list_info_sqoop_import.sh ${v_executeDate} >>log/r_list_info_sqoop_import.log 2>&1 
+
+v_time==`date -d now '+%F %T'`
+echo "end sqoop ...$v_time"

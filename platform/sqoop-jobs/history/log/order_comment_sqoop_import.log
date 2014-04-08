@@ -1,0 +1,50 @@
+Connection to hdp998.jx:3366?app_dididache&username=app_r&password=app_r
+executeDate:2013-12-22
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/01/07 17:21:26 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/01/07 17:21:26 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/01/07 17:21:26 INFO tool.CodeGenTool: Beginning code generation
+14/01/07 17:21:27 INFO manager.SqlManager: Executing SQL statement: SELECT cmtid,oid,ordertype,pphone,dphone, replace(replace(pcontent,'\r',''),'\n','') as pcontent,pcommenttype,DATE_FORMAT(pctime,'%Y-%m-%d') AS pctime,replace(replace(pcomplaint,'\n',''),'\r','') as pcomplaint,pcomplainttype,DATE_FORMAT(ptime,'%Y-%m-%d') AS ptime,pstatus,dcommenttype, replace(replace(dcontent,'\r',''),'\n','') as dcontent,replace(replace(dcomplaint,'\n',''),'\r','') as dcomplaint,dcomplainttype,DATE_FORMAT(dtime,'%Y-%m-%d') AS dtime,dstatus,credibility,neatness,punctual,replace(replace(remark,'\r',''),'\n','')  as remark,replace(replace(opname,'\n',''),'\r','') as opname,channel,AREA,DATE_FORMAT(createtime,'%Y-%m-%d') AS createtime FROM order_comment where createtime between '0000-00-00 00:00:00' and '2013-12-22 23:59:59' and  (1 = 0)  
+14/01/07 17:21:27 INFO manager.SqlManager: Executing SQL statement: SELECT cmtid,oid,ordertype,pphone,dphone, replace(replace(pcontent,'\r',''),'\n','') as pcontent,pcommenttype,DATE_FORMAT(pctime,'%Y-%m-%d') AS pctime,replace(replace(pcomplaint,'\n',''),'\r','') as pcomplaint,pcomplainttype,DATE_FORMAT(ptime,'%Y-%m-%d') AS ptime,pstatus,dcommenttype, replace(replace(dcontent,'\r',''),'\n','') as dcontent,replace(replace(dcomplaint,'\n',''),'\r','') as dcomplaint,dcomplainttype,DATE_FORMAT(dtime,'%Y-%m-%d') AS dtime,dstatus,credibility,neatness,punctual,replace(replace(remark,'\r',''),'\n','')  as remark,replace(replace(opname,'\n',''),'\r','') as opname,channel,AREA,DATE_FORMAT(createtime,'%Y-%m-%d') AS createtime FROM order_comment where createtime between '0000-00-00 00:00:00' and '2013-12-22 23:59:59' and  (1 = 0)  
+14/01/07 17:21:27 INFO manager.SqlManager: Executing SQL statement: SELECT cmtid,oid,ordertype,pphone,dphone, replace(replace(pcontent,'\r',''),'\n','') as pcontent,pcommenttype,DATE_FORMAT(pctime,'%Y-%m-%d') AS pctime,replace(replace(pcomplaint,'\n',''),'\r','') as pcomplaint,pcomplainttype,DATE_FORMAT(ptime,'%Y-%m-%d') AS ptime,pstatus,dcommenttype, replace(replace(dcontent,'\r',''),'\n','') as dcontent,replace(replace(dcomplaint,'\n',''),'\r','') as dcomplaint,dcomplainttype,DATE_FORMAT(dtime,'%Y-%m-%d') AS dtime,dstatus,credibility,neatness,punctual,replace(replace(remark,'\r',''),'\n','')  as remark,replace(replace(opname,'\n',''),'\r','') as opname,channel,AREA,DATE_FORMAT(createtime,'%Y-%m-%d') AS createtime FROM order_comment where createtime between '0000-00-00 00:00:00' and '2013-12-22 23:59:59' and  (1 = 0)  
+14/01/07 17:21:27 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/f546151b0128343ae3e6c6ef023db608/QueryResult.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/01/07 17:21:28 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/f546151b0128343ae3e6c6ef023db608/QueryResult.jar
+14/01/07 17:21:29 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/order_comment/2013/12/22 is not present, hence not deleting.
+14/01/07 17:21:29 INFO mapreduce.ImportJobBase: Beginning query import.
+14/01/07 17:21:30 INFO mapred.JobClient: Running job: job_201401031355_1606
+14/01/07 17:21:31 INFO mapred.JobClient:  map 0% reduce 0%
+14/01/07 17:24:35 INFO mapred.JobClient:  map 100% reduce 0%
+14/01/07 17:24:40 INFO mapred.JobClient: Job complete: job_201401031355_1606
+14/01/07 17:24:40 INFO mapred.JobClient: Counters: 18
+14/01/07 17:24:40 INFO mapred.JobClient:   Job Counters 
+14/01/07 17:24:40 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=185606
+14/01/07 17:24:40 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/01/07 17:24:40 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/01/07 17:24:40 INFO mapred.JobClient:     Launched map tasks=1
+14/01/07 17:24:40 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/01/07 17:24:40 INFO mapred.JobClient:   File Output Format Counters 
+14/01/07 17:24:40 INFO mapred.JobClient:     Bytes Written=1570706341
+14/01/07 17:24:40 INFO mapred.JobClient:   FileSystemCounters
+14/01/07 17:24:40 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/01/07 17:24:40 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=32432
+14/01/07 17:24:40 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=1570706341
+14/01/07 17:24:40 INFO mapred.JobClient:   File Input Format Counters 
+14/01/07 17:24:40 INFO mapred.JobClient:     Bytes Read=0
+14/01/07 17:24:40 INFO mapred.JobClient:   Map-Reduce Framework
+14/01/07 17:24:40 INFO mapred.JobClient:     Map input records=10372173
+14/01/07 17:24:40 INFO mapred.JobClient:     Physical memory (bytes) snapshot=457334784
+14/01/07 17:24:40 INFO mapred.JobClient:     Spilled Records=0
+14/01/07 17:24:40 INFO mapred.JobClient:     CPU time spent (ms)=176630
+14/01/07 17:24:40 INFO mapred.JobClient:     Total committed heap usage (bytes)=882966528
+14/01/07 17:24:40 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1987977216
+14/01/07 17:24:40 INFO mapred.JobClient:     Map output records=10372173
+14/01/07 17:24:40 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/01/07 17:24:40 INFO mapreduce.ImportJobBase: Transferred 1.4628 GB in 191.3281 seconds (7.8292 MB/sec)
+14/01/07 17:24:40 INFO mapreduce.ImportJobBase: Retrieved 10372173 records.

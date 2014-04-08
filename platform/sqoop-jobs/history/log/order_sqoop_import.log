@@ -1,0 +1,50 @@
+Connection to hdp998.jx:3366?app_dididache&username=app_r&password=app_r
+executeDate:2013-12-22
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/01/07 17:24:41 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/01/07 17:24:41 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/01/07 17:24:41 INFO tool.CodeGenTool: Beginning code generation
+14/01/07 17:24:41 INFO manager.SqlManager: Executing SQL statement: SELECT orderid,passengerid,token,driverId,STATUS,TYPE,lng,lat,replace(replace(address,'\r',''),'\n','') as address,replace(replace(destination,'\r',''),'\n','') as destination,DATE_FORMAT(setuptime,'%Y-%m-%d') AS setuptime,tip,EXP,waittime,callCount,distance,LENGTH,replace(replace(verifyMessage,'\r',''),'\n','') as verifyMessage,DATE_FORMAT(createTime,'%Y-%m-%d') AS createTime,DATE_FORMAT(striveTime,'%Y-%m-%d') AS striveTime,DATE_FORMAT(arriveTime,'%Y-%m-%d') AS arriveTime,DATE_FORMAT(aboardTime,'%Y-%m-%d') AS aboardTime,DATE_FORMAT(canceltime,'%Y-%m-%d') AS cancelTime,pCommentGread,replace(replace(pCommentText,'\r',''),'\n','') as pCommentText,DATE_FORMAT(pCommentTime,'%Y-%m-%d') AS pCommentTime,pCommentStatus,dCommentGread,replace(replace(dcommenttext,'\r',''),'\n','') as dcommenttext,DATE_FORMAT(dCommentTime,'%Y-%m-%d') AS dCommentTime,dCommentStatus,channel,AREA,VERSION,replace(replace(remark,'\r',''),'\n','') as remark,bonus,voicelength,voiceTime  FROM `Order` where createTime between '0000-00-00 00:00:00' and '2013-12-22 23:59:59' and  (1 = 0)  
+14/01/07 17:24:41 INFO manager.SqlManager: Executing SQL statement: SELECT orderid,passengerid,token,driverId,STATUS,TYPE,lng,lat,replace(replace(address,'\r',''),'\n','') as address,replace(replace(destination,'\r',''),'\n','') as destination,DATE_FORMAT(setuptime,'%Y-%m-%d') AS setuptime,tip,EXP,waittime,callCount,distance,LENGTH,replace(replace(verifyMessage,'\r',''),'\n','') as verifyMessage,DATE_FORMAT(createTime,'%Y-%m-%d') AS createTime,DATE_FORMAT(striveTime,'%Y-%m-%d') AS striveTime,DATE_FORMAT(arriveTime,'%Y-%m-%d') AS arriveTime,DATE_FORMAT(aboardTime,'%Y-%m-%d') AS aboardTime,DATE_FORMAT(canceltime,'%Y-%m-%d') AS cancelTime,pCommentGread,replace(replace(pCommentText,'\r',''),'\n','') as pCommentText,DATE_FORMAT(pCommentTime,'%Y-%m-%d') AS pCommentTime,pCommentStatus,dCommentGread,replace(replace(dcommenttext,'\r',''),'\n','') as dcommenttext,DATE_FORMAT(dCommentTime,'%Y-%m-%d') AS dCommentTime,dCommentStatus,channel,AREA,VERSION,replace(replace(remark,'\r',''),'\n','') as remark,bonus,voicelength,voiceTime  FROM `Order` where createTime between '0000-00-00 00:00:00' and '2013-12-22 23:59:59' and  (1 = 0)  
+14/01/07 17:24:41 INFO manager.SqlManager: Executing SQL statement: SELECT orderid,passengerid,token,driverId,STATUS,TYPE,lng,lat,replace(replace(address,'\r',''),'\n','') as address,replace(replace(destination,'\r',''),'\n','') as destination,DATE_FORMAT(setuptime,'%Y-%m-%d') AS setuptime,tip,EXP,waittime,callCount,distance,LENGTH,replace(replace(verifyMessage,'\r',''),'\n','') as verifyMessage,DATE_FORMAT(createTime,'%Y-%m-%d') AS createTime,DATE_FORMAT(striveTime,'%Y-%m-%d') AS striveTime,DATE_FORMAT(arriveTime,'%Y-%m-%d') AS arriveTime,DATE_FORMAT(aboardTime,'%Y-%m-%d') AS aboardTime,DATE_FORMAT(canceltime,'%Y-%m-%d') AS cancelTime,pCommentGread,replace(replace(pCommentText,'\r',''),'\n','') as pCommentText,DATE_FORMAT(pCommentTime,'%Y-%m-%d') AS pCommentTime,pCommentStatus,dCommentGread,replace(replace(dcommenttext,'\r',''),'\n','') as dcommenttext,DATE_FORMAT(dCommentTime,'%Y-%m-%d') AS dCommentTime,dCommentStatus,channel,AREA,VERSION,replace(replace(remark,'\r',''),'\n','') as remark,bonus,voicelength,voiceTime  FROM `Order` where createTime between '0000-00-00 00:00:00' and '2013-12-22 23:59:59' and  (1 = 0)  
+14/01/07 17:24:41 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/0db4716e9d87476bda69f2556230d3a8/QueryResult.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/01/07 17:24:42 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/0db4716e9d87476bda69f2556230d3a8/QueryResult.jar
+14/01/07 17:24:42 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/order/2013/12/22 deleted.
+14/01/07 17:24:42 INFO mapreduce.ImportJobBase: Beginning query import.
+14/01/07 17:24:43 INFO mapred.JobClient: Running job: job_201401031355_1607
+14/01/07 17:24:44 INFO mapred.JobClient:  map 0% reduce 0%
+14/01/07 17:31:54 INFO mapred.JobClient:  map 100% reduce 0%
+14/01/07 17:31:59 INFO mapred.JobClient: Job complete: job_201401031355_1607
+14/01/07 17:31:59 INFO mapred.JobClient: Counters: 18
+14/01/07 17:31:59 INFO mapred.JobClient:   Job Counters 
+14/01/07 17:31:59 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=429455
+14/01/07 17:31:59 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/01/07 17:31:59 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/01/07 17:31:59 INFO mapred.JobClient:     Launched map tasks=1
+14/01/07 17:31:59 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/01/07 17:31:59 INFO mapred.JobClient:   File Output Format Counters 
+14/01/07 17:31:59 INFO mapred.JobClient:     Bytes Written=3561360365
+14/01/07 17:31:59 INFO mapred.JobClient:   FileSystemCounters
+14/01/07 17:31:59 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/01/07 17:31:59 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=32766
+14/01/07 17:31:59 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=3561360365
+14/01/07 17:31:59 INFO mapred.JobClient:   File Input Format Counters 
+14/01/07 17:31:59 INFO mapred.JobClient:     Bytes Read=0
+14/01/07 17:31:59 INFO mapred.JobClient:   Map-Reduce Framework
+14/01/07 17:31:59 INFO mapred.JobClient:     Map input records=15819375
+14/01/07 17:31:59 INFO mapred.JobClient:     Physical memory (bytes) snapshot=359272448
+14/01/07 17:31:59 INFO mapred.JobClient:     Spilled Records=0
+14/01/07 17:31:59 INFO mapred.JobClient:     CPU time spent (ms)=399470
+14/01/07 17:31:59 INFO mapred.JobClient:     Total committed heap usage (bytes)=767557632
+14/01/07 17:31:59 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1987907584
+14/01/07 17:31:59 INFO mapred.JobClient:     Map output records=15819375
+14/01/07 17:31:59 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/01/07 17:31:59 INFO mapreduce.ImportJobBase: Transferred 3.3168 GB in 436.2746 seconds (7.785 MB/sec)
+14/01/07 17:31:59 INFO mapreduce.ImportJobBase: Retrieved 15819375 records.

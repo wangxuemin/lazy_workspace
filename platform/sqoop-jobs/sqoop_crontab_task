@@ -1,0 +1,35 @@
+#!/bin/sh
+
+v_currentDate=`date +%Y-%m-%d`
+v_paramDate=$1
+v_executeDate=""
+if [ -z "$v_paramDate" ];then
+    v_executeDate=`date --date="$v_currentDate-1 day" +%Y-%m-%d`
+#    echo v_executeDate:"$v_executeDate"
+else
+    flag=`echo $v_paramDate|grep -e '^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}$'`   
+    if [ -z "$flag" ];then
+        echo "date format is illege! please rewrite!eg:2013-12-12"
+        exit 0
+    else
+        v_executeDate="$v_paramDate"
+#       echo v_executeDate:"$v_executeDate"
+    fi  
+fi
+echo executeDate:"$v_executeDate"
+
+mkdir -p log
+# 全量
+sh city_sqoop_import.sh ${v_executeDate} >>log/city_sqoop_import.log 2>&1
+sh driver_sqoop_import.sh ${v_executeDate} >>log/driver_sqoop_import.log 2>&1
+sh passenger_sqoop_import.sh ${v_executeDate} >>log/passenger_sqoop_import.log 2>&1
+sh order_stat_sqoop_import.sh ${v_executeDate} >>log/order_stat_sqoop_import.log 2>&1
+sh prefer_driver_sqoop_import.sh ${v_executeDate} >>log/prefer_driver_sqoop_import.log 2>&1
+
+# 增量
+sh order_sqoop_import.sh ${v_executeDate} >>log/order_sqoop_import.log 2>&1
+sh order_comment_sqoop_import.sh ${v_executeDate} >>log/order_comment_sqoop_import.log 2>&1
+sh spam_order_sqoop_import.sh ${v_executeDate} >>log/spam_order_sqoop_import.log 2>&1
+sh staticstic_driver_sqoop_import.sh ${v_executeDate} >>log/staticstic_driver_sqoop_import.log 2>&1
+sh recommend_sqoop_import.sh ${v_executeDate} >>log/recommend_sqoop_import.log 2>&1
+#sh stat_preorder_sqoop_job.sh ${v_executeDate}

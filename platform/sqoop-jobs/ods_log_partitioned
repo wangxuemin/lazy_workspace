@@ -1,0 +1,49 @@
+#!/bin/sh
+
+## 为每天 ods_log 创建相应的 hive 表分区，方便查询
+
+hive_execute()
+{
+	local hive_cmd=$@
+	echo hive -e "${hive_cmd}"
+	hive -e "${hive_cmd}"
+}
+
+day=$1
+if [ -z ${day} ]; then
+    day=`date +%Y%m%d`
+else
+    day=`date +%Y%m%d -d "$1"`
+    if [ $? != 0 ];then
+        echo "error date format!"
+        exit
+    fi
+fi
+
+year=`date +%Y -d "${day}"`
+month=`date +%m -d "${day}"`
+day=`date +%d -d "${day}"`
+
+hive_dbname="ods"
+hdfs_ods_logpath="/user/xiaoju/data/bi/ods"
+ods_log_namelist="ods_log_nginx:access ods_log_broadcastorder:broadcastorder ods_log_pushserver_msg_broadcast:push/msgbroadcast ods_log_pushserver_pushservice_getorder:push/dgetorder ods_log_pushserver_pushservice_ordercoming:push/ordercoming ods_log_pushserver_pushservice_orderstrived:push/orderstrived ods_log_trace:trace"
+
+for t in ${ods_log_namelist}; do
+    table=${t%%:*}
+    ods_path=${t##*:}
+    hive_cmd="use ${hive_dbname};alter table ${table} add if not exists partition (year='${year}',month='${month}',day='${day}') location '${hdfs_ods_logpath%%/}/${ods_path%%/}/${year}/${month}/${day}';"
+    hive_execute ${hive_cmd}
+done
+
+hive_dbname="ods"
+hdfs_ods_mysqlpath="/user/xiaoju/data/bi/mysql"
+ods_log_namelist="ods_mysql_order:order"
+if [ -z ${ods_log_namelist} ];then
+    exit
+fi
+for t in ${ods_log_namelist}; do
+    table=${t%%:*}
+    ods_path=${t##*:}
+    hive_cmd="use ${hive_dbname};alter table ${table} add if not exists partition (year='${year}',month='${month}',day='${day}') location '${hdfs_ods_mysqlpath%%/}/${ods_path%%/}/${year}/${month}/${day}';"
+    hive_execute ${hive_cmd}
+done

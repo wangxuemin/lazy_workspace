@@ -1,0 +1,50 @@
+Connection to hdp998.jx:3366?app_dididache&username=app_r&password=app_r
+executeDate:2013-12-22
+Warning: /usr/lib/hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/lib/hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: $HADOOP_HOME is deprecated.
+
+14/01/07 17:32:38 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+14/01/07 17:32:38 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+14/01/07 17:32:38 INFO tool.CodeGenTool: Beginning code generation
+14/01/07 17:32:38 INFO manager.SqlManager: Executing SQL statement: select id,dphone,DATE_FORMAT(date,'%Y-%m-%d'),area,onlineTime,sumOrder,recommend_d,recommend_p,did from op_staticstic_driver where date <='2013-12-22' and  (1 = 0)  
+14/01/07 17:32:38 INFO manager.SqlManager: Executing SQL statement: select id,dphone,DATE_FORMAT(date,'%Y-%m-%d'),area,onlineTime,sumOrder,recommend_d,recommend_p,did from op_staticstic_driver where date <='2013-12-22' and  (1 = 0)  
+14/01/07 17:32:38 INFO manager.SqlManager: Executing SQL statement: select id,dphone,DATE_FORMAT(date,'%Y-%m-%d'),area,onlineTime,sumOrder,recommend_d,recommend_p,did from op_staticstic_driver where date <='2013-12-22' and  (1 = 0)  
+14/01/07 17:32:38 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /home/xiaoju/hadoop-1.0.4
+Note: /tmp/sqoop-xiaoju/compile/bc0fbc3e97069ff663ddb1abed3af2b1/QueryResult.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14/01/07 17:32:39 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-xiaoju/compile/bc0fbc3e97069ff663ddb1abed3af2b1/QueryResult.jar
+14/01/07 17:32:39 INFO tool.ImportTool: Destination directory /user/xiaoju/data/bi/mysql/op_staticstic_driver/2013/12/22 is not present, hence not deleting.
+14/01/07 17:32:39 INFO mapreduce.ImportJobBase: Beginning query import.
+14/01/07 17:32:40 INFO mapred.JobClient: Running job: job_201401031355_1610
+14/01/07 17:32:41 INFO mapred.JobClient:  map 0% reduce 0%
+14/01/07 17:34:33 INFO mapred.JobClient:  map 100% reduce 0%
+14/01/07 17:34:38 INFO mapred.JobClient: Job complete: job_201401031355_1610
+14/01/07 17:34:38 INFO mapred.JobClient: Counters: 18
+14/01/07 17:34:38 INFO mapred.JobClient:   Job Counters 
+14/01/07 17:34:38 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=112371
+14/01/07 17:34:38 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+14/01/07 17:34:38 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+14/01/07 17:34:38 INFO mapred.JobClient:     Launched map tasks=1
+14/01/07 17:34:38 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=0
+14/01/07 17:34:38 INFO mapred.JobClient:   File Output Format Counters 
+14/01/07 17:34:38 INFO mapred.JobClient:     Bytes Written=693277108
+14/01/07 17:34:38 INFO mapred.JobClient:   FileSystemCounters
+14/01/07 17:34:38 INFO mapred.JobClient:     HDFS_BYTES_READ=87
+14/01/07 17:34:38 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=31879
+14/01/07 17:34:38 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=693277108
+14/01/07 17:34:38 INFO mapred.JobClient:   File Input Format Counters 
+14/01/07 17:34:38 INFO mapred.JobClient:     Bytes Read=0
+14/01/07 17:34:38 INFO mapred.JobClient:   Map-Reduce Framework
+14/01/07 17:34:38 INFO mapred.JobClient:     Map input records=12064190
+14/01/07 17:34:38 INFO mapred.JobClient:     Physical memory (bytes) snapshot=428539904
+14/01/07 17:34:38 INFO mapred.JobClient:     Spilled Records=0
+14/01/07 17:34:38 INFO mapred.JobClient:     CPU time spent (ms)=102890
+14/01/07 17:34:38 INFO mapred.JobClient:     Total committed heap usage (bytes)=780009472
+14/01/07 17:34:38 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1987948544
+14/01/07 17:34:38 INFO mapred.JobClient:     Map output records=12064190
+14/01/07 17:34:38 INFO mapred.JobClient:     SPLIT_RAW_BYTES=87
+14/01/07 17:34:38 INFO mapreduce.ImportJobBase: Transferred 661.1606 MB in 118.8819 seconds (5.5615 MB/sec)
+14/01/07 17:34:38 INFO mapreduce.ImportJobBase: Retrieved 12064190 records.

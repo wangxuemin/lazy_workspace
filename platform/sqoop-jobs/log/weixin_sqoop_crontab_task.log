@@ -1,0 +1,878 @@
+executeDate:2014-01-20
+start...quanliang =2014-01-21 00:01:01
+start ...zengliang =2014-01-21 00:02:01
+end sqoop ...=2014-01-21 00:03:30
+executeDate:2014-01-21
+start...quanliang =2014-01-22 00:01:01
+start ...zengliang =2014-01-22 00:02:16
+end sqoop ...=2014-01-22 00:03:52
+executeDate:2014-01-22
+start...quanliang =2014-01-23 00:01:01
+start ...zengliang =2014-01-23 00:02:04
+end sqoop ...=2014-01-23 00:03:30
+executeDate:2014-01-23
+start...quanliang =2014-01-24 00:01:01
+start ...zengliang =2014-01-24 00:02:16
+end sqoop ...=2014-01-24 00:03:52
+executeDate:2014-01-24
+start...quanliang =2014-01-25 00:01:01
+start ...zengliang =2014-01-25 00:02:16
+end sqoop ...=2014-01-25 00:03:59
+executeDate:2014-01-25
+start...quanliang =2014-01-26 00:01:01
+start ...zengliang =2014-01-26 00:02:16
+end sqoop ...=2014-01-26 00:04:04
+executeDate:2014-01-26
+start...quanliang =2014-01-27 00:01:01
+start ...zengliang =2014-01-27 00:02:14
+end sqoop ...=2014-01-27 00:04:00
+executeDate:2014-01-27
+start...quanliang =2014-01-28 00:01:02
+start ...zengliang =2014-01-28 00:02:15
+end sqoop ...=2014-01-28 00:04:24
+executeDate:2014-01-28
+start...quanliang =2014-01-29 00:01:01
+start ...zengliang =2014-01-29 00:02:17
+end sqoop ...=2014-01-29 00:04:21
+executeDate:2014-01-29
+start...quanliang =2014-01-30 00:01:01
+start ...zengliang =2014-01-30 00:02:24
+end sqoop ...=2014-01-30 00:04:31
+executeDate:2014-01-30
+start...quanliang =2014-01-31 00:01:01
+start ...zengliang =2014-01-31 00:02:18
+end sqoop ...=2014-01-31 00:04:22
+executeDate:2014-01-31
+start...quanliang =2014-02-01 00:01:01
+start ...zengliang =2014-02-01 00:02:22
+end sqoop ...=2014-02-01 00:04:24
+executeDate:2014-02-01
+start...quanliang =2014-02-02 00:01:01
+start ...zengliang =2014-02-02 00:02:28
+end sqoop ...=2014-02-02 00:04:42
+executeDate:2014-02-02
+start...quanliang =2014-02-03 00:01:01
+start ...zengliang =2014-02-03 00:02:31
+end sqoop ...=2014-02-03 00:05:03
+executeDate:2014-02-03
+start...quanliang =2014-02-04 00:01:01
+start ...zengliang =2014-02-04 00:02:36
+end sqoop ...=2014-02-04 00:05:17
+executeDate:2014-02-04
+start...quanliang =2014-02-05 00:01:02
+start ...zengliang =2014-02-05 00:02:48
+end sqoop ...=2014-02-05 00:05:40
+executeDate:2014-02-05
+start...quanliang =2014-02-06 00:01:01
+start ...zengliang =2014-02-06 00:03:47
+end sqoop ...=2014-02-06 00:06:52
+executeDate:2014-02-06
+start...quanliang =2014-02-07 00:01:01
+start ...zengliang =2014-02-07 00:05:14
+end sqoop ...=2014-02-07 00:09:27
+executeDate:2014-02-07
+start...quanliang =2014-02-08 00:01:01
+start ...zengliang =2014-02-08 00:05:32
+end sqoop ...=2014-02-08 00:10:41
+executeDate:2014-02-08
+start...quanliang =2014-02-09 00:01:02
+start ...zengliang =2014-02-09 00:05:37
+end sqoop ...=2014-02-09 00:12:05
+executeDate:2014-02-09
+start...quanliang =2014-02-10 00:01:01
+start ...zengliang =2014-02-10 00:05:44
+end sqoop ...=2014-02-10 00:18:44
+executeDate:2014-02-10
+start...quanliang =2014-02-11 00:01:01
+start ...zengliang =2014-02-11 00:05:27
+end sqoop ...=2014-02-11 00:51:06
+executeDate:2014-02-11
+start...quanliang =2014-02-12 00:01:01
+start ...zengliang =2014-02-12 00:02:29
+end sqoop ...=2014-02-12 00:33:45
+executeDate:2014-02-12
+start...quanliang =2014-02-13 00:01:01
+start ...zengliang =2014-02-13 00:07:33
+end sqoop ...=2014-02-13 00:43:08
+executeDate:2014-02-13
+start...quanliang =2014-02-14 00:01:01
+start ...zengliang =2014-02-14 00:05:01
+end sqoop ...=2014-02-14 00:12:35
+executeDate:2014-02-14
+start...quanliang =2014-02-15 00:01:01
+start ...zengliang =2014-02-15 00:03:54
+end sqoop ...=2014-02-15 00:11:18
+executeDate:2014-02-15
+start...quanliang =2014-02-16 00:01:02
+start ...zengliang =2014-02-16 00:04:18
+end sqoop ...=2014-02-16 00:11:52
+executeDate:2014-02-16
+start...quanliang =2014-02-17 00:01:01
+start ...zengliang =2014-02-17 00:04:28
+end sqoop ...=2014-02-17 00:11:41
+executeDate:2014-02-17
+start...quanliang =2014-02-18 00:01:01
+start ...zengliang =2014-02-18 00:08:35
+end sqoop ...=2014-02-18 00:17:53
+executeDate:2014-02-18
+start...quanliang =2014-02-19 00:01:01
+start ...zengliang =2014-02-19 00:11:51
+end sqoop ...=2014-02-19 00:45:13
+executeDate:2014-02-19
+start...quanliang =2014-02-20 00:01:01
+start ...zengliang =2014-02-20 00:11:12
+end sqoop ...=2014-02-20 00:20:13
+executeDate:2014-02-20
+start...quanliang =2014-02-21 00:01:01
+start ...zengliang =2014-02-21 00:07:53
+end sqoop ...=2014-02-21 01:15:41
+executeDate:2014-02-21
+start...quanliang =2014-02-22 00:01:02
+start ...zengliang =2014-02-22 00:02:19
+end sqoop ...=2014-02-22 00:12:49
+executeDate:2014-02-22
+start...quanliang =2014-02-23 00:01:01
+start ...zengliang =2014-02-23 00:02:27
+end sqoop ...=2014-02-23 00:14:51
+executeDate:2014-02-23
+start...quanliang =2014-02-24 00:01:01
+start ...zengliang =2014-02-24 00:02:29
+end sqoop ...=2014-02-24 00:23:25
+executeDate:2014-02-24
+start...quanliang =2014-02-25 00:01:01
+start ...zengliang =2014-02-25 00:02:23
+end sqoop ...=2014-02-25 00:09:47
+executeDate:2014-02-25
+start...quanliang =2014-02-26 00:01:01
+start ...zengliang =2014-02-26 00:02:34
+end sqoop ...=2014-02-26 00:10:05
+executeDate:2014-02-26
+start...quanliang =2014-02-27 00:01:01
+start ...zengliang =2014-02-27 00:02:47
+end sqoop ...=2014-02-27 00:05:28
+executeDate:2014-02-27
+start...quanliang =2014-02-28 02:30:01
+start ...zengliang =2014-02-28 02:31:40
+end sqoop ...=2014-02-28 02:40:47
+executeDate:2014-02-28
+start...quanliang =2014-03-01 02:30:01
+start ...zengliang =2014-03-01 02:31:53
+end sqoop ...=2014-03-01 02:40:22
+executeDate:2014-03-01
+start...quanliang =2014-03-02 02:30:01
+start ...zengliang =2014-03-02 02:31:59
+end sqoop ...=2014-03-02 02:39:56
+executeDate:2014-03-02
+start...quanliang =2014-03-03 02:30:01
+start ...zengliang =2014-03-03 02:31:46
+end sqoop ...=2014-03-03 02:40:08
+executeDate:2014-03-03
+start...quanliang =2014-03-04 02:30:01
+start ...zengliang =2014-03-04 02:31:40
+end sqoop ...=2014-03-04 02:40:40
+executeDate:2014-03-04
+start...quanliang =2014-03-05 02:30:01
+start ...zengliang =2014-03-05 02:32:14
+end sqoop ...=2014-03-05 02:41:30
+executeDate:2014-03-05
+start...quanliang =2014-03-06 02:30:01
+start ...zengliang =2014-03-06 02:32:28
+end sqoop ...=2014-03-06 02:43:26
+executeDate:2014-03-06
+start...quanliang =2014-03-07 02:30:01
+start ...zengliang =2014-03-07 02:32:05
+end sqoop ...=2014-03-07 02:40:34
+executeDate:2014-03-07
+start...quanliang =2014-03-08 02:30:01
+start ...zengliang =2014-03-08 02:31:57
+end sqoop ...=2014-03-08 02:43:15
+executeDate:2014-03-08
+start...quanliang =2014-03-09 02:30:01
+start ...zengliang =2014-03-09 02:32:09
+end sqoop ...=2014-03-09 02:46:34
+executeDate:2014-03-09
+start...quanliang =2014-03-10 02:30:01
+start ...zengliang =2014-03-10 02:32:03
+end sqoop ...=2014-03-10 02:43:32
+executeDate:2014-03-10
+start...quanliang =2014-03-11 02:30:01
+start ...zengliang =2014-03-11 02:32:13
+end sqoop ...=2014-03-11 02:44:36
+executeDate:2014-03-11
+start...quanliang =2014-03-12 02:30:01
+start ...zengliang =2014-03-12 02:32:39
+end sqoop ...=2014-03-12 02:34:03
+executeDate:2014-03-12
+start...quanliang =2014-03-13 02:30:02
+start ...zengliang =2014-03-13 02:32:09
+end sqoop ...=2014-03-13 02:40:12
+executeDate:2014-03-13
+start...quanliang =2014-03-14 02:30:01
+start ...zengliang =2014-03-14 02:31:53
+end sqoop ...=2014-03-14 02:38:51
+executeDate:2014-03-14
+start...quanliang =2014-03-15 02:30:01
+start ...zengliang =2014-03-15 02:32:30
+end sqoop ...=2014-03-15 02:43:31
+executeDate:2014-03-15
+start...quanliang =2014-03-16 02:30:01
+start ...zengliang =2014-03-16 02:32:19
+end sqoop ...=2014-03-16 02:41:40
+executeDate:2014-03-16
+start...quanliang =2014-03-17 02:30:01
+start ...zengliang =2014-03-17 02:32:19
+end sqoop ...=2014-03-17 02:40:48
+executeDate:2014-03-17
+start...quanliang =2014-03-18 02:30:01
+start ...zengliang =2014-03-18 02:32:25
+end sqoop ...=2014-03-18 02:41:49
+executeDate:2014-03-18
+start...quanliang =2014-03-19 02:30:01
+start ...zengliang =2014-03-19 02:32:25
+end sqoop ...=2014-03-19 02:41:34
+executeDate:2014-03-19
+start...quanliang =2014-03-20 02:30:01
+start ...zengliang =2014-03-20 02:30:06
+end sqoop ...=2014-03-20 02:30:15
+executeDate:2014-03-20
+start...quanliang =2014-03-21 02:30:01
+start ...zengliang =2014-03-21 02:32:11
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-20
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-21 02:36:58
+executeDate:2014-03-21
+start...quanliang =2014-03-22 02:30:01
+start ...zengliang =2014-03-22 02:32:13
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-21
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-22 02:37:53
+executeDate:2014-03-22
+start...quanliang =2014-03-23 02:30:01
+start ...zengliang =2014-03-23 02:32:20
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-22
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-23 02:37:08
+executeDate:2014-03-23
+start...quanliang =2014-03-24 02:30:01
+start ...zengliang =2014-03-24 02:32:25
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-23
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-24 02:37:22
+executeDate:2014-03-24
+start...quanliang =2014-03-25 02:30:01
+start ...zengliang =2014-03-25 02:32:58
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-24
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-25 02:37:47
+executeDate:2014-03-25
+start...quanliang =2014-03-26 02:30:01
+start ...zengliang =2014-03-26 02:32:12
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-25
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-26 02:37:07
+executeDate:2014-03-26
+start...quanliang =2014-03-27 02:30:01
+start ...zengliang =2014-03-27 02:32:16
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-26
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-27 02:37:21
+executeDate:2014-03-27
+start...quanliang =2014-03-28 02:30:01
+start ...zengliang =2014-03-28 02:32:12
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-27
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-28 02:37:04
+executeDate:2014-03-28
+start...quanliang =2014-03-29 02:30:01
+start ...zengliang =2014-03-29 02:32:25
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-28
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-29 02:37:22
+executeDate:2014-03-29
+start...quanliang =2014-03-30 02:30:01
+start ...zengliang =2014-03-30 02:32:30
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-29
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-30 02:37:21
+executeDate:2014-03-30
+start...quanliang =2014-03-31 02:30:01
+start ...zengliang =2014-03-31 02:32:54
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-30
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-03-31 02:37:51
+executeDate:2014-03-31
+start...quanliang =2014-04-01 02:30:01
+start ...zengliang =2014-04-01 02:32:59
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-03-31
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db09/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db19/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db29/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db39/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db49/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db59/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db69/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db79/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db89/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/03/31/db99/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-04-01 02:35:44
+executeDate:2014-04-01
+start...quanliang =2014-04-02 02:30:01
+start ...zengliang =2014-04-02 02:30:33
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-01
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db09/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db19/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db29/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db39/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db49/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db59/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db69/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db79/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db89/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+mv: /user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/01/db99/table09/part-m-00000: No such file or directory
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+end sqoop ...=2014-04-02 02:32:01
+executeDate:2014-04-02
+start...quanliang =2014-04-03 02:30:01
+start ...zengliang =2014-04-03 02:30:01
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-02
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+Error: JAVA_HOME is not set and could not be found.
+end sqoop ...=2014-04-03 02:30:13
+executeDate:2014-04-03
+start...quanliang =2014-04-04 02:30:01
+start ...zengliang =2014-04-04 02:30:01
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-03
+rmr: DEPRECATED: Please use 'rm -r' instead.
+14/04/04 02:30:02 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rmr: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/*': No such file or directory
+14/04/04 02:30:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db09/table09/part-m-00000': No such file or directory
+14/04/04 02:30:07 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db19/table09/part-m-00000': No such file or directory
+14/04/04 02:30:09 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db29/table09/part-m-00000': No such file or directory
+14/04/04 02:30:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db39/table09/part-m-00000': No such file or directory
+14/04/04 02:30:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db49/table09/part-m-00000': No such file or directory
+14/04/04 02:30:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db59/table09/part-m-00000': No such file or directory
+14/04/04 02:30:18 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db69/table09/part-m-00000': No such file or directory
+14/04/04 02:30:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db79/table09/part-m-00000': No such file or directory
+14/04/04 02:30:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db89/table09/part-m-00000': No such file or directory
+14/04/04 02:30:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/03/db99/table09/part-m-00000': No such file or directory
+14/04/04 02:30:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/04 02:30:28 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/04 02:30:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+end sqoop ...=2014-04-04 02:30:31
+executeDate:2014-04-04
+start...quanliang =2014-04-05 02:30:01
+start ...zengliang =2014-04-05 02:30:27
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-04
+rmr: DEPRECATED: Please use 'rm -r' instead.
+14/04/05 02:30:29 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rmr: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/*': No such file or directory
+14/04/05 02:30:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db09/table09/part-m-00000': No such file or directory
+14/04/05 02:30:41 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db19/table09/part-m-00000': No such file or directory
+14/04/05 02:30:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db29/table09/part-m-00000': No such file or directory
+14/04/05 02:30:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db39/table09/part-m-00000': No such file or directory
+14/04/05 02:31:00 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db49/table09/part-m-00000': No such file or directory
+14/04/05 02:31:06 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db59/table09/part-m-00000': No such file or directory
+14/04/05 02:31:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db69/table09/part-m-00000': No such file or directory
+14/04/05 02:31:18 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db79/table09/part-m-00000': No such file or directory
+14/04/05 02:31:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db89/table09/part-m-00000': No such file or directory
+14/04/05 02:31:30 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/04/db99/table09/part-m-00000': No such file or directory
+14/04/05 02:31:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/05 02:31:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/05 02:31:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+end sqoop ...=2014-04-05 02:31:53
+executeDate:2014-04-05
+start...quanliang =2014-04-06 02:30:01
+start ...zengliang =2014-04-06 02:30:10
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-05
+rmr: DEPRECATED: Please use 'rm -r' instead.
+14/04/06 02:30:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rmr: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/*': No such file or directory
+14/04/06 02:30:15 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db09/table09/part-m-00000': No such file or directory
+14/04/06 02:30:21 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db19/table09/part-m-00000': No such file or directory
+14/04/06 02:30:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db29/table09/part-m-00000': No such file or directory
+14/04/06 02:30:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db39/table09/part-m-00000': No such file or directory
+14/04/06 02:30:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db49/table09/part-m-00000': No such file or directory
+14/04/06 02:30:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db59/table09/part-m-00000': No such file or directory
+14/04/06 02:30:51 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db69/table09/part-m-00000': No such file or directory
+14/04/06 02:30:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db79/table09/part-m-00000': No such file or directory
+14/04/06 02:31:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db89/table09/part-m-00000': No such file or directory
+14/04/06 02:31:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/05/db99/table09/part-m-00000': No such file or directory
+14/04/06 02:31:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/06 02:31:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/06 02:31:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+end sqoop ...=2014-04-06 02:31:27
+executeDate:2014-04-06
+start...quanliang =2014-04-07 02:30:01
+start ...zengliang =2014-04-07 02:30:07
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-06
+rmr: DEPRECATED: Please use 'rm -r' instead.
+14/04/07 02:30:08 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rmr: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/*': No such file or directory
+14/04/07 02:30:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db09/table09/part-m-00000': No such file or directory
+14/04/07 02:30:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db19/table09/part-m-00000': No such file or directory
+14/04/07 02:30:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db29/table09/part-m-00000': No such file or directory
+14/04/07 02:30:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db39/table09/part-m-00000': No such file or directory
+14/04/07 02:30:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db49/table09/part-m-00000': No such file or directory
+14/04/07 02:30:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db59/table09/part-m-00000': No such file or directory
+14/04/07 02:30:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db69/table09/part-m-00000': No such file or directory
+14/04/07 02:30:56 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db79/table09/part-m-00000': No such file or directory
+14/04/07 02:31:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db89/table09/part-m-00000': No such file or directory
+14/04/07 02:31:09 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/06/db99/table09/part-m-00000': No such file or directory
+14/04/07 02:31:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/07 02:31:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/07 02:31:15 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+end sqoop ...=2014-04-07 02:31:23
+executeDate:2014-04-07
+start...quanliang =2014-04-08 02:30:01
+start ...zengliang =2014-04-08 02:30:10
+Connection to 10.10.10.123:3388?transaction&username=pay_r&password=pay_r
+executeDate:2014-04-07
+rmr: DEPRECATED: Please use 'rm -r' instead.
+14/04/08 02:30:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rmr: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/*': No such file or directory
+14/04/08 02:30:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db09/table09/part-m-00000': No such file or directory
+14/04/08 02:30:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db19/table09/part-m-00000': No such file or directory
+14/04/08 02:30:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db29/table09/part-m-00000': No such file or directory
+14/04/08 02:30:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db39/table09/part-m-00000': No such file or directory
+14/04/08 02:30:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db49/table09/part-m-00000': No such file or directory
+14/04/08 02:30:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db59/table09/part-m-00000': No such file or directory
+14/04/08 02:30:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db69/table09/part-m-00000': No such file or directory
+14/04/08 02:30:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db79/table09/part-m-00000': No such file or directory
+14/04/08 02:31:03 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db89/table09/part-m-00000': No such file or directory
+14/04/08 02:31:09 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+mv: `/user/xiaoju/data/bi/mysql/passenger_transaction/2014/04/07/db99/table09/part-m-00000': No such file or directory
+14/04/08 02:31:10 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/08 02:31:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/08 02:31:15 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+end sqoop ...=2014-04-08 02:31:23
