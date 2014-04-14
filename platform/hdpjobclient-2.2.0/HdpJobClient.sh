@@ -42,7 +42,7 @@ for f in $HADOOP_HOME/$MAPRED_LIB_JARS_DIR/*.jar; do
 done
 
 if [ $# -eq 0 ];then
-    java -Xms1024m -Xmx1024m -XX:MaxPermSize=256m -classpath "${clspath}" org.apache.hadoop.mapred.HdpJobClient | sort
+    java -Xms1024m -Xmx1024m -XX:MaxPermSize=256m -classpath "${clspath}" org.apache.hadoop.mapred.HdpJobClient | sort | grep `date +%Y-%m-%d`
     exit
 fi
 

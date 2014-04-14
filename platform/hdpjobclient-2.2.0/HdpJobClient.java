@@ -126,18 +126,21 @@ public class HdpJobClient {
 		sb.append( sDateTime );
 		sb.append( "|"+job[i].getJobID().toString() );
 		sb.append( "|"+job[i].getState() );
-		sb.append( "|"+job[i].getUsername() );
+		sb.append( "|"+String.format("%6s",job[i].getUsername()) );
 		sb.append( "|"+job[i].getQueue() );
 		//sb.append( "|"+job[i].getSchedulingInfo() );
-		sb.append( "|"+job[i].getJobFile() );
-		sb.append( "|"+job[i].getTrackingUrl() );
-		sb.append( "|"+job[i].getNumUsedSlots() );
+		//sb.append( "|"+job[i].getJobFile() );
+		//sb.append( "|"+job[i].getTrackingUrl() );
+		sb.append( "|Slots:"+job[i].getNumUsedSlots() );
 		//sb.append( "|"+job[i].getHistoryFile() );
-		sb.append( "|"+job[i].getNumReservedSlots() );
-		sb.append( "|"+job[i].getUsedMem() );
-		sb.append( "|"+job[i].getReservedMem() );
-		sb.append( "|"+job[i].getReduceProgress() );
-		sb.append( "|"+job[i].getMapProgress() );
+		sb.append( " Reserved:"+job[i].getNumReservedSlots() );
+		sb.append( "|Mem:"+job[i].getUsedMem() );
+		sb.append( " Reserved:"+job[i].getReservedMem() );
+
+        float mapProgress=job[i].getReduceProgress();
+		sb.append( "|"+(mapProgress==1? "100%":String.format("%.2f%%",mapProgress*100)) );
+        float reduceProgress=job[i].getMapProgress();
+		sb.append( "|"+(reduceProgress==1? "100%":String.format("%.2f%%",reduceProgress*100)) );
 		//sb.append( "|"+job[i].getJobName() );
 		String jobname=job[i].getJobName() ;
 
@@ -162,8 +165,8 @@ public class HdpJobClient {
 		   logParams.getContainerId(), logParams.getNodeId(),
 		   logParams.getOwner());
 		   */
-		//System.out.println( sb.toString() );
-		LOG.info( sb.toString() );
+		System.out.println( sb.toString() );
+		//LOG.info( sb.toString() );
 
 		//System.out.println( job[i].getJobName() );
 
