@@ -18,6 +18,7 @@ import org.apache.hadoop.mapreduce.util.ConfigUtil;
 import org.apache.hadoop.mapreduce.JobStatus;
 import org.apache.hadoop.mapreduce.TaskType;
 import org.apache.hadoop.mapreduce.TaskReport;
+import org.apache.hadoop.mapreduce.TaskAttemptID;
 import org.apache.hadoop.mapreduce.v2.LogParams;
 import org.apache.hadoop.yarn.logaggregation.LogCLIHelpers;
 
@@ -118,17 +119,26 @@ public class HdpJobClient {
 
 	try{
 	    String errinfo[];
+        StringBuilder sb=new StringBuilder();
 
 	    JobID jobid=JobID.forName(job);
 	    JobStatus status=client.getJobStatus(jobid);
 	    System.out.println( status.getTrackingUrl() );
-
-	    printTaskAttempt( client.getTaskReports( jobid, TaskType.MAP ) );
-	    printTaskAttempt( client.getTaskReports( jobid, TaskType.REDUCE ) );
+	    System.out.println( status.getJobFile() );
+	    System.out.println( status.getHistoryFile() );
 
 	    int mapnum=client.getTaskReports( jobid, TaskType.MAP ).length;
 	    int rednum=client.getTaskReports( jobid, TaskType.REDUCE ).length;
-	    System.out.println( "map "+mapnum+" reduce "+rednum);
+        float progress=status.getMapProgress();
+		sb.append( String.format("m %4d %6s", mapnum, progress==1? "100%":String.format("%.2f%%",progress*100)) );
+        sb.append("|");
+        progress=status.getReduceProgress();
+		sb.append( String.format("r %4d %6s", rednum, progress==1? "100%":String.format("%.2f%%",progress*100)) );
+
+        System.out.println( sb.toString() );
+	    printTaskAttempt( client.getTaskReports( jobid, TaskType.MAP ) );
+	    printTaskAttempt( client.getTaskReports( jobid, TaskType.REDUCE ) );
+        System.out.println( sb.toString() );
 
 	}catch( Exception e ){
 	    System.out.println( e );
@@ -143,9 +153,9 @@ public class HdpJobClient {
 	for( TaskReport task: tasks )
 	{
 	    StringBuilder sb=new StringBuilder();
+	    StringBuilder attempt=new StringBuilder();
 
 	    float progress = task.getProgress();
-	    String attempt = task.getSuccessfulTaskAttemptId().toString();
 
 	    java.text.SimpleDateFormat sdf= new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 	    java.util.Date dt = new java.util.Date( task.getStartTime() ); 
@@ -154,7 +164,20 @@ public class HdpJobClient {
 	    String eDateTime = sdf.format(dt);
 
 	    sb.append( task.getTaskId() );
-	    sb.append( "|"+attempt );
+
+        if (task.getCurrentStatus() == TIPStatus.COMPLETE) {
+            attempt.append(task.getSuccessfulTaskAttemptId());
+        } else if (task.getCurrentStatus() == TIPStatus.RUNNING) {
+            for (TaskAttemptID t : 
+                    task.getRunningTaskAttemptIds()) {
+                if( attempt == null || attempt.length() == 0)
+                    attempt.append( t );
+                else
+                    attempt.append( ","+t );
+            }
+        }
+
+	    sb.append( "|"+attempt.toString() );
 	    sb.append( "|"+(progress==1? "100%":String.format("%.2f%%",progress*100)) );
 	    sb.append( "|"+sDateTime);
 	    sb.append( "|"+eDateTime);
@@ -189,12 +212,18 @@ public class HdpJobClient {
 		sb.append( "|"+String.format("%-10s",job[i].getState()) );
 		sb.append( "|"+String.format("%-8s",job[i].getUsername()) );
 		sb.append( "|"+String.format("%-8s",job[i].getQueue()) );
+        //JobStatus status=client.getJobStatus( job[i].getJobID() );
+		//sb.append( "|"+String.format("m %.2f",status.getMapProgress()) );
+		//sb.append( "|"+String.format("r %.2f",status.getReduceProgress()) );
 		String jobname=job[i].getJobName() ;
 
 		Pattern p = Pattern.compile("[\t|\r|\n]*");
 		Matcher m = p.matcher(jobname);
 		jobname = m.replaceAll("");
 		sb.append( "|"+jobname );
+        String failInfo=job[i].getFailureInfo() ;
+        if( !failInfo.isEmpty() )
+            sb.append( "|"+failInfo );
 
 		//getClusterMetrics()
 
