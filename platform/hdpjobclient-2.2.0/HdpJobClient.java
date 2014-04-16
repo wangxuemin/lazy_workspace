@@ -130,10 +130,10 @@ public class HdpJobClient {
 	    int mapnum=client.getTaskReports( jobid, TaskType.MAP ).length;
 	    int rednum=client.getTaskReports( jobid, TaskType.REDUCE ).length;
         float progress=status.getMapProgress();
-		sb.append( String.format("m %4d %6s", mapnum, progress==1? "100%":String.format("%d%%",progress*100)) );
+		sb.append( String.format("m %4d %6s", mapnum, progress==1? "100%":String.format("%.2f%%",progress*100)) );
         sb.append("|");
         progress=status.getReduceProgress();
-		sb.append( String.format("r %4d %6s", rednum, progress==1? "100%":String.format("%d%%",progress*100)) );
+		sb.append( String.format("r %4d %6s", rednum, progress==1? "100%":String.format("%.2f%%",progress*100)) );
 
         System.out.println( sb.toString() );
 	    printTaskAttempt( client.getTaskReports( jobid, TaskType.MAP ) );
