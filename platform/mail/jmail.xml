@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gbk" ?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+  <name>mail.server.host</name>
+    <value>smtp.163.com</value>
+  </property>
+<property>
+  <name>mail.server.port</name>
+    <value>25</value>
+  </property>
+<property>
+  <name>mail.user.name</name>
+    <value>hadoopmonitor@163.com</value>
+  </property>
+ <property>
+  <name>mail.user.pass</name>
+    <value>hadoop</value>
+  </property>
+  <property>
+  <name>mail.address.to</name>
+    <value>55885293@qq.com</value>
+  </property>
+  <property>
+  <name>mail.address.cc</name>
+    <value></value>
+  </property>
+  <property>
+  <name>mail.app.subject</name>
+    <value>platform监控报警</value>
+  </property>
+  <property>
+  <name>mail.app.content</name>
+    <value>platform监控报警</value>
+  </property>
+  <property>
+  <name>mail.app.attach</name>
+    <value></value>
+  </property>
+</configuration>
