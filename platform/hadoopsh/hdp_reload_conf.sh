@@ -21,9 +21,9 @@ done
 
 clear
 echo 读取配置完成!!!
-activeHost=`echo -e $topomap | grep active | awk -F "|" '{print $3}'`
-standbyHost=`echo -e $topomap | grep standby | awk -F "|" '{print $3}'`
-standbyNN=`echo -e $topomap | grep standby | awk -F "|" '{print $2}'`
+activeHost=`echo -e $topomap | grep $localNameService | grep active | awk -F "|" '{print $3}'`
+standbyHost=`echo -e $topomap | grep $localNameService | grep standby | awk -F "|" '{print $3}'`
+standbyNN=`echo -e $topomap | grep $localNameService | grep standby | awk -F "|" '{print $2}'`
 
 # kill active namenode
 pid=`ssh $activeHost "jps -ml | grep NameNode" | awk '{print $1}'`
