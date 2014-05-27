@@ -1,50 +1,58 @@
 #!/bin/sh
 
 hdpbin=$HADOOP_HOME
-nnlist=`${hdpbin%%/}/bin/hdfs getconf -namenodes`
-
-localmachine=`hostname -s`
-
-for nn in $nnlist ;do
-	echo $nn | grep $localmachine >/dev/null
-	if [ $? -eq 0 ]; then
-		continue
-	else
-		remotmachine=$nn" "$remotmachine
-	fi
+nslist=`${hdpbin%%/}/bin/hdfs getconf -confKey dfs.nameservices`
+for ns in `echo $nslist | sed 's/,/ /g'`; do
+    nns=`${hdpbin%%/}/bin/hdfs getconf -confKey dfs.ha.namenodes.$ns`
+    for n in `echo $nns | sed 's/,/ /g'` ;do
+    	nnhost=`${hdpbin%%/}/bin/hdfs getconf -confKey dfs.namenode.rpc-address.${ns}.${n}`
+	state=`${hdpbin%%/}/bin/hdfs haadmin -getServiceState $n`
+	topomap="$ns|$n|${nnhost%%:*}|$state\n"${topomap}
+	echo $nnhost | grep `hostname -s` >/dev/null
+        if [ $? -eq 0 ]; then
+                flg=1
+        fi
+    done
+    if [ $flg -eq 1 ];then
+        localNameService=$ns
+	break
+    fi
 done
 
-for remotnn in $remotmachine ;do
-	remotnnpid=`ssh $remotnn "jps -ml | grep NameNode " |awk '{print $1}'`
-	break;
-done
-#echo "Remot NameNode PID:"$remotnnpid
+clear
+echo 读取配置完成!!!
+activeHost=`echo -e $topomap | grep active | awk -F "|" '{print $3}'`
+standbyHost=`echo -e $topomap | grep standby | awk -F "|" '{print $3}'`
+standbyNN=`echo -e $topomap | grep standby | awk -F "|" '{print $2}'`
 
-# kill local namenode
-nnpid=`jps -ml | grep NameNode | awk '{print $1}'`
-echo "kill Local NameNode PID:"$nnpid
-kill $nnpid
+# kill active namenode
+pid=`ssh $activeHost "jps -ml | grep NameNode" | awk '{print $1}'`
+echo "kill Active NameNode PID:"$pid
+ssh $activeHost kill $pid
 
 echo "Wait standby ==> active"
 while true;do
     sleep 3
 
-    state=`${hdpbin%%/}/bin/hdfs haadmin -getServiceState nn2`
+    state=`${hdpbin%%/}/bin/hdfs haadmin -getServiceState ${standbyNN}`
     if [ $state = "active" ]; then
 	break
     fi
 done
 
 # standby -> active SUCCESS ;then kill local nnpid
-echo standby To active SUCCESS!!!
-echo 启动本地namenode
-${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode
+echo Standby To Active SUCCESS!!!
+echo .
+echo .
+echo .
+echo 启动原 Active NameNode
+ssh $activeHost "${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode"
 
-echo 等待remote离开安全模式
+echo 等待standby离开安全模式
 while true;do
     sleep 3
 
-    state=`ssh $remotnn ${hdpbin%%/}/bin/hdfs dfsadmin -safemode get`
+    state=`ssh $standbyHost "${hdpbin%%/}/bin/hdfs dfsadmin -safemode get"`
     state=`echo $state|awk '{print $4}'`
     if [ $state = "OFF" ]; then
 	break
@@ -53,19 +61,20 @@ while true;do
     # 等待 远程事件结束
 done
 
-echo 等待local离开安全模式
+echo 等待active离开安全模式
 while true;do
     sleep 3
 
-    state=`${hdpbin%%/}/bin/hdfs dfsadmin -safemode get`
+    state=`ssh $activeHost "${hdpbin%%/}/bin/hdfs dfsadmin -safemode get"`
     state=`echo $state|awk '{print $4}'`
     if [ $state = "OFF" ]; then
 	break
     fi
 done
 
-# 本地namenode启动成功；then reboot remote namenode
-echo 重启远程namenode,使Local NameNode 切换为active
-ssh $remotnn kill $remotnnpid
+# Active namenode启动成功；then reboot Standby namenode
+pid=`ssh $standbyHost "jps -ml | grep NameNode " |awk '{print $1}'`
+echo 重启 Standby namenode,使Active NameNode 切换为active
+ssh $standbyHost kill $pid
 sleep 2
-ssh $remotnn ${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode
+ssh $standbyHost ${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode
