@@ -1,5 +1,10 @@
 #!/bin/sh
 
+cmd="echo"
+if [ x$1 = "xyes" -o x$1 = "xYES" ]; then
+    cmd=""
+fi
+
 hdpbin=$HADOOP_HOME
 nslist=`${hdpbin%%/}/bin/hdfs getconf -confKey dfs.nameservices`
 for ns in `echo $nslist | sed 's/,/ /g'`; do
@@ -28,12 +33,15 @@ standbyNN=`echo -e $topomap | grep $localNameService | grep standby | awk -F "|"
 # kill active namenode
 pid=`ssh $activeHost "jps -ml | grep NameNode" | awk '{print $1}'`
 echo "kill Active NameNode PID:"$pid
-ssh $activeHost kill $pid
+$cmd ssh $activeHost kill $pid
 
 echo "Wait standby ==> active"
 while true;do
+    if [ x$cmd = "xecho" ];then
+        break
+    fi
     sleep 3
-
+    
     state=`${hdpbin%%/}/bin/hdfs haadmin -getServiceState ${standbyNN}`
     if [ $state = "active" ]; then
 	break
@@ -46,7 +54,7 @@ echo .
 echo .
 echo .
 echo 启动原 Active NameNode
-ssh $activeHost "${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode"
+$cmd ssh $activeHost "${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode"
 
 echo 等待standby离开安全模式
 while true;do
@@ -75,6 +83,6 @@ done
 # Active namenode启动成功；then reboot Standby namenode
 pid=`ssh $standbyHost "jps -ml | grep NameNode " |awk '{print $1}'`
 echo 重启 Standby namenode,使Active NameNode 切换为active
-ssh $standbyHost kill $pid
+$cmd ssh $standbyHost kill $pid
 sleep 2
-ssh $standbyHost ${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode
+$cmd ssh $standbyHost ${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode
