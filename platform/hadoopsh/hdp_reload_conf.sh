@@ -34,6 +34,9 @@ standbyNN=`echo -e $topomap | grep $localNameService | grep standby | awk -F "|"
 pid=`ssh $activeHost "jps -ml | grep NameNode" | awk '{print $1}'`
 echo "kill Active NameNode PID:"$pid
 $cmd ssh $activeHost kill $pid
+sleep 3
+echo 启动原 Active NameNode
+$cmd ssh $activeHost "${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode"
 
 echo "Wait standby ==> active"
 while true;do
@@ -53,8 +56,6 @@ echo Standby To Active SUCCESS!!!
 echo .
 echo .
 echo .
-echo 启动原 Active NameNode
-$cmd ssh $activeHost "${hdpbin%%/}/sbin/hadoop-daemon.sh start namenode"
 
 echo 等待standby离开安全模式
 while true;do
