@@ -1,0 +1,105 @@
+#function description: 
+#procedure name: P_DM_driverreg
+#creator:MARS
+#created:
+#!/bin/bash
+#today date
+V_DATE=$1
+#
+if [ -z ${V_DATE} ];then
+        V_DATE=`date +%Y-%m-%d`
+fi
+
+#yesterday data partition
+V_PARYEAR=`date --date="$V_DATE-1 day" +%Y`
+V_PARMONTH=`date --date="$V_DATE-1 day" +%m`
+V_PARDAY=`date --date="$V_DATE-1 day" +%d`
+V_PARYESTERDAY=`date --date="$V_DATE-1 day" +%Y%m%d`
+#today,yesterday,7 day  ago,30 days ago,2 days ago  date
+V_TODAY=`date -d $V_DATE "+%Y-%m-%d"`
+V_YESTERDAY=`date --date="$V_DATE-1 day" +%Y-%m-%d`
+V_7DAYS=`date --date="$V_DATE-7 day" +%Y-%m-%d`
+V_WEEK=`date --date="$V_DATE-7 day" +%Y-%m-%d`
+V_THREEWEEKS=`date --date="$V_DATE-21 day" +%Y-%m-%d`
+V_THREEMONTHS=`date --date="$V_DATE-90 day" +%Y-%m-%d`
+V_SIXMONTHS=`date --date="$V_DATE-180 day" +%Y-%m-%d`
+V_15DAYS=`date --date="$V_DATE-15 day" +%Y-%m-%d`
+V_30DAYS=`date --date="$V_DATE-30 day" +%Y-%m-%d`
+V_TWODAYS=`date --date="$V_DATE-2 day" +%Y-%m-%d`
+#30 days ago, 2 days ago data partition 
+V_PAR7DAYS=`date --date="$V_DATE-7 day" +%Y%m%d`
+V_PAR15DAYS=`date --date="$V_DATE-15 day" +%Y%m%d`
+V_PAR30DAYS=`date --date="$V_DATE-30 day" +%Y%m%d`
+V_PAR2DAYS=`date --date="$V_DATE-2 day" +%Y%m%d`
+/home/xiaoju/hive-0.10.0/bin/hive -e"use app;
+INSERT OVERWRITE TABLE DRIVERREG PARTITION(YEAR='$V_PARYEAR',MONTH='$V_PARMONTH',DAY='$V_PARDAY')
+SELECT 0,
+       '$V_YESTERDAY',
+	    M.AREA,
+	    M.CHANNEL,
+	   (CASE WHEN A.DRIVER_REG_ALL IS NOT NULL THEN CAST(A.DRIVER_REG_ALL AS INT) ELSE 0 END) DRIVER_REG_ALL,
+	   (CASE WHEN A.DRIVER_BDREG_ALL IS NOT NULL THEN CAST(A.DRIVER_BDREG_ALL AS INT) ELSE 0 END) DRIVER_BDREG_ALL,
+	   (CASE WHEN A.DRIVER_NEWREG_TODAY IS NOT NULL THEN CAST(A.DRIVER_NEWREG_TODAY AS INT) ELSE 0 END) DRIVER_NEWREG_TODAY,
+	   (CASE WHEN A.DRIVER_REG_ALL IS NOT NULL AND B.DRIVER_6HOUR IS NOT NULL AND A.DRIVER_REG_ALL <>0 
+				THEN ROUND(B.DRIVER_6HOUR/A.DRIVER_REG_ALL,3)
+			ELSE 0.000
+			END) DRIVER_6HOURONLINE_RATIO
+  FROM PDW.DRIVER_AREA_CHANNEL M
+LEFT OUTER JOIN
+(
+SELECT (CASE WHEN AREA IS NULL THEN 10000 ELSE CAST(AREA AS INT) END) AREA,
+       (CASE WHEN CHANNEL IS NULL THEN 0 ELSE CAST(CHANNEL AS INT) END) CHANNEL,
+	   DRIVER_REG_ALL,
+	   DRIVER_BDREG_ALL,
+	   DRIVER_NEWREG_TODAY
+  FROM (SELECT AREA,
+			  (CASE WHEN CHANNEL >= 202 AND CHANNEL <= 204 THEN 1 
+				  ELSE 2
+				 END) CHANNEL,
+			  COUNT(DRIVERID) DRIVER_REG_ALL,
+			  SUM(CASE WHEN SOURCE >0 THEN 1 ELSE 0 END) DRIVER_BDREG_ALL,
+			  SUM(CASE WHEN REGTIME>='$V_YESTERDAY' AND STATUS = 1 THEN 1 ELSE 0 END) DRIVER_NEWREG_TODAY
+		  FROM PDW.DRIVER
+		 WHERE YEAR='$V_PARYEAR'
+		   AND MONTH='$V_PARMONTH'
+		   AND DAY='$V_PARDAY'
+		   AND REGTIME < '$V_TODAY'
+		   AND STATUS=1
+		   AND CHANNEL!=1
+		GROUP BY AREA, 
+			  (CASE WHEN CHANNEL >= 202 AND CHANNEL <= 204 THEN 1 
+					ELSE 2
+				END)
+		GROUPING SETS (AREA,
+					   (CASE WHEN CHANNEL >= 202 AND CHANNEL <= 204 THEN 1 
+							ELSE 2
+						END),
+						(AREA,(CASE WHEN CHANNEL >= 202 AND CHANNEL <= 204 THEN 1 
+								ELSE 2
+							END)),
+						())
+		) W
+) A
+ON(M.AREA=A.AREA AND M.CHANNEL=A.CHANNEL)
+LEFT OUTER JOIN
+(
+SELECT (CASE WHEN AREA IS NULL THEN 10000 ELSE CAST(AREA AS INT) END) AREA,
+        CHANNEL,
+        DRIVER_6HOUR
+  FROM (SELECT AREA,
+			   0 CHANNEL,
+			   COUNT(DISTINCT DPHONE) DRIVER_6HOUR
+		  FROM PDW.OP_STATICSTIC_DRIVER
+		 WHERE YEAR='$V_PARYEAR'
+		   AND MONTH='$V_PARMONTH'
+		   AND DAY='$V_PARDAY'
+		   AND OP_STATICSTIC_DRIVER_DATE='$V_YESTERDAY'
+		   AND ONLINETIME>= 360
+		GROUP BY AREA
+		GROUPING SETS (AREA,
+					   ())
+		) W
+) B
+ON(M.AREA=B.AREA AND M.CHANNEL=B.CHANNEL)
+;"
+/home/xiaoju/hadoop-1.0.4/bin/hadoop fs -touchz /user/xiaoju/data/bi/app/driverreg/$V_PARYEAR/$V_PARMONTH/$V_PARDAY/_SUCCESS

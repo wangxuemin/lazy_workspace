@@ -1,0 +1,81 @@
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	you under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+
+<coordinator-app name="synchonlinedriver-synchonlinedriverjob-coordinator"
+	frequency="${coord:days(1)}" start="${startDatetime}" end="${endDatetime}" timezone="${timezone}"
+	xmlns="uri:oozie:coordinator:0.2">
+
+	<controls>
+		<timeout>120</timeout>
+	</controls>
+
+	<datasets>
+		<!-- mps dataset -->
+		<dataset name="etl_prefer_driver" frequency="${coord:days(1)}"
+			initial-instance="${pwdDatasetInitialInstance}" timezone="${timezone}">
+			<uri-template>${nameNode}/user/xiaoju/data/bi/mysql/preferdriver/${YEAR}/${MONTH}/${DAY}
+			</uri-template>
+			<done-flag>_SUCCESS</done-flag>
+		</dataset>
+		<dataset name="etl_mysql_driver" frequency="${coord:days(1)}"
+			initial-instance="${pwdDatasetInitialInstance}" timezone="${timezone}">
+			<uri-template>${nameNode}/user/xiaoju/data/bi/mysql/driver/${YEAR}/${MONTH}/${DAY}
+			</uri-template>
+			<done-flag>_SUCCESS</done-flag>
+		</dataset>
+		<dataset name="etl_pdw_driver" frequency="${coord:days(1)}"
+			initial-instance="${pwdDatasetInitialInstance}" timezone="${timezone}">
+			<uri-template>${nameNode}/user/xiaoju/data/bi/pdw/driver/${YEAR}/${MONTH}/${DAY}
+			</uri-template>
+			<done-flag>_SUCCESS</done-flag>
+		</dataset>
+	</datasets>
+
+	<input-events>
+		<data-in name="input_etl_prefer_driver" dataset="etl_prefer_driver">
+			<instance>${coord:current(-1)}</instance>
+		</data-in>
+		<data-in name="input_etl_mysql_driver" dataset="etl_mysql_driver">
+			<instance>${coord:current(-1)}</instance>
+		</data-in>
+		<data-in name="input_etl_pdw_driver" dataset="etl_pdw_driver">
+			<instance>${coord:current(-2)}</instance>
+		</data-in>
+		
+	</input-events>
+
+
+	<action>
+		<workflow>
+			<app-path>${workflowAppUri}</app-path>
+			<configuration>
+				<property>
+					<name>jobTracker</name>
+					<value>${jobTracker}</value>
+				</property>
+				<property>
+					<name>nameNode</name>
+					<value>${nameNode}</value>
+				</property>
+				<property>
+					<name>queueName</name>
+					<value>${queueName}</value>
+				</property>
+				<property>
+					<name>wfInput</name>
+					<value>${coord:dataIn('input_etl_prefer_driver')},${coord:dataIn('input_etl_mysql_driver')},${coord:dataIn('input_etl_pdw_driver')}</value>
+				</property>
+			</configuration>
+		</workflow>
+	</action>
+
+</coordinator-app>
+

@@ -1,10 +1,14 @@
 from string import ascii_lowercase
 from random import choice, random
+import sys
 
-target  = list("welcome to http://www.cnhup.com")
-charset = ascii_lowercase + ' .:/'
+target  = list("abcdefghijklmnopqrstuvwxyz")
+charset = ascii_lowercase
+#target  = list("welcome to http://www.google.com")
+#charset = ascii_lowercase + ' .:/'
 parent  = [choice(charset) for _ in range(len(target))]
-minmutaterate  = .09
+
+minmutaterate  = 0.69
 C = range(100)
 
 perfectfitness = len(target)
@@ -25,7 +29,7 @@ iterations = 0
 while parent != target:
     rate =  mutaterate(parent)
     iterations += 1
-    if iterations % 10 == 0: log(iterations,rate,parent)
+    if iterations % 1 == 0: log(iterations,rate,parent)
     copies = [ mutate(parent, rate) for _ in C ]  + [parent]
     parent = max(copies, key=fitness)
 print ()
