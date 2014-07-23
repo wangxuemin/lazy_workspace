@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gbk" ?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+  <name>nimbus.host</name>
+    <value>hdp71.qq</value>
+  </property>
+<property>
+  <name>nimbus.thrift.port</name>
+    <value>6627</value>
+  </property>
+</configuration>
