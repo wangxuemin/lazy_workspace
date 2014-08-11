@@ -170,6 +170,11 @@ public class HdpJobClient {
 					else
 						attempt.append("," + t);
 				}
+
+                if (attempt == null || attempt.length() == 0)
+                {
+                    attempt.append( task.getTaskId().replace("task","attempt")+"_0-" );
+                }
 			}
 
 			sb.append("|" + attempt.toString());
@@ -207,9 +212,9 @@ public class HdpJobClient {
 				String sDateTime = sdf.format(dt);
 
 				sb.append(sDateTime);
-				int mapnum = client.getTaskReports(job[i].getJobID(), TaskType.MAP).length;
-				int rednum = client.getTaskReports(job[i].getJobID(), TaskType.MAP).length;
-				sb.append("|" + mapnum + "-" + rednum);
+				//int mapnum = client.getTaskReports(job[i].getJobID(), TaskType.MAP).length;
+				//int rednum = client.getTaskReports(job[i].getJobID(), TaskType.MAP).length;
+				//sb.append("|" + mapnum + "-" + rednum);
 				sb.append("|" + job[i].getJobID().toString());
 				sb.append("|" + String.format("%-10s", job[i].getState()));
 				sb.append("|" + String.format("%-8s", job[i].getUsername()));
