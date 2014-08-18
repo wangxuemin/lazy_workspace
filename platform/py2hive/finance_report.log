@@ -1,0 +1,10 @@
+logMonth is 2014-07
+Connect to HIVE Server hdp999.jx:10000
+Traceback (most recent call last):
+  File "bin/finance_report.py", line 95, in <module>
+    transport.open()
+  File "/home/xiaoju/datascript/py2hive/lib/thrift/transport/TTransport.py", line 150, in open
+    return self.__trans.open()
+  File "/home/xiaoju/datascript/py2hive/lib/thrift/transport/TSocket.py", line 90, in open
+    raise TTransportException(type=TTransportException.NOT_OPEN, message=message)
+thrift.transport.TTransport.TTransportException: Could not connect to hdp999.jx:10000
