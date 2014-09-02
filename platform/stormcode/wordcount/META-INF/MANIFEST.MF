@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: resources/jedis-2.1.0.jar
+Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+

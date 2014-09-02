@@ -49,6 +49,7 @@ class Perceptron:
 	self.w0 = self.w0 + self.learnrate * x[2] * x[0] #根据调整策略，此处是否需要*x[2] ? 
 	self.w1 = self.w1 + self.learnrate * x[2] * x[1]
 	self.b = self.b + self.learnrate * x[2]
+	print self.w0,self.w1,self.b
 
 
     #训练
