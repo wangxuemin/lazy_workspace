@@ -20,6 +20,7 @@ import org.apache.hadoop.mapreduce.TaskType;
 import org.apache.hadoop.mapreduce.TaskReport;
 import org.apache.hadoop.mapreduce.TaskAttemptID;
 import org.apache.hadoop.mapreduce.v2.LogParams;
+import org.apache.hadoop.mapreduce.ClusterMetrics;
 import org.apache.hadoop.yarn.logaggregation.LogCLIHelpers;
 
 public class HdpJobClient {
@@ -31,7 +32,7 @@ public class HdpJobClient {
 	private Configuration conf;
 
 	static {
-		ConfigUtil.loadResources();
+//		ConfigUtil.loadResources();
 	}
 
 	public HdpJobClient() throws IOException {
@@ -234,8 +235,6 @@ public class HdpJobClient {
 				if (!failInfo.isEmpty())
 					sb.append("|" + failInfo);
 
-				// getClusterMetrics()
-
 				System.out.println(sb.toString());
 				// LOG.info( sb.toString() );
 			}
@@ -245,12 +244,49 @@ public class HdpJobClient {
 		}
 	}
 
+    public ClusterMetrics getClusterMetrics() {
+        ClusterMetrics cluster=null;
+        try{
+            cluster=client.getClusterMetrics();
+        }catch( Exception e)
+        {
+            System.out.println(e);
+        }
+        return cluster;
+    }
+
 	public static void main(String args[]) {
 		try {
 			Configuration conf = new Configuration();
+            conf.set("yarn.resourcemanager.address","hdp800.qq:18040");
+            conf.set("mapreduce.framework.name","yarn");
 			HdpJobClient hdpcli = new HdpJobClient(conf);
 
 			if (args.length == 1) {
+
+                if( args[0].equals("stat") )
+                {
+                    ClusterMetrics cluster=hdpcli.getClusterMetrics();
+                    System.out.println( "RunningMaps:                  :"+cluster.getRunningMaps() );
+                    System.out.println( "RunningReduces                :"+cluster.getRunningReduces() );
+
+                    System.out.println( "OccupiedMapSlots              :"+cluster.getOccupiedMapSlots() );
+                    System.out.println( "OccupiedReduceSlots           :"+cluster.getOccupiedReduceSlots() );
+
+                    System.out.println( "ReservedMapSlots              :"+cluster.getReservedMapSlots() );
+                    System.out.println( "ReservedReduceSlots           :"+cluster.getReservedReduceSlots() );
+
+                    System.out.println( "MapSlotCapacity               :"+cluster.getMapSlotCapacity() );
+                    System.out.println( "ReduceSlotCapacity            :"+cluster.getReduceSlotCapacity() );
+
+                    System.out.println( "TotalJobSubmissions           :"+cluster.getTotalJobSubmissions() );
+                    System.out.println( "TaskTrackerCount              :"+cluster.getTaskTrackerCount() );
+
+                    System.out.println( "BlackListedTaskTrackerCount   :"+cluster.getBlackListedTaskTrackerCount() );
+                    System.out.println( "GrayListedTaskTrackerCount    :"+cluster.getGrayListedTaskTrackerCount() );
+                    System.out.println( "DecommissionedTaskTrackerCount:"+cluster.getDecommissionedTaskTrackerCount() );
+                    return;
+                }
 				hdpcli.getTaskDiagnostics(args[0]);
 				return;
 			} else if (args.length == 2) {
@@ -259,9 +295,11 @@ public class HdpJobClient {
 			}
 
 			hdpcli.displayAllJobs();
+
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+
 
 	}
 
