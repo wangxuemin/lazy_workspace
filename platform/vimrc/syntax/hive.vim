@@ -434,7 +434,8 @@ if version >= 508 || !exists("did_sql_syn_inits")
   "HiLink sqlKeyword	sqlSpecial
   HiLink sqlKeyword	Identifier
   HiLink sqlNumber	Number
-  HiLink sqlOperator	Constant
+  HiLink sqlOperator	Identifier
+  "HiLink sqlOperator	Constant
   "HiLink sqlSpecial	Special
   HiLink sqlStatement	Statement
   HiLink sqlString	String

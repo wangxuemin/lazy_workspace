@@ -22,6 +22,8 @@ import org.apache.hadoop.mapreduce.TaskAttemptID;
 import org.apache.hadoop.mapreduce.v2.LogParams;
 import org.apache.hadoop.mapreduce.ClusterMetrics;
 import org.apache.hadoop.yarn.logaggregation.LogCLIHelpers;
+import org.apache.hadoop.mapreduce.QueueAclsInfo;
+import org.apache.hadoop.mapreduce.QueueInfo;
 
 public class HdpJobClient {
 
@@ -122,6 +124,33 @@ public class HdpJobClient {
 			System.out.println(status.getTrackingUrl());
 			System.out.println(status.getJobFile());
 			System.out.println(status.getHistoryFile());
+			System.out.println(status.getQueue());
+			System.out.println(status.toString());
+
+            System.out.println("#### QueueAclsInfo ####" );
+            QueueAclsInfo[] qais=client.getQueueAclsForCurrentUser();
+			for( int i=0; i< qais.length; i++ )
+            {
+                QueueAclsInfo qai = qais[i];
+                System.out.println(qai.getQueueName().toString() );
+                String[] ops=qai.getOperations();
+                for( int j=0; j<ops.length;j++)
+                {
+                    System.out.println(ops[j]);
+                }
+            }
+
+
+            System.out.println("#### QueueInfo ####" );
+            QueueInfo[] qis=client.getRootQueues();
+			for( int i=0; i< qis.length; i++ )
+            {
+                QueueInfo qi = qis[i];
+                System.out.println(qi.getQueueName() );
+                System.out.println(qi.getSchedulingInfo() );
+                System.out.println(qi.getState() );
+                System.out.println(qi.getProperties() );
+            }
 
 			int mapnum = client.getTaskReports(jobid, TaskType.MAP).length;
 			int rednum = client.getTaskReports(jobid, TaskType.REDUCE).length;
