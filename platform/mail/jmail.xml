@@ -14,11 +14,11 @@
   </property>
 <property>
   <name>mail.user.name</name>
-    <value>hadoopmonitor@163.com</value>
+    <value>@163.com</value>
   </property>
  <property>
   <name>mail.user.pass</name>
-    <value>hadoop</value>
+    <value></value>
   </property>
   <property>
   <name>mail.address.to</name>
@@ -30,11 +30,11 @@
   </property>
   <property>
   <name>mail.app.subject</name>
-    <value>platform¼à¿Ø±¨¾¯</value>
+    <value>platformÂ¼Ã Â¿Ã˜Â±Â¨Â¾Â¯</value>
   </property>
   <property>
   <name>mail.app.content</name>
-    <value>platform¼à¿Ø±¨¾¯</value>
+    <value>platformÂ¼Ã Â¿Ã˜Â±Â¨Â¾Â¯</value>
   </property>
   <property>
   <name>mail.app.attach</name>
