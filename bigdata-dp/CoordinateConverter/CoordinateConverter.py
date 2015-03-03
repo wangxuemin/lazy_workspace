@@ -1,5 +1,8 @@
 # encoding: utf-8
-import os,sys,math
+import os,string,math,re
+import urllib2,json
+
+UserAgent = "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)"
 
 class SpBaiduPointMC:
     def __init__(self, lng, lat ):
@@ -190,7 +193,7 @@ class spBaiduCoordinateConverter:
         p1r = p1.getRadians()
         p2r = p2.getRadians()
 
-        return self.EARTHRADIUS * acos((sin(p1r[1]) * sin(p2r[1]) + cos(p1r[1]) * cos(p2r[1]) * cos(p2r[0] - p1r[0])))
+        return self.EARTHRADIUS * math.acos((math.sin(p1r[1]) * math.sin(p2r[1]) + math.cos(p1r[1]) * math.cos(p2r[1]) * math.cos(p2r[0] - p1r[0])))
 
     @classmethod
     def convertMC2LL( self, spBaiduPointMC ):
@@ -234,8 +237,35 @@ class spBaiduCoordinateConverter:
 
         return [T,cM]
 
-point = SpBaiduPointLL( 116.301934, 39.977552 )
-print point.toMC()
+def GetPoi( x,y ):
+    url = "http://api.map.baidu.com/?qt=rgc&x=%.2f&y=%.2f&dis_poi=1&poi_num=1&ie=utf-8&res=api" %(x,y)
+    response = urllib2.urlopen(url).read()
+    return json.loads( response )
 
-point = SpBaiduPointMC( 12946812.94, 4834970.37)
-print point.toLL()
+
+if __name__ == '__main__':
+
+    partern = re.compile('from:([0-9.]+),([0-9.]+) to:([0-9.]+),([0-9.]+)')
+
+    filename= "main_order.txt"
+    if os.path.exists( filename ) :
+        fp = open( filename, 'r' )
+        for line in fp:
+            match=partern.match( line )
+            if match :
+                lng = string.atof(match.group(1))
+                lat = string.atof(match.group(2))
+                p1 = SpBaiduPointLL( lng, lat )
+                [x,y] = p1.toMC()
+                addr_src = GetPoi( x,y )
+
+                lng = string.atof(match.group(3))
+                lat = string.atof(match.group(4))
+                p2 = SpBaiduPointLL( lng, lat )
+                [x,y] = p2.toMC()
+                addr_dst = GetPoi( x,y )
+
+                distance = spBaiduCoordinateConverter.getDistance( p1, p2 )
+                print "%s\t\t%s %lf" %(addr_src["content"]["address"], addr_dst["content"]["address"], distance )
+
+        fp.close()
