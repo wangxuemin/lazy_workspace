@@ -401,7 +401,7 @@ class CityPolygon:
             #查找冲突表
             cityid = self.conflictbitmap_.getBitMapValue( key1, key2 )
             if cityid != None:
-                citylst.append( cityid )
+                citylst += cityid 
 
         cityid = self.bitmap_.getBitMapValue( key1-1, key2 )
         if cityid != None:
@@ -409,7 +409,7 @@ class CityPolygon:
             #查找冲突表
             cityid = self.conflictbitmap_.getBitMapValue( key1-1, key2 )
             if cityid != None:
-                citylst.append( cityid )
+                citylst += cityid 
 
         cityid = self.bitmap_.getBitMapValue( key1, key2-1 )
         if cityid != None:
@@ -417,7 +417,7 @@ class CityPolygon:
             #查找冲突表
             cityid = self.conflictbitmap_.getBitMapValue( key1, key2-1 )
             if cityid != None:
-                citylst.append( cityid )
+                citylst += cityid 
 
         cityid = self.bitmap_.getBitMapValue( key1+1, key2 )
         if cityid != None:
@@ -425,7 +425,7 @@ class CityPolygon:
             #查找冲突表
             cityid = self.conflictbitmap_.getBitMapValue( key1+1, key2 )
             if cityid != None:
-                citylst.append( cityid )
+                citylst += cityid 
 
         cityid = self.bitmap_.getBitMapValue( key1, key2+1 )
         if cityid != None:
@@ -433,7 +433,7 @@ class CityPolygon:
             #查找冲突表
             cityid = self.conflictbitmap_.getBitMapValue( key1, key2+1 )
             if cityid != None:
-                citylst.append( cityid )
+                citylst += cityid 
 
         return set(citylst)
 
