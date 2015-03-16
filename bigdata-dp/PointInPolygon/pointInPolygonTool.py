@@ -8,6 +8,14 @@ logging.basicConfig(
         format = "[%(asctime)s] %(levelname)s: %(message)s"
         )   
 
+CityCode={}
+CityCode['beijing'] = 1 
+CityCode['shanghai'] = 4 
+CityCode['guangzhou'] = 3 
+CityCode['shenzhen'] = 2 
+CityCode['nanjing'] = 11
+CityCode['qingdao'] = 13
+
 WKT={}
 CHINA=[
         [73.33,18.00],
@@ -433,8 +441,8 @@ class CityPolygon:
             cityname = self.id2city_[cityid]
             city_wkt = self.wkt_[ cityname ]
             if pointInPolygon( [x,y], city_wkt ):
-                return self.id2city_[ cityid ]
-                #return self.CityCode[ cityname ]
+                #return self.id2city_[ cityid ]
+                return CityCode[ cityname ]
 
     def getCityByPointArr(self,point):
         return self.getCityByPoint( point[0], point[1] )
