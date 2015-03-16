@@ -430,13 +430,19 @@ class CityPolygon:
         return set(citylst)
 
     # 边界处理
-    # 取一个点附近 4 个点 , 逐个遍历
     def getCityByPoint(self,x,y):
         [ key1,key2 ] = self.getKeyByPoint(x,y)
         logging.debug( "getCityByPoint %d %d", key1, key2 )
         
         cityidlst = self.getCityId4Neighbors(key1,key2)
         logging.debug("getCityId4Neighbors cityidlst: [%s]",cityidlst)
+        # 如果只找到一个 City，说明没有冲突
+        if len(cityidlst) == 1:
+            cityname = self.id2city_[cityidlst.pop()]
+            return CityCode[ cityname ]
+
+        # else: 否则
+        # 取一个点附近 4 个点 , 逐个遍历
         for cityid in cityidlst:
             cityname = self.id2city_[cityid]
             city_wkt = self.wkt_[ cityname ]
