@@ -1,6 +1,14 @@
 # encoding: utf-8
 import os,sys
 import math
+import logging
+
+logging.basicConfig(
+        level = logging.INFO,
+        format = "[%(asctime)s] %(levelname)s: %(message)s"
+        )
+
+isDebug = logging.getLogger().isEnabledFor( logging.DEBUG )
 
 # 功能：计算球面距离
 # 输入：两个gps点
@@ -42,29 +50,49 @@ def calcDistanceSpan( p1,p2 ):
 
     return calcGpsDistance( [p1_lng,p1_lat],[p2_lng,p2_lat] )
 
+def calcTimeAndDistanceSpan( p1,p2 ):
+    p1 = p1.split(',')
+    p2 = p2.split(',')
+
+    _dt = int(p2[0]) - int(p1[0])
+
+    p1_lng = float(p1[1])
+    p1_lat = float(p1[2])
+    p2_lng = float(p2[1])
+    p2_lat = float(p2[2])
+    _ds = calcGpsDistance( [p1_lng,p1_lat],[p2_lng,p2_lat] )
+
+    return _dt, _ds
+
 def main( time_threshold, distance_threshold ):
     user_count = 0
-    # 轨迹分割默认时间阈值60s，距离阈值300m
-    #dt_threshold = time_hreshold
-    #ds_threshold = distance_threshold
+    # 轨迹分割
+    # 默认时间阈值60s，距离阈值300m
+    # dt_threshold = time_hreshold
+    # ds_threshold = distance_threshold
 
     for line in sys.stdin:
         user_count += 1
         userId,trajs = line.split(' ')
+
+        # 删除换行符
+        trajs = trajs[:-1]
         loc_point = trajs.split(';')
 
         # 统计项
-        point_count = 0
-        outlier_count = 0 
+        trajs_point_cnt = 0         # 所有合法轨迹点数
+        trajs_total_online_time = 0 # 所有轨迹在线时长
+        trajs_total_length = 0.0    # 所有轨迹长度
+        sub_traj_cnt = 0            # 子轨迹数
 
-        online_time = 0
-        trajs_length = 0.0
-        total_online_time = 0
-        total_trajs_length = 0.0
+        sub_traj_point_cnt = 0      # 当前子轨迹点数
+        sub_traj_online_time = 0    # 当前子轨迹在线时长
+        sub_trajs_length = 0.0      # 当前子轨迹长度
 
-        # 子轨迹计数
-        sub_traj=[]
-        sub_traj_count = 0
+        # 子轨迹变量 (辅助调试)
+        if isDebug:
+            sub_traj = []
+            ret_traj = []
 
         # 查询 第一个point的 城市 CityCode
         area = 0
@@ -72,47 +100,76 @@ def main( time_threshold, distance_threshold ):
         # 设置第一个point
         prev_point = loc_point[0]
         for point in loc_point[1:]:
-            point_count += 1
+            # 子轨迹点数 += 1
+            sub_traj_point_cnt += 1
             # 计算 时间差 dt
-            dt = calcTimeSpan( prev_point, point )
+            #dt = calcTimeSpan( prev_point, point )
             # 计算 距离差 ds
-            ds = calcDistanceSpan( prev_point, point )
+            #ds = calcDistanceSpan( prev_point, point )
+            dt,ds = calcTimeAndDistanceSpan( prev_point, point )
 
-            # traj 分割,新的 traj
+            if isDebug:
+                sub_traj.append(prev_point)
+            logging.debug( "%s %s" , prev_point, point)
+            logging.debug( "dt: %d ds: %f" , dt, ds)
+            logging.debug( "sub_traj_point_cnt :%d", sub_traj_point_cnt )
+
+            # 轨迹分割
             if dt > time_threshold or ds > distance_threshold :
-                # 加入子轨迹，重新计算online_time, trajs_length 
-                if online_time > 0 and trajs_length > 0.0 :
-                    sub_traj_count += 1
-                    #sub_traj.append([online_time,trajs_length])
+                # 跳过连续的 孤立点
+                if sub_traj_point_cnt > 1 :
+                    # 子轨迹数 +=1
+                    sub_traj_cnt += 1
+                    # 统计轨迹点数: 加和长于1的子轨迹点数
+                    trajs_point_cnt += sub_traj_point_cnt
 
-                # 如果 online_time ==0 and trahs_length == 0.0
-                # 跳过单点，计数
-                elif not online_time < 0 and not trajs_length < 0.0 :
-                    outlier_count += 1
+                    logging.debug( "sub_traj_cnt: %d",sub_traj_cnt)
+                    if isDebug:
+                        ret_traj.append( sub_traj )
 
-                online_time = 0
-                trajs_length = 0.0
+                if isDebug:
+                    sub_traj=[]
+
+                # 重置 子轨迹点数，在线时长，距离
+                sub_traj_point_cnt = 0 
+                sub_traj_online_time = 0
+                sub_trajs_length = 0.0
 
                 # 移动指针
                 prev_point = point
+                logging.debug( "============================" );
                 continue
 
-            online_time += dt
-            trajs_length += ds
+            # 添加移动点，忽略异常不动点
+            if dt > 0 or ds > 0.0 :
+                sub_traj_online_time += dt
+                sub_trajs_length += ds
 
-            total_online_time += dt
-            total_trajs_length += ds
+                # 统计 轨迹的在线时长，轨迹的长度
+                trajs_total_online_time += dt
+                trajs_total_length += ds
 
+                logging.debug( "trajs_total_online_time: %d",trajs_total_online_time)
+                logging.debug( "trajs_total_length: %f",trajs_total_length)
+
+            logging.debug( "============================" );
             # 移动指针
             prev_point = point
 
         # 添加最后一段traj
-        if online_time > 0 and trajs_length > 0.0 :
-            sub_traj_count += 1
-            #sub_traj.append([online_time,trajs_length])
+        # if sub_traj_online_time > 0 and sub_trajs_length > 0.0 :
+        if sub_traj_point_cnt > 1 :
+            sub_traj_cnt += 1
+            trajs_point_cnt += sub_traj_point_cnt
+            if isDebug:
+                ret_traj.append( sub_traj )
 
         # 输出 一个，userId的统计信息, 等待reduce聚合
-        print "%s\t%d,%lf,%d,%d" %( area, total_online_time, total_trajs_length, point_count - outlier_count, sub_traj_count )
+        if isDebug:
+            for tj in ret_traj:
+                print tj,len(tj)
+            print "area:%s\tonline_time:%d,trajs_length:%lf,pt_cnt:%d,subtraj_cnt:%d" %( area, trajs_total_online_time, trajs_total_length, trajs_point_cnt , sub_traj_cnt )
+        print "area:%s\t%d,%lf,%d,%d" %( area, trajs_total_online_time, trajs_total_length, trajs_point_cnt , sub_traj_cnt )
 
 if __name__ == '__main__':
 

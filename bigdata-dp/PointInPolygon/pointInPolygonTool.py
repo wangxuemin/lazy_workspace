@@ -389,51 +389,35 @@ class CityPolygon:
         scale = self.scale_
         return [int(x*scale),int(y*scale)]
 
-    def getCityByPoint(self,point):
-        return getCityByPoint(self,point[0],point[1])
+    def getCityFromAllBitMap(self,key1,key2):
+        _citylst = []
+        cityid = self.bitmap_.getBitMapValue( key1, key2 )
+        if cityid != None:
+            _citylst.append( cityid )
+            #查找冲突表
+            cityid = self.conflictbitmap_.getBitMapValue( key1, key2 )
+            if cityid != None:
+                _citylst += cityid 
+
+        return _citylst
 
     def getCityId4Neighbors(self, key1, key2):
         citylst = []
 
-        cityid = self.bitmap_.getBitMapValue( key1, key2 )
-        if cityid != None:
-            citylst.append( cityid )
-            #查找冲突表
-            cityid = self.conflictbitmap_.getBitMapValue( key1, key2 )
-            if cityid != None:
-                citylst += cityid 
+        cityid = self.getCityFromAllBitMap( key1, key2 )
+        citylst += cityid 
 
-        cityid = self.bitmap_.getBitMapValue( key1-1, key2 )
-        if cityid != None:
-            citylst.append( cityid )
-            #查找冲突表
-            cityid = self.conflictbitmap_.getBitMapValue( key1-1, key2 )
-            if cityid != None:
-                citylst += cityid 
+        cityid = self.getCityFromAllBitMap( key1-1, key2 )
+        citylst += cityid 
 
-        cityid = self.bitmap_.getBitMapValue( key1, key2-1 )
-        if cityid != None:
-            citylst.append( cityid )
-            #查找冲突表
-            cityid = self.conflictbitmap_.getBitMapValue( key1, key2-1 )
-            if cityid != None:
-                citylst += cityid 
+        cityid = self.getCityFromAllBitMap( key1, key2-1 )
+        citylst += cityid 
 
-        cityid = self.bitmap_.getBitMapValue( key1+1, key2 )
-        if cityid != None:
-            citylst.append( cityid )
-            #查找冲突表
-            cityid = self.conflictbitmap_.getBitMapValue( key1+1, key2 )
-            if cityid != None:
-                citylst += cityid 
+        cityid = self.getCityFromAllBitMap( key1+1, key2 )
+        citylst += cityid 
 
-        cityid = self.bitmap_.getBitMapValue( key1, key2+1 )
-        if cityid != None:
-            citylst.append( cityid )
-            #查找冲突表
-            cityid = self.conflictbitmap_.getBitMapValue( key1, key2+1 )
-            if cityid != None:
-                citylst += cityid 
+        cityid = self.getCityFromAllBitMap( key1, key2+1 )
+        citylst += cityid 
 
         return set(citylst)
 
@@ -450,6 +434,10 @@ class CityPolygon:
             city_wkt = self.wkt_[ cityname ]
             if pointInPolygon( [x,y], city_wkt ):
                 return self.id2city_[ cityid ]
+                #return self.CityCode[ cityname ]
+
+    def getCityByPointArr(self,point):
+        return self.getCityByPoint( point[0], point[1] )
 
     def dump_conflict_bitmap(self):
         self.conflictbitmap_.dump()
@@ -464,4 +452,4 @@ if __name__ == '__main__':
     print cityPolygon.getCityByPoint(113.266839,23.148763)
     print cityPolygon.getCityByPoint(118.790628,32.098446)
     print cityPolygon.getCityByPoint(114.14531,22.6758)
-    print cityPolygon.getCityByPoint(120.391192,36.130978)
+    print cityPolygon.getCityByPointArr([120.391192,36.130978])
