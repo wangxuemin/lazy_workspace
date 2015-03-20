@@ -1,0 +1,765 @@
+// $Id: didi_protocol.proto 1949 2014-09-03 08:52:36Z roshantu $
+
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiCommonProtobuf";
+
+package DidiPush;
+//update time: 2014-4-23 15:43 (新增kPushStrategyTryBest)
+//update time: 2014-4-8 17:00 (新增DispatchSvr,MsgType value redefined)
+//update time: 2014-4-3 19:48 (新增CollectSvr)
+//update time: 2014-4-3 11:00 (新增PushSvr)
+//update time: 2014-4-2 13:06 (CdntSvr支持多对多关系)
+// full package = outer_header + header + payload
+// outer_header = magic(2B)+payload_offset(2B,payload offset)+data_length(4B,full package length)
+//   .magic = kMagic
+//   .payload_offset = sizeof(outer_header) + sizeof(header)
+//   .data_length  = sizeof(full package)
+// header       = (outer_header.payload_offset - sizeof(outer_header)) bytes，see protobuf message Header
+// payload      = (data_length - outer_header.payload_offset) bytes, decided by Header.type
+// 协议中出现的所有user_id(eg.
+// driver_id,auth_user_id,user_id)均为uint64_t，最高16位为角色标记(0: 司机,1: 乘客)，其余48位为相应角色下的唯一标识(自增id)
+
+enum Constants {
+    // On wire format: 0x54 0x58
+    kMagic = 0x5854; //different from asn(ASN1.3(1B):'0' ,ASN20(4B): 0x4E534153)
+    kNodeTypeMask = 0xF;
+    kNodeTypeShiftBits = 8; //0x?00
+}
+
+enum NodeType {
+    kNodeTypeMin            = 0x0; // unknown
+    kNodeTypeApp            = 0x1; // APP
+    kNodeTypeConnSvr        = 0x2; // 长连接server
+    kNodeTypeConnMasterSvr  = 0x3; // 长连接master
+    kNodeTypeCdntSvr        = 0x4; // 坐标转发服务
+    kNodeTypeAuthSvr        = 0x5; // 认证服务
+    kNodeTypePushSvr        = 0x6; // Push服务(推送消息给APP)
+    kNodeTypeCollectSvr     = 0x7; // 数据收集server
+    kNodeTypeDispatchSvr    = 0x8; // dispatch
+    kNodeTypeMessageSvr     = 0x9; // InstantMessage - Message
+    kNodeTypeSessionSvr     = 0xA; // InstantMessage - Session
+    kNodeTypeFileSvr        = 0xB; // InstantMessage - File
+    kNodeTypeRepushSvr      = 0xC; // Repush服务(retry PushSvr) - Inner Use
+    kNodeTypeDbSvr          = 0xD; // DbSvr mysql 同步转异步
+    kNodeTypeMax            = 0xF; // 结束
+};
+
+
+//type(暂时只用了4b + 1B) = type_reserved(20b) + node_type(4b) + real_msg_type(7b)+request_or_response(1b)
+// request_or_response, 1: request ,0: response(即奇数为请求，偶数为响应)
+enum MsgType {
+    kMsgTypeMin                      = 0x000; // unknow
+
+    // APP(request & response,请求用奇数,响应用偶数)
+    kMsgTypeAppTypeMin               = 0x100; // 开始
+    kMsgTypeConnSvrConnectChallenge  = 0x101; // ConnSvr -> APP: 连接挑战 (real kMsgTypeAppConnectChallenge)
+    kMsgTypeAppHeartbeatReq          = 0x103; // ConnSvr -> APP: 心跳请求
+    kMsgTypeAppHeartbeatRsp          = 0x104; // APP -> ConnSvr: 心跳响应
+    kMsgTypeCdntSvrDownReq           = 0x105; // CdntSvr -> ConnSvr -> APP: 下载坐标请求
+    kMsgTypeCdntSvrDownRsp           = 0x106; // APP -> ConnSvr -> CdntSvr(暂不需要): 下载坐标响应
+    kMsgTypeAppPushMessageReq        = 0x107; // PushSvr -> ConnSvr -> APP 请求: 下推消息给APP
+    kMsgTypeAppPushMessageRsp        = 0x108; // APP -> ConnSvr -> PushSvr 响应
+    kMsgTypeAppTypeMax               = 0x1FF; // 结束
+
+    // ConnSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeConnSvrTypeMin           = 0x200; // 开始
+    kMsgTypeConnSvrConnectReq        = 0x201; // APP -> ConnSvr: 连接建立请求
+    kMsgTypeConnSvrConnectRsp        = 0x202; // ConnSvr -> APP: 连接建立响应
+    kMsgTypeConnSvrDisconnectReq     = 0x203; // ConnSvr -> APP: 连接断开请求
+    kMsgTypeConnSvrDisconnectRsp     = 0x204; // APP -> ConnSvr(暂不需要): 链接断开响应
+    kMsgTypeConnSvrGetOnlineReq      = 0x205; // ConnMaster -> ConnSvr: 获取所有连接信息请求
+    kMsgTypeConnSvrGetOnlineRsp      = 0x206; // ConnSvr -> ConnMaster: 获取所有连接信息响应
+    kMsgTypeConnSvrGetOnlineCountReq = 0x207; // ConnMaster -> ConnSvr: 获取连接总数请求
+    kMsgTypeConnSvrGetOnlineCountRsp = 0x208; // ConnSvr -> ConnMaster: 获取连接总数响应
+    kMsgTypeConnSvrHeartbeatReq      = 0x209; // APP -> ConnSvr: 心跳请求
+    kMsgTypeConnSvrHeartbeatRsp      = 0x20A; // ConnSvr -> APP: 心跳响应
+    kMsgTypeConnSvrGetIfOnlineReq    = 0x20B; // ConnMaster -> ConnSvr: 获取是否在线请求
+    kMsgTypeConnSvrGetIfOnlineRsp    = 0x20C; // ConnSvr -> ConnMaster: 获取是否在线响应
+    kMsgTypeConnSvrKickNoRspReq      = 0x20D; // ConnMaster - > ConnSvr: 踢连接
+    kMsgTypeConnSvrTypeMax           = 0x2FF; // 结束
+
+    // ConnMaster(request & response,请求用奇数,响应用偶数)
+    kMsgTypeConnMasterTypeMin           = 0x300; // 开始
+    kMsgTypeConnMasterGetRouteReq       = 0x301; // * -> ConnMaster: 获取路由请求
+    kMsgTypeConnMasterGetRouteRsp       = 0x302; // ConnMaster -> *: 获取路由响应
+    kMsgTypeConnMasterSetRouteReq       = 0x303; // * -> ConnMaster: 设置路由请求
+    kMsgTypeConnMasterSetRouteRsp       = 0x304; // ConnMaster -> *: 设置路由响应
+    kMsgTypeConnMasterDelRouteReq       = 0x305; // * -> ConnMaster: 删除路由请求
+    kMsgTypeConnMasterDelRouteRsp       = 0x306; // ConnMaster -> *: 删除路由响应
+    kMsgTypeConnMasterGetOnlineReq      = 0x307; // * -> ConnMaster: 获取所有连接信息请求
+    kMsgTypeConnMasterGetOnlineRsp      = 0x308; // ConnMaster -> *: 获取所有连接信息响应
+    kMsgTypeConnMasterGetOnlineCountReq = 0x309; // * -> ConnMaster: 获取连接总数请求
+    kMsgTypeConnMasterGetOnlineCountRsp = 0x30A; // ConnMaster -> *: 获取连接总数响应
+    kMsgTypeConnMasterGetIfOnlineReq    = 0x30B; // * -> ConnMaster: 获取是否在线请求
+    kMsgTypeConnMasterGetIfOnlineRsp    = 0x30C; // ConnMaster -> *: 获取是否在线响应
+    kMsgTypeConnMasterKickReq           = 0x30D; // * -> ConnMaster: 广播踢连接请求
+    kMsgTypeConnMasterKickRsp           = 0x30E; // ConnMaster -> *: 广播踢连接响应
+    kMsgTypeConnMasterTypeMax           = 0x3FF; // 结束
+
+    // CdntSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeCdntSvrTypeMin           = 0x400; // 开始
+    kMsgTypeCdntSvrUpReq             = 0x401; // APP -> ConnSvr -> CdntSvr: 上传坐标请求
+    kMsgTypeCdntSvrUpRsp             = 0x402; // CdntSvr -> ConnSvr -> APP(暂不需要): 上传坐标响应
+    kMsgTypeCdntSvrSetRelationReq    = 0x403; // PHP -> CdntSvr: 设置司机乘客关联关系请求
+    kMsgTypeCdntSvrSetRelationRsp    = 0x404; // CdntSvr -> PHP: 设置司机乘客关联关系响应
+    kMsgTypeCdntSvrDelRelationReq    = 0x405; // PHP -> CdntSvr: 删除司机乘客关联关系请求
+    kMsgTypeCdntSvrDelRelationRsp    = 0x406; // CdntSvr -> PHP: 删除司机乘客关联关系响应
+    kMsgTypeCdntSvrGetRelationReq    = 0x407; // PHP -> CdntSvr: 获取司机乘客关联关系请求
+    kMsgTypeCdntSvrGetRelationRsp    = 0x408; // CdntSvr -> PHP: 获取司机乘客关联关系响应
+    kMsgTypeCdntSvrAddRelationReq    = 0x409; // PHP -> CdntSvr: 添加司机乘客关联关系请求
+    kMsgTypeCdntSvrAddRelationRsp    = 0x40A; // CdntSvr -> PHP: 添加司机乘客关联关系响应
+    kMsgTypeCdntSvrTypeMax           = 0x4FF; // 结束
+
+    // AuthSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeAuthSvrTypeMin           = 0x500; // 开始
+    kMsgTypeAuthSvrAddUserReq        = 0x501; // * -> AuthSvr: 设置用户登录token请求
+    kMsgTypeAuthSvrAddUserRsp        = 0x502; // AuthSvr -> *: 设置用户登录token响应
+    kMsgTypeAuthSvrDelUserReq        = 0x503; // * -> AuthSvr: 删除用户登录token请求
+    kMsgTypeAuthSvrDelUserRsp        = 0x504; // AuthSvr -> *: 删除用户登录token响应
+    kMsgTypeAuthSvrLoginReq          = 0x505; // ConnSvr -> AuthSvr: 登录用户
+    kMsgTypeAuthSvrLoginRsp          = 0x506; // AuthSvr -> ConnSvr: 登录用户
+    kMsgTypeAuthSvrQueryUserReq      = 0x507; // * -> AuthSvr: 电话号码查询UserId request
+    kMsgTypeAuthSvrQueryUserRsp      = 0x508; // AuthSvr -> *: 电话号码查询UserId response
+    kMsgTypeAuthSvrSignReq           = 0x509; // * -> AuthSvr: 请求签名
+    kMsgTypeAuthSvrSginRsp           = 0x50A; // AuthSvr -> *: 返回签名
+    kMsgTypeAuthSvrTypeMax           = 0x5FF; // 结束
+
+    // PushSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypePushSvrTypeMin           = 0x600; // 开始
+    kMsgTypePushSvrReq               = 0x601; // * -> PushSvr[ -> APP 请求]
+    kMsgTypePushSvrRsp               = 0x602; // [APP->]PushSvr -> * 响应
+    kMsgTypePushSvrMultiReq          = 0x603; // * -> PushSvr[ -> APP 批量请求]
+    kMsgTypePushSvrMultiRsp          = 0x604; // [APP->]PushSvr -> * 批量响应
+    kMsgTypePushSvrAppRspReq         = 0x605; // APP -> ConnSvr -> PushSvr: 上报收到消息
+    kMsgTypePushSvrRetryReq          = 0x607; // RepushSvr -> PushSvr 请求: RepushSvr专用
+    kMsgTypePushSvrRetryRsp          = 0x608; // PushSvr -> RepushSvr 响应: RepushSvr专用
+    kMsgTypePushStatReq              = 0x609; // * -> PushStat
+    kMsgTypePushStatRsp              = 0x610; // PushStat -> *
+    kMsgTypePushSvrTypeMax           = 0x6FF; // 结束
+
+    // CollectSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeCollectSvrTypeMin        = 0x700; // 开始
+    kMsgTypeCollectSvrNoRspReq       = 0x701; // APP -> ConnSvr -> CollectSvr -> Proxy 无响应的请求
+    kMsgTypeCollectSvrHeartbeatReq   = 0x703; // CollectSvr -> Proxy 心跳
+    kMsgTypeCollectSvrHeartbeatRsp   = 0x704; // Proxy -> CollectSvr 心跳回报
+	kMsgTypeCollectSvrDelayReq       = 0x7FE; // InnerProxy -> InnerWorker 延迟包
+    kMsgTypeCollectSvrTypeMax        = 0x7FF; // 结束
+
+    // DispatchSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeDispatchSvrTypeMin       = 0x800; // 开始
+    kMsgTypeDispatchSvrNoRspReq      = 0x801; // APP -> ConnSvr or ConnMaster -> DispatchSvr -> PHP无响应的请求
+    kMsgTypeDispatchSvrReq           = 0x803; // APP -> APP -> ConnSvr -> DispatchSvr
+    kMsgTypeDispatchSvrRsp           = 0x804; // APP -> DispatchSvr -> ConnSvr -> APP
+    kMsgTypeDispatchSvrTypeMax       = 0x8FF; // 结束
+
+    // MessageSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeMessageSvrTypeMin        = 0x900; // 开始
+    kMsgTypeMessageSvrGetSessionsReq = 0x901; // APP -> ConnSvr -> MessageSvr: 查询会话列表
+    kMsgTypeMessageSvrGetSessionsRsp = 0x902; // MessageSvr -> ConnSvr -> APP: 查询会话列表
+    kMsgTypeMessageSvrGetMessagesReq = 0x903; // APP -> ConnSvr -> MessageSvr: 下载消息
+    kMsgTypeMessageSvrGetMessagesRsp = 0x904; // MessageSvr -> ConnSvr -> APP: 下载消息
+    kMsgTypeMessageSvrSendTextReq    = 0x905; // APP -> ConnSvr -> MessageSvr: 发送文本
+    kMsgTypeMessageSvrSendTextRsp    = 0x906; // MessageSvr -> ConnSvr -> APP: 发送文本
+    kMsgTypeMessageSvrNewObjectReq   = 0x907; // APP -> ConnSvr -> MessageSvr: 准备富媒体
+    kMsgTypeMessageSvrNewObjectRsp   = 0x908; // MessageSvr -> ConnSvr -> APP: 准备富媒体
+    kMsgTypeMessageSvrSendObjectReq  = 0x909; // APP -> ConnSvr -> MessageSvr: 发送富媒体
+    kMsgTypeMessageSvrSendObjectRsp  = 0x90A; // MessageSvr -> ConnSvr -> APP: 发送富媒体
+    kMsgTypeMessageSvrNotification   = 0x90B; // * -> PushSvr -> ConnSvr-> APP: 通知
+    kMsgTypeMessageSvrTypeMax        = 0x9FF; // 结束
+
+    // SessionSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeSessionSvrTypeMin        = 0xA00; // 开始
+    kMsgTypeSessionSvrCreateReq      = 0xA01; // PHP -> SessionSvr: 创建会话
+    kMsgTypeSessionSvrCreateRsp      = 0xA02; // SessionSvr -> PHP: 创建会话
+    kMsgTypeSessionSvrFreezeReq      = 0xA03; // PHP -> SessionSvr: 冻结会话
+    kMsgTypeSessionSvrFreezeRsp      = 0xA04; // SessionSvr -> PHP: 冻结会话
+    kMsgTypeSessionSvrGetSessionsReq = 0xA05; // MessageSvr -> SessionSvr: 查询sid
+    kMsgTypeSessionSvrGetSessionsRsp = 0xA06; // SessionSvr -> MessageSvr: 查询sid
+    kMsgTypeSessionSvrNewMessageReq  = 0xA07; // MessageSvr -> SessionSvr: 申请mid
+    kMsgTypeSessionSvrNewMessageRsp  = 0xA08; // SessionSvr -> MessageSvr: 申请mid
+    kMsgTypeSessionSvrGetMessageReq  = 0xA09; // MessageSvr -> SessionSvr: 是否可以下载
+    kMsgTypeSessionSvrGetMessageRsp  = 0xA0A; // SessionSvr -> MessageSvr: 是否可以下载
+    kMsgTypeSessionSvrNewObjectReq   = 0xA0B; // MessageSvr -> SessionSvr: 准备富媒体
+    kMsgTypeSessionSvrNewObjectRsp   = 0xA0C; // SessionSvr -> MessageSvr: 准备富媒体
+    kMsgTypeSessionSvrSendObjectReq  = 0xA0D; // MessageSvr -> SessionSvr: 发送富媒体
+    kMsgTypeSessionSvrSendObjectRsp  = 0xA0E; // SessionSvr -> MessageSvr: 发送富媒体
+    kMsgTypeSessionSvrCheckObjectReq = 0xA0F; // FileSvr -> SessionSvr: 是否可以上传
+    kMsgTypeSessionSvrCheckObjectRsp = 0xA10; // SessionSvr -> FileSvr: 是否可以上传
+    kMsgTypeSessionSvrTypeMax        = 0xAFF; // 结束
+
+    // FileSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeFileSvrTypeMin           = 0xB00; // 开始
+    kMsgTypeFileSvrUploadReq         = 0xB01; // APP -> FileSvr: 上传富媒体
+    kMsgTypeFileSvrUploadRsp         = 0xB02; // FileSvr -> APP: 上传富媒体
+    kMsgTypeFileSvrDownloadReq       = 0xB03; // APP -> FileSvr: 下载富媒体
+    kMsgTypeFileSvrDownloadRsp       = 0xB04; // FileSvr -> APP: 下载富媒体
+    kMsgTypeFileSvrTypeMax           = 0xBFF; // 结束
+
+    // RepushSvr(request & response,请求用奇数,响应用偶数)
+    kMsgTypeRepushSvrTypeMin         = 0xC00; // 开始
+    kMsgTypeRepushSvrStageMsgReq     = 0xC01; // PushSvr -> RepushSvr: 暂存消息
+    kMsgTypeRepushSvrStageMsgRsp     = 0xC02; // RepushSvr -> PushSvr: 暂存消息
+    kMsgTypeRepushSvrTypeMax         = 0xCFF; // 结束
+
+    // DbSvr (request & response,请求用奇数,响应用偶数)
+    kMsgTypeDbSvrTypeMin             = 0xD00; // 开始
+    kMsgTypeDbSvrSqlQueryReq         = 0xD01; // Sql cmd which return records set
+    kMsgTypeDbSvrSqlQueryRsp         = 0xD02; // SqlQuery Response: query set
+    kMsgTypeDbSvrSqlExecReq          = 0xD03; // Sql cmd which return simple result
+    kMsgTypeDbSvrSqlExecRsp          = 0xD04; // SqlExec Response: simple result
+    kMsgTypeDbSvrSelectDbReq         = 0xD05; // switch db request
+    kMsgTypeDbSvrSelectDbRsp         = 0xD06; // switch db response
+    kMsgTypeDbSvrInvalidReqRsp       = 0xD08; // invalid request rsp
+    kMsgTypeDbSvrTypeMax             = 0xDFF; // 结束
+}
+
+// WARNING WARNING WARNING
+// WARNING WARNING WARNING
+// WARNING WARNING WARNING
+// ！！禁止新代码使用这个东西，禁止修改这个东西！！
+//注意:本枚举类型和高16bit的定义不一致
+enum OldRole {
+    OldUnknown = 0;
+    OldDriver = 1;
+    OldPassenger = 2;
+    OldPilot = 3;
+}
+// ！！禁止新代码使用这个东西，禁止修改这个东西！！
+// WARNING WARNING WARNING
+// WARNING WARNING WARNING
+// WARNING WARNING WARNING
+
+enum Role {
+    Driver = 0;
+    Passenger = 1;
+    Pilot = 2;
+}
+
+// 这里是增加业务类型，区分服务器集群
+enum Business {
+    Taxi       = 0; // 滴滴打车
+    GulfStream = 1; // 湾流
+}
+
+//头部
+message UserAgent {
+    optional string os_type            = 1; // 操作系统类型
+    optional string os_ver             = 2; // 操作系统版本
+    optional string model              = 3; // 设备型号
+    optional string client_ver         = 4; // 客户端版本
+    optional string network            = 5; // ISP信息
+    optional string location	       = 6; // 当前位置 坐标系类型,经度,纬度
+    optional string carrier_operator   = 7; // 运营商
+}
+
+message Header {
+    required MsgType    type = 1;//payload type
+    optional uint64     msg_id = 2;// rsp copied from req
+    optional uint64     auth_user_id = 3;//
+    optional bytes      log_id = 4;
+    optional UserAgent  user_agent = 5; // Only present in intranet packets.
+}
+
+//rsp_code可能值
+enum RspCode {
+    kRspCodeConnSvrMin                   = 1;
+    kRspCodeConnSvrTimedOut              = 2;
+    kRspCodeConnSvrInternalError         = 3;
+    kRspCodeConnSvrMax                   = 99;
+
+    kRspCodeCdntSvrMin                   = 201;
+    kRspCodeCdntSvrNotExist              = 202;
+    kRspCodeCdntSvrAccessCkvError        = 203;
+    kRspCodeCdntSvrArgsError             = 204; //输入参数错误
+    kRspCodeCdntSvrMax                   = 299;
+
+    kRspCodeConnMasterMin                = 401;
+    kRspCodeConnMasterKeyNotExist        = 402;
+    kRspCodeConnMasterTimedOut           = 403;
+    kRspCodeConnMasterAccessCkvTimedOut  = 404;
+    kRspCodeConnMasterPbDecodeError      = 405;
+    kRspCodeConnMasterCkvDecodeFailed    = 406;
+    kRspCodeConnMasterCkvCasNewer        = 407;
+    kRspCodeConnMasterKeyExistWhenAdd    = 408; // when add ckv
+    kRspCodeConnMasterIfOnlineOutRange   = 409; // GetIfOnline user_id size out of range
+    kRspCodeConnMasterMax                = 499;
+
+    kRspCodeAuthSvrMin                   = 601;
+    kRspCodeAuthSvrKeyNotExist           = 602;
+    kRspCodeAuthSvrParamError            = 603;
+    kRspCodeAuthSvrDelTokenError         = 604;
+    kRspCodeAuthSvrAddTokenError         = 605;
+    kRspCodeAuthSvrLoginError            = 606;
+    kRspCodeAuthSvrGetUserIdError        = 607;
+    kRspCodeAuthSvrDecodeError           = 608;
+    kRspCodeAuthSvrHmacEncodeError       = 609;
+    kRspCodeAuthSvrBase64EncodeError     = 610;
+    kRspCodeAuthSvrMax                   = 699;
+
+    kRspCodePushSvrMin                   = 0x600;
+    kRspCodePushSvrInternalError         = 0x601;
+    kRspCodePushSvrMsgStaged             = 0x602; // 消息已暂存,稍候会自动尝试重发
+    kRspCodePushSvrInvalidArgs           = 0x603; // 请求端参数错误
+    kRspCodePushSvrKeyNotExist           = 0x604;
+    kRspCodePushSvrSmsMsgSend            = 0x605; // 用户不在线，消息已短信发送
+    kRspCodePushSvrMax                   = 0x6FF;
+
+    kRspCodeMessageSvrMin                = 0x900;
+    kRspCodeMessageSvrTimeOut            = 0x901;
+    kRspCodeMessageSvrInvalidArgs        = 0x902;
+    kRspCodeMessageSvrCkvError           = 0x903; //ckv操作相关错误
+    kRspCodeMessageSvrGetServerError     = 0x904; //获取server操作指针出错
+    kRspCodeMessageSvrToPushError        = 0x905; //推送给pushserver失败
+    kRspCodeMessageSvrToSessionError     = 0x906; //推送给sessionserver失败
+    kRspCodeMessageSvrSessionInvalidArgs = 0x907; //SessionServer返回参数不正确
+    kRspCodeMessageSvrDecodeError        = 0x908; //数据包解包出错
+    kRspCodeMessageSvrMax                = 0x9FF;
+
+    kRspCodeSessionSvrMin                = 0xA00;
+    kRspCodeSessionSvrTryAgain           = 0xA01; // 内部错误，重试
+    kRspCodeSessionSvrInvalidArguments   = 0xA02; // 非法输入
+    kRspCodeSessionSvrNoSuchSession      = 0xA03; // 查无此会话
+    kRspCodeSessionSvrFrozen             = 0xA04; // 会话已冻结
+    kRspCodeSessionSvrForbidden          = 0xA05; // 用户不属于此会话
+    kRspCodeSessionSvrMax                = 0xAFF;
+
+    kRspCodeFileSvrMin                   = 0xB00;
+    kRspCodeFileSvrTimedOut              = 0xB01; //整个任务超时
+    kRspCodeFileSvrStateError            = 0xB02; //任务逻辑的当前状态不符合预期
+    kRspCodeFileSvrNoSessionServer       = 0xB03; //没有找到可用的SessionSvr
+    kRspCodeFileSvrVerificationError     = 0xB04; //向SessionSvr发送验证包的过程中失败
+    kRspCodeFileSvrNoCkvServer           = 0xB05; // 没有找到可用的CkvSvr
+    kRspCodeFileSvrCkvSetError           = 0xB06; //向Ckv发送Set包的过程中失败
+    kRspCodeFileSvrKeyNotExist           = 0xB07; // 没有找到该key的value
+    kRspCodeFileSvrSessionNotReturnToken = 0xB08; //SessionSvr验证返回成功，但是没有返回token
+    kRspCodeFileSvrKeyHasExist           = 0xB09; //该Key已经插入CKV，业务要求不能插入两次及两次以上，即不能覆盖
+    kRspCodeFileSvrCkvDecodeFailed       = 0xB0A; // Ckv Decode失败
+    kRspCodeFileSvrMax                   = 0xBFF;
+
+    kRspCodeRepushSvrMin                 = 0xC00;
+    kRspCodeRepushSvrInvalidArgs         = 0xC01; // 请求端参数错误
+    kRspCodeRepushSvrKeyNotExist         = 0xC02;
+    kRspCodeRepushSvrMax                 = 0xCFF;
+}
+
+//payload
+//响应信息
+message RspMsg {
+    required int32 rsp_code = 1; // 错误码, 0表示成功
+    optional string rsp_msg = 2; // 错误描述
+}
+
+message BinaryMsg {
+    required uint32 type = 1;   // payload类型
+    optional bytes payload = 2; // req payload
+}
+
+message PushMsg {
+    required uint32 type = 1;   // payload类型
+    optional bytes payload = 2; // req payload
+
+    // bit0-7: bizType
+    // bit8-15: 在相同1ms内递增的编号
+    // bit16-23: 服务编号
+    // bit24-63: 毫秒级timestamp
+    optional uint64 task_id = 3;  // identify a group of push msg
+    optional bytes msg_id = 4;  // identify a single push msg
+    optional bool need_rsp = 5; // whether app response to server
+}
+
+//=====================ConnSvr=============================
+//ConnSvr模块协议
+message ConnSvrConnectReq {
+    required string phone_num = 1;//电话号码
+    optional OldRole old_role = 2; //deprecated
+    required bytes secret_chap = 3;//加密字符串
+    optional bytes user_agent = 4;//Serialized and encrypted UserAgent.
+    optional int32 role = 5;//角色，司机还是乘客
+}
+message ConnSvrConnectRsp {
+    required RspMsg rsp_msg = 1;
+    //optional time_stamp = 2;//服务器端时间戳(暂不需要)
+}
+message ConnSvrDisconnectReq {} //空包，0字节的payload
+//message ConnSvrDisconnectRsp = RspMsg //包和RspMsg一样
+message ConnSvrHeartbeatReq {}  //空包，0字节的payload
+//message ConnSvrHeartbeatRsp = RspMsg //包和RspMsg一样
+message ConnSvrGetOnlineReq {} //空包，0字节的payload
+
+message ConnSvrGetOnlineRsp {
+    required RspMsg rsp_msg = 1;
+    repeated uint64 user_id = 2; //连接信息
+}
+
+message ConnSvrGetOnlineCountReq {} //空包，0字节的payload
+message ConnSvrGetOnlineCountRsp {
+    required RspMsg rsp_msg = 1;
+    required uint64 count = 2; //连接数量
+}
+
+message ConnSvrGetIfOnlineReq {
+    repeated uint64 user_id = 1;
+}
+
+message ConnSvrGetIfOnlineRsp {
+    repeated uint64 user_id = 1;
+}
+
+message ConnSvrKickNoRspReq { //user_id in header
+    optional uint64 timestamp = 1; // 时间戳标识连接, timestamp如果没填就是广播踢，如果填了就是定点踢
+}
+
+//=====================ConnMaster=============================
+//ConnMaster模块协议
+message Address {
+    required string ip = 1; //server ip
+    required uint32 port = 2; //server port
+    optional uint64 timestamp = 3 [ default = 0]; // 时间戳标识连接
+    optional bool should_stat = 4 [default = false]; //需要统计到用户上线流水里
+}
+message ConnMasterKickReq {
+    required uint64 user_id = 1;
+}
+message ConnMasterKickRsp { //用于表示ConnMaster收到该ConnMasterKickReq
+    required int32 rc = 1;
+}
+message ConnMasterGetIfOnlineReq {
+    repeated uint64 user_id = 1;
+}
+
+message ConnMasterGetIfOnlineRsp {
+    required RspMsg rsp_msg = 1;
+    repeated uint64 user_id = 2;
+}
+
+message ConnMasterGetRouteReq {
+    required uint64 user_id = 1;//用户id，司机和乘客都唯一的id 
+}
+message ConnMasterGetRouteRsp {
+    required RspMsg rsp_msg = 1;
+    optional Address conn_svr = 2;//connect server 的ip和port, rsm_msg.rsp_code == 0 时才有该字段
+}
+//message ConnMasterSetRouteReq = Address //包和Address一样
+//message ConnMasterSetRouteRsp = RspMsg //包和RspMsg一样
+message ConnMasterDelRouteReq {
+    required uint64 user_id = 1;
+    optional uint64 timestamp = 2 [ default = 0]; // 时间戳标识连接
+}
+//message ConnMasterDelRouteRsp = RspMsg
+message ConnMasterGetOnlineReq{} //空包，0字节的payload
+message ConnMasterGetOnlineRsp{
+    required RspMsg rsp_msg = 1;
+    repeated uint64 user_id = 2; //连接信息
+}
+message ConnMasterGetOnlineCountReq {}
+message ConnMasterGetOnlineCountRsp {
+    required RspMsg rsp_msg = 1;
+    required uint64 count = 2;
+}
+
+//=====================AuthSvr=============================
+//AuthSvr模块协议
+message AuthSvrAddUserReq {
+    required uint64 user_id = 1;    // 用户id，司机和乘客都唯一的id 
+    required bytes token = 2;       // 用户的服务器端秘密token
+    required string phone_num = 3;  // 电话号码
+}
+//message AuthSvrAddUserRsp = RspMsg
+
+message AuthSvrDelUserReq {
+    required uint64 user_id = 1;    // 用户id，司机和乘客都唯一的id 
+}
+//message AuthSvrDelUserRsp = RspMsg
+
+message AuthSvrLoginReq {
+    required string phone_num = 1;  // 电话号码
+    //optional OldRole old_role = 2;         //deprecated
+    required bytes secret_chap = 3; // 加密字符串
+    required bytes random_msg = 4;  // 随机消息 (A-Za-z0-9组成的256个字节)
+    required int32 role = 5;
+}
+
+message AuthSvrLoginRsp {
+    required RspMsg rsp_msg = 1;
+    required uint64 user_id = 2;
+}
+
+message AuthSvrQueryUserReq {
+    required string phone_num = 1;  // 电话号码
+    //optional OldRole old_role = 2;         //deprecated
+    required int32 role = 3;
+}
+
+message AuthSvrQueryUserRsp {
+    required RspMsg rsp_msg = 1;
+    optional uint64 user_id = 2;    // rsp_msg.rsp_code == 0 时返回该字段
+}
+
+message AuthSvrSignReq {
+    required bytes content = 1;    // 需要签名的内容
+}
+
+message AuthSvrSignRsp {
+    required RspMsg rsp_msg = 1;
+    optional string hmac    = 2;    // 签名hmac的base64编码值
+}
+
+
+
+//=====================CdntSvr=============================
+//CdntSvr模块协议
+//坐标系
+enum CoordinateType {
+    BD_09 = 1;   //百度坐标系,BD-09
+    GCJ_02 = 2;  //SOSO坐标系,GCJ-02
+    WGS_84 = 4;  //国际标准坐标系,WGS-84
+}
+
+//坐标
+message Coordinate {
+    required double x = 1;
+    required double y = 2;
+    required CoordinateType type = 3;//坐标系
+    optional uint32 timestamp = 4; // 坐标产生时间,seconds since epoch(app可选上报，仅用于log分析)
+    optional double dx = 5;
+    optional double dy = 6;
+}
+
+message CdntSvrUpReq {
+    required double x = 1;
+    required double y = 2;
+    required CoordinateType type = 3;//坐标系
+    optional uint32 timestamp = 4; // 坐标产生时间,seconds since epoch(app可选上报，仅用于log分析)
+
+    // 是否需要拉取对端的坐标, 没有设置该字段表示需要拉取(兼容之前的情况),
+    // 设置了该字段且为false时仅存储坐标
+    optional bool pull_peer = 5; // 司机在没有接单的情况下上报坐标时应该设置该字段为false
+
+    // 根据新的需求添加dx dy表示目标位置
+    optional double dx = 6;
+    optional double dy = 7;
+}
+//CdntSvrUpRsp = RspMsg(暂不需要) //包和RspMsg一样
+
+message PeerCoordinateInfo {
+    required string local_id = 1; //坐标对应的用户标识,在当前用户下唯一即可(当前为订单号)
+    required Coordinate coordinate = 2; // 这里需要根据司机端和乘客端转换成不同的坐标系
+    required uint32 distance = 3; //司机和乘客距离,单位: 米
+    required uint32 wait_time = 4; //估计相遇时间,单位: 分钟
+    optional bool is_arrived_limited = 5; //是否已到达,true:到达 false:未到达. (agree with shichenyi)
+}
+enum RelationType {
+    kRelationTypeRealTime = 0;    // 实时
+    kRelationTypeReservation = 1; // 预约
+}
+message PeerCoordinateRelation {
+    required string local_id = 1; //另一端的用户标识,在当前用户下唯一即可(当前为订单号)
+    required uint64 user_id = 2; //全局的用户id(乘客or司机)
+    required uint32 inactive_expire_seconds = 3;//不活动(推送坐标)后的超时自动删除时间
+    optional uint32 last_active_timestamp = 4; //请求端设置无效，以服务器端为准,seconds since epoch
+    optional uint32 create_time = 5; // 服务端设置，since epoch
+    optional RelationType type = 6; // 订单类型(local_id)
+    optional uint32 biz_type = 7; // 取值见enum Business, 如果没有设置该字段认为是Business.Taxi
+}
+
+//全量设置
+message CdntSvrSetRelationReq {
+    required uint64 user_id = 1; //我的用户id(乘客or司机)
+    repeated PeerCoordinateRelation relations = 2; //会覆盖之前的
+    optional CoordinateType type = 3; // 推送坐标给user时的坐标系
+}
+message CdntSvrSetRelationRsp {
+    required RspMsg rsp_msg = 1;
+    repeated PeerCoordinateRelation relations = 2; //当前关系列表
+}
+//增量添加
+message CdntSvrAddRelationReq {
+    required uint64 user_id = 1; //我的用户id(乘客or司机)
+    repeated PeerCoordinateRelation relations = 2;
+    optional CoordinateType type = 3; // 推送坐标给user时的坐标系
+}
+message CdntSvrAddRelationRsp {
+    required RspMsg rsp_msg = 1;
+    repeated PeerCoordinateRelation relations = 2; //当前关系列表
+}
+//增量添加反操作--删除
+message CdntSvrDelRelationReq {
+    required uint64 user_id = 1;
+    repeated string local_ids = 2; //需要删除的关系的标识列表
+}
+message CdntSvrDelRelationRsp {
+    required RspMsg rsp_msg = 1;
+    repeated PeerCoordinateRelation relations = 2; //当前关系列表
+}
+
+message CdntSvrGetRelationReq {
+    required uint64 user_id = 1;
+}
+message CdntSvrGetRelationRsp {
+    required RspMsg rsp_msg = 1;
+    repeated PeerCoordinateRelation relations = 2; //当前关系列表
+    optional CoordinateType type = 3; // 推送坐标给user时的坐标系
+}
+
+//=====================CollectSvr=============================
+//CollectSvr payload消息的类型
+// 参见 didi_protocol_collectsvr.proto
+
+//message CollectSvrNoRspReq = BinaryMsg; // 包和BinaryMsg一样,type为CollectSvrMessageType
+
+message CollectSvrHeartbeatReq {} //空包，0字节的payload
+
+message CollectSvrHeartbeatRsp {} //空包，0字节的payload
+
+message CollectSvrDelayReq {
+	optional int64 time = 1;
+}
+
+//=====================PushSvr=============================
+// Push payload消息的类型
+// 参见 didi_protocol_pushsvr.proto
+
+//PushSvr模块协议
+enum PushStrategy {
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则直接返回失败
+    // APP侧收到请求后不回复
+    kPushStrategyNoResponse   = 0x1;
+
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则直接返回失败
+    // APP侧收到请求后，通过kMsgTypeAppPushMessageRsp上报回包,用于运营统计
+    kPushStrategyStatResponse = 0x2;
+
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则先暂存当前消息
+    // 如果暂存成功，返回特殊错误码kRspCodePushSvrMsgStaged, 否则返回失败(其他错误码)
+    // APP侧收到请求后，通过kMsgTypeAppPushMessageRsp上报回包,用于运营统计
+    // 对于暂存的消息，如果在expire_seconds时间内，pushsvr会定期检查目标是否在线，如果在线则发送一次，否则暂存消息丢弃
+    kPushStrategyTryBest      = 0x3;
+
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则先暂存当前消息
+    // 如果暂存成功，返回特殊错误码kRspCodePushSvrMsgStaged, 否则返回失败(其他错误码)
+    // APP侧收到请求后，通过kMsgTypeAppPushMessageRsp上报回包,用于运营统计
+    // 没有收到kMsgTypeAppPushMessageRsp 则下发短信
+    kPushStrategyMobileMsg    = 0x4;
+};
+
+message PushSvrReq {
+    optional OldRole    old_role = 1;      // 见下面
+    optional string  phone_num = 2; // 如果传了user_id，优先使用user_id(role+phone_num会忽略)，否则使用role+phone_num
+    required PushMsg push_msg = 3; // PushMsg.type为PushMessageType
+    required PushStrategy push_strategy = 4;
+    optional uint64 user_id = 5; // 如果传了user_id，role+phone_num就会忽略
+    optional uint32 expire_seconds = 6; // 在push_strategy == kPushStrategyTryBest时该参数有效(必传),见PushStrategy的说明
+    optional string log_str = 7; // PushMsg.payload的一些关键信息，用于跟踪定位问题
+    optional int32 role = 8;
+    optional string sms_msg = 9;  // 短信下发内容
+    optional uint32 timeout_to_sms = 10;  // 等待rsp的超时(秒)，目前预估等待时间范围：0~180s
+}
+
+//message PushSvrRsp = RspMsg //包和RspMsg一样
+
+message PushSvrMultiReq {
+    message UserId {
+        optional OldRole    old_role = 1;      // 见下面
+        optional string  phone_num = 2; // 如果传了user_id，优先使用user_id(role+phone_num会忽略)，否则使用role+phone_num
+        optional uint64  user_id = 3; // 如果传了user_id，role+phone_num就会忽略
+        optional int32 role = 4;
+    }
+    repeated UserId users = 1;
+    required PushMsg push_msg = 2; // PushMsg.type为PushMessageType
+    required PushStrategy push_strategy = 3;
+    optional uint32 expire_seconds = 4; // 在push_strategy == kPushStrategyTryBest时该参数有效(必传),见PushStrategy的说明
+    optional string log_str = 5; // PushMsg.payload的一些关键信息，用于跟踪定位问题
+    optional string sms_msg = 6;  // 短信下发内容
+    optional uint32 timeout_to_sms = 7;  // 等待rsp的超时(秒)，目前预估等待时间范围：0~180s
+}
+
+message PushSvrMultiRsp {
+    repeated RspMsg rsps = 1; //和MultiReq.users对应,按顺序返回
+}
+
+// message PushSvrAppRspReq = BinaryMsg; //包和BinaryMsg一样,type为PushMessageType
+
+// PushSvrRetryReq
+message PushSvrRetryReq {
+    required PushSvrReq msg = 1;
+    required uint64 message_id = 2;
+}
+
+// message PushSvrRetryRsp = PushSvrRsp; // 包和PushSvrRsp一样,type为kMsgTypePushSvrRetryRsp
+//=====================DispatchSvr=============================
+// Dispatch payload消息的类型
+// 这里在didi_protocol_dispatchsvr.proto里面定义
+
+//无响应的请求
+//message DispatchSvrNoRspReq = BinaryMsg; // 包和BinaryMsg一样,type为DispatchMessageType
+
+message Param {
+    required bytes key = 1;
+    required bytes data = 2;
+}
+
+message DispatchSvrReq {
+    required string path = 1;
+    repeated Param query_params = 2;
+    optional string content_type = 3;
+    optional bytes post_data = 4;
+}
+
+message DispatchSvrRsp {
+    required int32 sys_code = 1;
+    optional int32 http_status_code = 2;
+    optional bytes body = 3;
+}
+
+//=====================APP=============================
+message ConnSvrConnectChallenge {
+    required bytes random_msg = 1;//随机消息 (A-Za-z0-9组成的256个字节)
+}
+message AppHeartbeatReq {}  //空包，0字节的payload
+//message AppHeartbeatRsp = RspMsg //包和RspMsg一样
+
+// message AppPushMessageReq = PushMsg; //包和BinaryMsg一样,type为PushMessageType
+// message AppPushMessageRsp = PushMsg; //包和BinaryMsg一样,type为PushMessageType
+
+message CdntSvrDownReq {
+    repeated PeerCoordinateInfo peer_coordinate_infos = 1;
+}
+//CdntSvrDownRsp = RspMsg(暂不需要) //包和RspMsg一样
+
+//=====================RepushSvr=============================
+// message RepushSvrStageMsgReq = PushSvrReq; //包和PushSvrReq一样
+// message RepushSvrStageMsgRsp = RspMsg //包和RspMsg一样
+
+message PushStatReq {
+    repeated uint64 task_ids = 1;
+}
+
+message PushStat {
+    required uint64 task_id = 1;
+    optional uint32 send_cnt = 2;
+    optional uint32 recv_cnt = 3;
+    optional uint32 in1s_recv_cnt = 4;
+    optional uint32 in3s_recv_cnt = 5;
+    optional uint32 in6s_recv_cnt = 6;
+    optional uint32 in10s_recv_cnt = 7;
+    optional uint32 in30s_recv_cnt = 8;
+    optional uint32 in60s_recv_cnt = 9;
+    optional uint32 gt60s_recv_cnt = 10;
+}
+
+message PushStatRsp {
+    repeated PushStat stats = 1;
+}
+
+message StatLogReq {
+    required uint32 event =  1;
+    required uint64 task_id = 2;
+    optional uint32 msg_type = 3;
+    optional uint64 gap_us = 4;
+}
+
+enum StatEvent {
+    kStatEventSend  = 0;
+    kStatEventRecv  = 1;
+    kStatEventView  = 2;
+}

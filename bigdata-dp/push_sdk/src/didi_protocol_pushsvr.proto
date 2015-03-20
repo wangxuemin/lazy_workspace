@@ -1,0 +1,450 @@
+package DidiPush;
+
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiPushProtobuf";
+
+import "didi_protocol.proto";
+import "didi_protocol_common.proto";
+
+// 这里是所有客户端从服务器收到的消息
+
+// 推送的策略，定义在了didi_protocol.proto里面，由于需要实现服务逻辑，不再这里允许修改，但是可以看到
+
+// enum PushStrategy {
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则直接返回失败
+    // APP侧收到请求后不回复
+    // kPushStrategyNoResponse   = 0x1;
+
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则直接返回失败
+    // APP侧收到请求后，通过kMsgTypePushSvrAppRspReq上报回包,用于运营统计
+    // kPushStrategyStatResponse = 0x2;
+
+    // 在请求时刻，如果目标在线，发送一次同时返回成功，否则先暂存当前消息
+    // 如果暂存成功，返回特殊错误码kRspCodePushSvrMsgStaged, 否则返回失败(其他错误码)
+    // APP侧收到请求后，通过kMsgTypePushSvrAppRspReq上报回包,用于运营统计
+    // 对于暂存的消息，如果在expire_seconds时间内，pushsvr会定期检查目标是否在线，如果在线则发送一次，否则暂存消息丢弃
+    // kPushStrategyTryBest      = 0x3;
+// };
+
+// Push payload消息的类型
+enum PushMessageType {
+    kPushMessageTypeDriverOrderComingReq      = 0x0001; // 司机收到有订单的请求
+    kPushMessageTypeDriverOrderStrivedReq     = 0x0004; // 司机收到订单被抢的请求
+    kPushMessageTypeDriverOrderCancelledReq   = 0x0006; // 司机收到订单被取消的请求
+
+    kPushMessageTypeDriverOrderChangeTipReq   = 0x0008; // 司机收到订单小费调整的请求
+
+    kPushMessageTypeDriverMsgBroadcastReq     = 0x000A; // 司机收到运营消息的请求
+    kPushMessageTypeDriverUploadLogReq        = 0x000C; // 司机收到上传日志的请求
+    kPushMessageTypeDriverTraceLogReq         = 0x000D; // 司机收到用户行为追踪的请求
+    kPushMessageTypeDriverMonitorInfoReq      = 0x000E; // 司机收到检查竞品的请求
+    kPushMessageTypeDriverCoordinateUploadReq = 0x000F; // 司机收到切换坐标上传方式的请求
+    kPushMessageTypeDriverAppCheckReq         = 0x0010; // 司机收到检查手机软件的请求
+
+    kPushMessageTypeMessageSvrNotification    = 0x0011; // IM通知用户会话变更或消息到达
+    kPushMessageTypeDriverAppRestartReq       = 0x0012; // 司机收到重起软件的请求
+    kPushMessageTypeDriverMsgPayReq           = 0x0013; // 司机收到支付消息的请求
+    kPushMessageTypePassengerOrderStatusReq   = 0x0014; // 乘客收到订单状态信息
+    kPushMessageTypeOrderTotalCountReq        = 0x0015; // 乘客收到总价信息
+    kPushMessageTypeOrderRealtimeCountReq     = 0x0016; //
+    kPushMessageTypeCommonMsgReq              = 0x0017; //
+    kPushMessageTypeOrderPaySuccReq           = 0x0018; // 乘客收到支付成功的消息
+    kPushMessageTypeOrderChargeSuccReq        = 0x0019; // 司机收到收款成功的消息
+
+    //鱼鹰项目
+    kPushMessageTypeOspreyOrderStriveSuccReq        = 0x001A; // 鱼鹰司机抢单成功的消息
+    kPushMessageTypeOspreyOrderStriveFailReq        = 0x001B; // 鱼鹰司机抢单失败的消息
+    kPushMessageTypeOspreyOrderStrivedReq        = 0x001C; // 鱼鹰司机订单已被抢的消息
+    kPushMessageTypeOspreyDriverBuffChangeReq      =0x001D;//鱼鹰中司机buff状态发生了变化
+
+	kPushMessageTypeWxAgentReq				  = 0x001E; // 微信代扣签约信息
+
+	kPushMessageTypeTimelyRemindReq         = 0x0030; // 乘客适时提醒
+	kPushMessageTypePassengerPaySuccReq	= 0x0031; // 乘客支付成功通知司机端(自动切换成空车模式)
+	kPushMessageTypeFreeRideDigAddressReq	= 0x0032; // 系统挖掘司机顺风车收车地点
+};
+
+enum DriverMessageTipShowType {
+	DriverMessageTipShowTypeWindow = 1;
+	DriverMessageTipShowTypeBubble = 2;
+};
+
+// 司机有订单的请求 
+message DriverOrderComingReq {
+	enum OnBoardType {
+		kOnBoardTypeFree	= 0x00;		// 空载模式
+		kOnBoardTypeLoad	= 0x01;		// 载客模式
+		kOnBoardTypeOldV	= 0x02;		// 幽灵2期之前的版本
+	};
+	required string oid = 1;							// 订单ID
+	required string key = 2;							// 唯一标识xx司机收到订单时的小费、平台加价等可变参数(服务器下发,抢单时带上)
+	required int32 type = 3;							// 订单类型(0:实时、1:预约)			
+	required int32 input = 4;							// 输入类型(0:语音、1:文本)
+	required int32 createTime = 5;						// 订单创建时间
+	required int32 setupTime = 6;						// 出发时间(timestamp)
+	required string distance = 7;						// 司机和乘客的距离
+	required string from = 8;							// 出发地
+	required string to = 9;								// 目的地
+	required double fromLat = 10;						// 乘客出发纬度（预约单坐标表：stat_preorder）
+	required double fromLng = 11;						// 乘客出发经度
+	required double toLat = 12;							// 乘客目的地纬度（仅存在于预约单）
+	required double toLng = 13;							// 乘客目的地经度（仅存在于预约单）
+	required uint32 tip = 14;							// 小费
+	required uint32 bonus = 15;							// 平台加价
+	required int32 tWait = 16;							// 抢单期时间（根据订单密度）
+	required int32 tWaitMax = 17;						// 最大有效抢单时间
+	required uint32 exp = 18;							// 订单积分
+	required string playTxt = 19;						// 订单播放文本(用户录制语音用$代替 , always TTS + VOICE)
+	required int32 timestamp = 20;						// 时间戳
+	required uint32 voiceSize = 21;						// 语音文件大小
+	required string audioUrl = 22;						// 语音url
+	required string phone = 23;							// 司机手机号
+	optional int32 disableTime = 24;					// 失效时间
+	optional string fromAddr1 = 25;						// 第一出发地址
+	optional string fromAddr2 = 26;						// 第二出发地址
+	optional string toAddr1 = 27;						// 第一到达地址
+	optional string toAddr2 = 28;						// 第二到达地址
+	optional string extraInfo = 29;						// 额外信息
+	optional string playTxt2 = 30;						// 新版本中的语音文本
+	optional int32 listenModel = 31;					// 实时听单模式
+	optional int32 lastUpdate = 32;					    // 最近一次听单选项更新时间
+	optional int32 listenMethod = 33;					// 实时听单方式(听单、看单)
+	optional int32 realLimit = 34;					    // 实时单听单距离
+	optional double realtoLng = 35;                     // 听实时单目的地经度
+	optional double realtoLat = 36;                     // 听实时单目的地纬度
+	optional int32 preStart = 37;					    // 听预约单出发时间
+	optional int32 preEnd = 38;					        // 听预约单结束时间
+	optional int32 tWaitMax4look = 39;					// 看单模式抢单时间
+	optional int32 disableTime4look = 40;				// 看单模式抢单倒计时
+	optional int32 forcePlay = 41;				        // 客户端不校验强制播单标志
+    optional string exp2 = 42;                          // 鱼鹰订单积分(之前的名字是new_exp，iOS不允许new开头的属性，会导致偶发的崩溃，故改为exp2)
+    optional int32 on_board = 43;                       // 新版本播单模式 值参考OnBoardType
+	optional string receive_level = 44;                 // 分车型-司机可听车型
+	optional string require_level_txt = 45;             // 分成型-乘客所需车型文字
+	optional int32 require_level = 46;                  // 分车型-乘客所需车型
+	optional bytes send_info = 47;
+	// 司机该次播单包含的信息，是定义在didi_protocol_common.proto
+	// 里面的DriverBroadcastOrderExtraInfo串行化之后的数据
+};
+
+// 司机订单被抢的请求
+message DriverOrderStrivedReq {
+	required string oid = 1;							// 订单ID
+	required string dInfo = 2;							// 订单信息
+	required string msg = 3;							// tips内容
+	required DriverMessageTipShowType showType = 4;		// tips效果
+};
+
+// 司机订单取消的请求
+message DriverOrderCancelledReq {
+	required string oid = 1;							// 订单ID
+	required string msg = 2;							// tips内容
+	required DriverMessageTipShowType showType = 3;		// tips效果
+};
+
+// 司机订单修改小费的请求
+message DriverOrderChangeTipReq {
+	required string oid = 1;							// 订单ID
+	required int32 tip = 2;								// 修改小费金额
+	required DriverMessageTipShowType showType = 3;		// tips效果
+};
+
+// 司机系统推广消息的请求
+message DriverMsgBroadcastReq {
+	required int32 posType = 1;							// 消息置顶类型,1-置顶 2-列表
+	required int32 showType = 2;						// 0-纯文字 1-tts 2-语音
+	required string title = 3;							// 消息标题
+	required string text = 4;							// 语音类型下(show_type:2)有该字段
+	required int32 pushTime = 5;						// 发送时间(timestamp)
+	required int32 expireTime = 6;						// 失效时间（timestamp，距离发送时间的总秒数）
+	required string voiceUrl = 7;						// 语音类型下（show_type:2）有该字段
+	required int32 portalType = 8;						// 跳转入口, 1=我的滴滴、2=推荐、3=荣誉榜、4=路况、5=导航、6=滴滴指南、7=设置、8=滴滴助手 9=网页
+	required string portalUrl = 9;						// 跳转的url
+	optional int32 urgent = 10;                         // 紧急标识,0-普通消息,1-紧急消息(高于订单播报)
+};
+
+// 司机支付消息的请求
+message DriverMsgPayReq {
+	required int32 posType = 1;							// 消息置顶类型,1-置顶 2-列表
+	required int32 showType = 2;						// 0-纯文字 1-tts 2-语音
+	required string title = 3;							// 消息标题
+	required string text = 4;							// 语音类型下(show_type:2)有该字段
+	required int32 pushTime = 5;						// 发送时间(timestamp)
+	required int32 expireTime = 6;						// 失效时间（timestamp，距离发送时间的总秒数）
+	required string voiceUrl = 7;						// 语音类型下（show_type:2）有该字段
+	required int32 portalType = 8;						// 跳转入口, 1=我的滴滴、2=推荐、3=荣誉榜、4=路况、5=导航、6=滴滴指南、7=设置、8=滴滴助手 9=网页
+	required string portalUrl = 9;						// 跳转的url
+	optional string oid = 10;						//订单号
+};
+
+// 司机上传日志的请求
+message DriverUploadLogReq {
+	// 抓取客户端日志时，要抓取的日志类型
+	enum CollectType {
+		kCollectTypeCommon	= 0x01;		// 普通日志
+		kCollectTypePush	= 0x02;		// Push日志
+		kCollectTypeLoc		= 0x04;		// 定位日志
+		kCollectTypeNet		= 0x08;		// 联网日志
+	};
+
+	required int32 upload = 1;				// 上传状态
+	required int32 logEnable = 2;			// 记录状态
+	optional int32 logType = 3;				// 上报类型
+	optional int32 collectType = 4;			// 要抓取的客户端日志类型 CollectType
+};
+
+// 司机用户行为追踪的请求
+message DriverTraceLogReq {
+	required int32 traceLogEnable = 1;		// 跟踪状态
+};
+
+// 司机检查竞品的请求
+message DriverMonitorInfoReq {
+	required string info = 1;				// 竞品包名
+};
+
+// 司机切换坐标上传方式的请求
+message DriverCoordinateUploadReq {
+	required int32 type = 1;				// 上传方式
+};
+
+// 司机检查手机上面软件的请求
+message DriverAppCheckReq {
+	optional int32 appType = 1;				// 
+	optional bool checkTime = 2;			//
+	optional bool checkRoot = 3;			// 检查手机是否已经root
+	message CheckMessage {
+		optional string package = 1;		//
+		optional string md5 = 2;			//
+	};
+	repeated CheckMessage checkList = 4;
+};
+
+//
+message DriverAppRestartReq {
+	optional string tipMsg = 1;			// 提示信息 
+	optional bool logout = 2;			//
+};
+
+// IM收到有变化的通知消息
+// 这里由于和业务关系不大，不在这里定义，定义在didi_protocol.proto
+// message MessageSvrNotification {
+// repeated IMSessionChanged sessions = 1;
+// repeated IMMessageArrived messages = 2;
+// }
+
+//司机信息
+message DriverInfo {
+	required string driver_name = 1;
+	required string driver_card = 2;
+	required string driver_company = 3;
+	required string driver_headPic = 4;
+	required string driver_phone = 5;
+	optional uint64 driver_id = 6;
+	optional string car_type = 7;
+	optional int32 cnt_order = 8;
+	optional int32 cnt_positive = 9;
+	optional int32 level = 10;
+	optional float level_new = 11;
+	optional int32 is_protect = 12; // 0真实手机号, 1虚拟手机号
+	optional int32 is_timeout = 13; // 0未超时可以拨打 1超时联系客服
+};
+
+message DriverPos {
+	optional Coordinate pos = 1;
+	optional int32 arrived_time = 2;
+	optional float distance = 3;
+	optional int32 distance_enabled = 4;
+};
+
+message ConsultInfo { // 协商信息
+	optional string consult_min = 1; // 协商时间，分钟为单位
+	optional string driver_tips = 2; // 我承诺20分钟到达上车地点接您，您接受么？
+	optional string system_tips = 3; // 20秒后司机有可能取消，请尽快确认。
+}
+
+//下发订单状态信息
+message PassengerOrderStatusReq {
+	required int32 status = 1;
+	required string oid = 2;
+	optional int32 driver_num = 3;
+	optional DriverInfo driver_info = 4;
+	optional DriverPos driver_pos = 5;
+	required int32 time_out = 6;
+	optional int32 is_arrived = 7;
+	optional int32 consult_status = 8; // 协商状态 0等待协商 1协商通过
+	optional ConsultInfo consult_info = 9;
+	optional int32 sub_status = 10; // 子状态
+	optional int32 strive_order_driver_num = 11; // 抢单司机数
+	optional int32 count_down_time = 12; // 倒计时秒数
+	optional string push_passenger_msg = 13; // 给乘客下发的消息内容
+}
+
+//运营活动信息
+message OperationActivityReq {
+	optional string activity_doc = 1; // 运营活动文案
+	optional string activity_ded = 2; // 运营活动抵扣
+}
+
+//总价信息
+message OrderTotalCountReq {
+	required string pay_title = 1;
+	required string start_fee = 2;			//起步价
+	required string driving_fee = 3;		//行驶公里费用
+	required string driving_distance = 4;		//行驶里程
+	required string slow_speed_fee = 5;		//低速行驶费
+	required string slow_speed_time = 6;		//低速行驶时间
+	required string highway_fee = 7;		//高速费用
+	required string park_fee = 8;	 		//停车费
+	required string extra_fee = 9;			//乘客加价
+	required string other_fee = 10;			//其他费用
+	required string reparation_fee = 11;	        //赔付费用(司机迟到赔付)
+	required string cancle_reparation_fee = 12;	//乘客取消赔付费用(乘客取消司机迟到赔付)
+	required string wx_pay_tip = 13;		//微信支付立减10元
+	required string balance_pay_tip = 14;		//余额抵扣
+	required string fixed_price_tip = 15;		//一口价抵扣金额
+	required string coupon_tip = 16;		//所有优惠活动金额总和(钱)
+    required string pay_button_title = 17;          //支付113元
+    required string driver_late_time = 18;      // 司机迟到信息
+    required string oid = 19; // 订单ID
+    required string empty_distance = 20; // 超公里数
+    required string empty_fee = 21; // 超公里数费用
+    required string night_distance = 22; // 夜间服务公里数
+    required string night_fee = 23; // 夜间服务公里数费用
+    required string bridge_fee = 24; // 路桥费
+	required string coupon_fee = 25; // 所有优惠活动简介
+	optional int32 voucher_cnt = 26; // 优惠券总张数
+	optional string voucher_url = 27; // 优惠券链接
+	optional string voucher_desc = 28; // 优惠券简介
+	optional int32 penny_flag = 29; // 是否要支付0.01元
+	optional string voucher_pay = 30; // 订单历史展示优惠券抵扣
+	repeated OperationActivityReq opera_act = 31; // 运营活动相关
+	optional int32 pay_type = 32; // 支付类型(10:微信代扣)
+	optional string coupon_id = 33; // 券id
+	optional string coupon_money = 34; // 券金额
+	optional string ext_msg = 35; // 扩展信息(扣款时间文案)
+	optional int32 order_pay_status = 36; // 2:扣款受理状态 
+	optional string order_pay_title = 37; // "扣款受理中"
+	optional string order_pay_subject = 38; // "已收到您的支付请求"
+	optional string order_pay_msg = 39; // "正在处理中..."
+}
+
+//乘客收到支付成功的消息
+message OrderPaySuccReq {
+	required string oid = 1;			//订单号
+	required int32  trade_status = 2;		//付款状态 1:成功，0：失败
+	required string pay_order_title = 3;		//支付文案(微信支付/余额支付)
+	required string pay_order_subtitle = 4;		//支付二级文案(93元)
+	required string pay_info = 5;		        //支付出错信息
+	optional string share_coupon = 6;           //分享券相关JSON
+}
+
+//司机收到收款成功的消息
+message OrderChargeSuccReq {
+	required string oid = 1;			//订单号
+	required int32  trade_status = 2;		//付款状态，1:成功，0：失败
+	required string pay_order_text = 3;		//支付文案(尾号377的乘客支付X元，您收到车费Y元，请到收到的车费查看详情)
+	required string pay_info = 5;		        //支付出错信息
+}
+
+//计价信息
+message OrderRealtimeCountReq {
+    repeated LocationInfo driving_track = 1; //当前行驶轨迹(lat, lng)
+    required DrivingFeeInfo fee_info = 2;    //费用明细
+	optional string oid = 3;				 //订单ID
+    optional int32 timestamp = 4; 			 //用于标识哪组坐标的费用
+}
+
+//通用消息
+message CommonMsgReq {
+	required string recommond_msg = 1;
+	required int32 recommond_type = 2;
+}
+
+// 鱼鹰：司机对比信息
+message OspreyDriverDiffInfo {
+    required int32 multi = 1;       //综合距离
+    required int32 leng = 2;     //实际距离
+    required int32 buff = 3;        //司机buff状态
+    optional string name = 4;        //司机姓名
+    optional string license = 5;     //车牌号
+};
+
+// 鱼鹰：司机抢单成功
+message OspreyOrderStriveSuccReq {
+    required string oid = 1;
+    required string phone = 2;
+    required int32 push_relation = 3;
+    optional int32 strived_poll = 4;
+    optional int32 r_withinorder = 5;
+	optional string rst_tts = 6; // 成功原因的tts
+	optional uint64 sid = 7; // 创建的聊天会话id
+	optional uint32 expect_gopick_time = 8; // 预计接驾时间
+	optional uint32 is_protect = 9; // 号码保护标记
+};
+
+// 鱼鹰：司机抢单失败(参与)
+message OspreyOrderStriveFailReq {
+    required string oid = 1;                            //订单ID
+    required string title = 2;                          //标题
+    required string text = 3;                           //文案
+	required DriverMessageTipShowType showType = 4;		// tips效果
+    optional OspreyDriverDiffInfo self_info = 5;        //自己的消息
+    optional OspreyDriverDiffInfo other_info = 6;       //对方的消息
+	optional string rst_tts = 7;                        //失败原因的tts
+};
+
+
+// 鱼鹰：司机订单已被抢(未参与)
+message OspreyOrderStrivedReq {
+    required string oid = 1;                            //订单ID
+    required string title = 2;                          //标题
+    required string text = 3;                           //文案
+	required DriverMessageTipShowType showType = 4;		// tips效果
+    optional OspreyDriverDiffInfo self_info = 5;        //自己的消息
+    optional OspreyDriverDiffInfo other_info = 6;       //对方的消息
+	optional string rst_tts = 7;                        //失败原因的tts
+}
+
+//鱼鹰：司机buff状态发生了变化
+message OspreyDriverBuffChangeReq {
+	required string buff_str = 1;                           //司机buff状态
+}
+
+message TimelyRemindReq {
+	// api:timelyRemind
+	required uint32 msg_id = 1;           // 消息Id，在同一个order里面唯一 msgId
+	required uint32 msg_type = 2;         // 消息的类型(0:加价/1:愿等/2:捎话) msgType
+	required string msg_value = 3;        // (5元/10分钟/打表来接) msgValue
+	required string order_id = 4;         // 订单号 orderId
+	required string title = 5;            // 消息Title文案 title
+	required string content = 6;          // 消息内容文案 content
+	required string cancel_btn_text = 7;  // 取消按钮文案 cancelBtnText
+	required string confirm_btn_text = 8; // 确定按钮文案 confirmBtnText
+}
+
+message WxAgentReq {
+	required int32 type = 1; // 消息类型(1:微信代扣,...)
+	optional string bind_title = 2; // 绑定标题
+	optional string bind_subject = 3; // 绑定主题
+	optional string bind_msg = 4; // 绑定提示文案, 用|分隔
+	optional string button_confirm = 5; // 确认按钮文案
+	optional string button_cancel = 6; // 取消按钮文案
+}
+
+message PassengerPaySuccReq {
+	required string order_id = 1;         // 订单号 orderId
+	required string content = 2;          // 消息内容文案 content
+}
+
+message FreeRideDigAddressReq {
+	required double lng = 1;//收车地点经度
+	required double lat = 2;//收车地点纬度
+	required CoordinateType type = 3;//坐标系 
+	required string address = 4;//收车地点文字描述
+	required string title = 5;//消息标题
+	required string text = 6;//消息文案
+	required string alertText = 7;//对话框中的文案
+	required int32 pushTime = 8;//发送时间(timestamp)
+	required int32 expireTime = 9;//失效时间(timestamp,距离发送时间的总秒数)
+}

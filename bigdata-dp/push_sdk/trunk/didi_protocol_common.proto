@@ -1,0 +1,65 @@
+package DidiPush;
+
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiUserCommonProtobuf";
+
+import "didi_protocol.proto";
+
+//定位来源
+enum LocationType {
+    LOC_GPS = 1;   //GPS数据
+    LOC_NET = 2;  //网络定位数据
+    LOC_OTHER = 3;  //其他
+}
+
+//位置信息
+message LocationInfo {
+    required double x = 1;
+    required double y = 2;
+	required CoordinateType type = 3;       // 坐标系
+    required double accuracy = 4;           // 精度
+    required double direction = 5;          // 头方向
+    required double speed = 6;              // 速度
+    required float acceleratedSpeedX = 7;   // X方向加速度
+    required float acceleratedSpeedY = 8;   // Y方向加速度
+    required float acceleratedSpeedZ = 9;   // Z方向加速度
+    required float includedAngleYaw = 10;   // 航向夹角
+    required float includedAngleRoll = 11;  // 翻滚夹角
+    required float includedAnglePitch = 12; // 俯仰夹角
+	required int32 timestamp = 13; 			// 坐标产生时间(app可选上报，仅用于log分析)
+	optional LocationType locType = 14;
+}
+
+//费用信息
+message DrivingFeeInfo {
+    required float normal_distance 	=	1;	//行驶距离 
+    required float cur_distance 	=	2;	//单次行驶距离
+    required float empty_distance	=	3;  //空驶里程
+    required float night_distance	=	4;  //夜间行驶里程
+    required int32 slow_time 		=	5;  //低速时间
+    required int32 slow_cur_time 	= 	6;  //单次低速时间
+    required float normal_fee 		= 	7;  //行驶展示费用
+    required float normal_act_fee 	=	8; 	//行驶实际费用
+    required float empty_fee		=	9;	//空驶展示费用
+    required float empty_act_fee	=	10;	//空驶实际展示费用
+    required float night_fee		=	11;	//夜间行驶费用
+    required float night_act_fee	=	12;	//夜间实际行驶费用
+    required float slow_fee		    =	13;	//低速费用
+    required float display_fee		=	14;	//总价费用
+    required float actual_fee		=	15;	//实际总价费用
+    required int32 timestamp		=	16;	//时间戳
+    required float start_fee        =   17; //起步价
+}
+
+message DriverBroadcastOrderExtraInfo {
+	optional int32 send_num = 1;            // 该订单播给该司机的次数
+}
+
+enum DriverOrderFilterType {
+	DriverOrderFilterType_OnCalling = 1;              // 正在打电话
+	DriverOrderFilterType_OnOrderShowing = 2;         // 有订单正在展示
+	DriverOrderFilterType_OnSettingMode = 3;          // 正在设置听单模式
+	DriverOrderFilterType_ModeConflict = 4;           // 听单模式有冲突
+	DriverOrderFilterType_Offline = 5;                // 当前处于收车状态
+	DriverOrderFilterType_ViewCanNotShowOrder = 6;    // 当前界面不能展示订单（比如导航中）
+}

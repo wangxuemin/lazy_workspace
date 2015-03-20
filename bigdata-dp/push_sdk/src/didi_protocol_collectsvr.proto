@@ -1,0 +1,65 @@
+package DidiPush;
+
+option java_package = "com.sdu.didi.protobuf";
+option java_outer_classname = "DiDiCollectProtobuf";
+
+import "didi_protocol.proto";
+import "didi_protocol_common.proto";
+
+enum CollectSvrMessageType {
+    kCollectSvrMessageTypeCollectSvrCoordinateReq = 1;
+	kCollectSvrMessageTypeCollectSvrOrderFilterReq = 2;
+};
+
+// 需要收集的消息
+message CollectSvrCoordinateReq {
+	optional string phone = 1;				// 手机号
+    optional double lng = 2;                // 经度
+    optional double lat = 3;                // 纬度
+	optional CoordinateType type = 4;       // 坐标系
+    optional double accuracy = 5;           // 精度
+    optional double direction = 6;          // 头方向
+    optional double speed = 7;              // 速度
+    optional float acceleratedSpeedX = 8;   // X方向加速度
+    optional float acceleratedSpeedY = 9;   // Y方向加速度
+    optional float acceleratedSpeedZ = 10;   // Z方向加速度
+    optional float includedAngleYaw = 11;   // 航向夹角
+    optional float includedAngleRoll = 12;  // 翻滚夹角
+    optional float includedAnglePitch = 13; // 俯仰夹角
+
+    // 是否需要拉取对端的坐标, 设置了该字段且为true时才拉取对端坐标
+    optional bool pull_peer = 14; // 司机在没有接单的情况下上报坐标时应该设置该字段为false
+
+	optional double pre_lng = 15; // 预计上车地点
+	optional double pre_lat = 16; // 预计上车地点
+
+	optional uint32 state = 17; // 预留上报客户端状态的字段
+	optional uint32 gps_source = 18; // 是否通过GPS获取到
+}
+
+enum GPSSource {
+	GPSSourceFromGPSModel = 0;
+	GPSSourceFromNetwork = 1;
+	GPSSourceFromUnknown = 2;
+}
+
+enum DriverCollectSvrCoordinateReqState {
+	DriverNotWorking = 0;					// 出租司机已收车
+	DriverWorkingWithoutPassenger = 1;		// 出租司机出车未接客
+	DriverWorkingWithPassenger = 2;			// 出租司机出车已接客
+}
+
+enum PassengerState {
+	PassengerStateNormal = 0;				// 乘客正常状态
+	PassengerStateHasPaidOff = 1;			// 乘客支付完成状态
+	PassengerStateHasCommented = 2;			// 乘客完成评论状态
+}
+
+message CollectSvrOrderFilterReq {
+	optional string order_id = 1;            // 订单ID
+	optional int32 filter_type = 2;          // 被过滤的原因
+	// 过滤类型,定义在didi_protocol_common.proto里面的DriverOrderFilterType
+	optional bytes send_info = 3;
+	// 司机该次播单包含的信息，是定义在didi_protocol_common.proto
+	// 里面的DriverBroadcastOrderExtraInfo串行化之后的数据
+}
