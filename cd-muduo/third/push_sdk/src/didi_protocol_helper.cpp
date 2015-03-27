@@ -1,4 +1,5 @@
 #include "didi_protocol_helper.h"
+#include "kd_dd_protocol.pb.h"
 #include <string.h>
 
 namespace DidiPush {
@@ -17,7 +18,7 @@ int NetHandler::CheckComplete(const void *message, size_t length)
 
     //is outer_header valid
     const struct outer_header_t *outer_header = reinterpret_cast<const struct outer_header_t *>(message);
-    if (outer_header->magic != static_cast<uint16_t>(kMagic)) {
+    if (outer_header->magic != static_cast<uint16_t>(DdKd::kMagic)) {
         return -1;
     }
     if (outer_header->data_length <= sizeof(struct outer_header_t) || outer_header->data_length > _max_package_bytes) {

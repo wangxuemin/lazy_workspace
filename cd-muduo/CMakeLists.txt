@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
-project (coord-dispatcher)
+project (cd-muduo)
 
-set(ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+set(ROOT /home/didi/github/bigdata-dp/)
 #set(CMAKE_CXX_FLAGS "-g -O0 -pipe -std=c++0x -W -Wall -fPIC")
 #set(CMAKE_CXX_FLAGS "-g -pipe -std=c++0x -W -Wall -fPIC")
 IF(NOT CMAKE_BUILD_TYPE)
@@ -66,7 +66,9 @@ file(GLOB_RECURSE CONHASH_MODULE_LIB "${CONHASH_MODULE}/lib/*.a")
 
 
 file(GLOB_RECURSE DD_SOURCES 
-    "src/*.cpp" 
+    "src/client/*.cpp" 
+    "src/service/*.cpp" 
+    "src/service/*.cc" 
     "third/push_sdk/src/*.cc"
     "third/push_sdk/src/*.cpp"
     )
@@ -78,6 +80,8 @@ file(GLOB_RECURSE DD_SOURCES
 
 include_directories(
     "src"
+    "src/client" 
+    "src/service" 
     ${BOOST_MODULE_INCLUDE}
     ${THRIFT_MODULE_INCLUDE}
     ${MUDUO_MODULE_INCLUDE}
@@ -93,9 +97,9 @@ include_directories(
     ${ITS_LIB_MODULE_INCLUDE}
     )
 
-add_executable(coord-dispatcher ${DD_SOURCES})
+add_executable(cd-muduo ${DD_SOURCES})
 
-target_link_libraries(coord-dispatcher
+target_link_libraries(cd-muduo
     ${ITS_PROTO_MODULE_LIB}
     ${ITS_LIB_MODULE_LIB}
     ${ITS_THRIFT_MODULE_LIB}
@@ -112,4 +116,3 @@ target_link_libraries(coord-dispatcher
     crypto
     rt)
 
-add_subdirectory(test)
