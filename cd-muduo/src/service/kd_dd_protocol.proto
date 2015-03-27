@@ -1,0 +1,44 @@
+package DdKd;
+
+enum Constants {
+    kMagic = 0x5855 ; // 头标记
+}
+
+message UserAgent {
+    optional string os_type            = 1; // 操作系统类型
+    optional string os_ver             = 2; // 操作系统版本
+    optional string model              = 3; // 设备型号
+    optional string client_ver         = 4; // 客户端版本
+    optional string network            = 5; // ISP信息
+    optional string location           = 6; // 当前位置 坐标系类型,经度,纬度
+    optional string carrier_operator   = 7; // 运营商
+}
+
+enum KDMsgType {
+    KDMsgTypeLocPoint = 0x001; //实时坐标消息
+}
+
+message Header{
+    required  KDMsgType type = 1;
+    optional  uint64 msg_id = 2;
+    optional  uint64 auth_user_id=3;
+    optional  bytes log_id =4; 
+    optional  UserAgent user_agent=5;
+}
+
+message KDLocationInfo {
+
+    enum WorkState {
+        WORK = 1;
+        OFFWORK = 2;
+    } 
+    required uint64 driverid = 1;  
+    required double lat = 2;
+    required double lng = 3;
+    required double spd = 4;
+    required WorkState work = 5;
+    required uint64 location_timestamp = 6;
+    required uint32 location_type = 7;
+    required double direction = 8;
+
+}
