@@ -1,0 +1,20 @@
+#!/bin/sh
+
+STORM=${STORM:-/home/xiaoju/apache-storm-0.9.1-incubating}
+
+KAFKA_HOME="/home/xiaoju/kafka_2.9.2-0.8.1.1"
+
+for f in `ls $STORM/lib/*.jar`; do
+            clspath=${clspath}:$f;
+done
+
+for f in `ls $KAFKA_HOME/libs/*.jar`; do
+            clspath=${clspath}:$f;
+done
+
+for f in `find ./resources/ -name "*.jar"`; do
+            clspath=${clspath}:`readlink -f $f`;
+done
+
+javac -d . -classpath ${clspath} *.java
+jar cmvf META-INF/MANIFEST.MF storm_resourcemanager.jar xiaoju/ resources/
