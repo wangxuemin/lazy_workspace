@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 import os,sys,math
 import copy
 import numpy as np
@@ -31,8 +33,9 @@ class Layer:
         self._b = copy.deepcopy( b )
         self._Func = Func
 
-        self._delta_W = copy.deepcopy( W )
-        self._delta_b = copy.deepcopy( b )
+        self._delta_W = np.zeros(W.shape)
+        self._delta_b = np.zeros(b.shape)
+        self._a = np.zeros(b.shape)
 
     def dump(self):
         pass
@@ -85,25 +88,37 @@ class NeuralNet:
             _input = map(sigmod,_output)
             _input = np.matrix( _input )
 
+            # 保留中间层 输出, BP 计算导数使用
+            layer._a = _input
+
         return _output
 
     def BackWardPropagation(self, error):
 
+        # 计算输出层 残差
         _output_idx = len(self._layers) - 1
         _output_layer = self._layers[_output_idx]
-        _output_error = error - _output_layer._b
-        _back_input = _output_layer._W.T * _output_error
 
+        np.multiply( _output_layer._a , 1 - _output_layer._a) 
+        _output_error = - np.multiply( error.T , np.multiply( _output_layer._a , 1 - _output_layer._a) )
+        print _output_error
+        dw = _output_error * _output_layer._a.T
+
+        _output_layer._delta_W += dw
+        print _output_layer._delta_b
+        _output_layer._delta_b += _output_error.T
+        # 计算隐含层 残差
+        _output_idx = len(self._layers) - 1
         for i in range(_output_idx - 1, 0, -1):
             layer = self._layers[i]
             w = layer._W
             b = layer._b
 
-            _delta_w = layer._delta_W
-            _delta_b = layer._delta_b
+            #_delta_w = layer._delta_W
+            #_delta_b = layer._delta_b
 
-            _output_error = w.T * _back_input - b
-            _back_input = _output_error
+            #_output_error = w.T * _back_input - b
+            #_back_input = _output_error
 
     def UpdateWeightMatrix(self):
         pass
