@@ -99,26 +99,20 @@ class NeuralNet:
         _output_idx = len(self._layers) - 1
         _output_layer = self._layers[_output_idx]
 
-        np.multiply( _output_layer._a , 1 - _output_layer._a) 
-        _output_error = - np.multiply( error.T , np.multiply( _output_layer._a , 1 - _output_layer._a) )
-        print _output_error
-        dw = _output_error * _output_layer._a.T
+        _output_error = - np.multiply( error , np.multiply( _output_layer._a , 1 - _output_layer._a).T )
+        _error = _output_layer._W.T * _output_error
 
-        _output_layer._delta_W += dw
-        print _output_layer._delta_b
-        _output_layer._delta_b += _output_error.T
+        dw = _error * _output_layer._a
+
+        _output_layer._delta_W += dw.T
+        _output_layer._delta_b += _output_error
+
         # 计算隐含层 残差
         _output_idx = len(self._layers) - 1
         for i in range(_output_idx - 1, 0, -1):
             layer = self._layers[i]
             w = layer._W
             b = layer._b
-
-            #_delta_w = layer._delta_W
-            #_delta_b = layer._delta_b
-
-            #_output_error = w.T * _back_input - b
-            #_back_input = _output_error
 
     def UpdateWeightMatrix(self):
         pass
