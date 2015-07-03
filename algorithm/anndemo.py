@@ -41,7 +41,8 @@ class Layer:
         pass
 
 class NeuralNet:
-    def __init__(self,layer_unit_num_array,learn_rate=0.01, lambda_r = 0.01):
+    def __init__(self,layer_unit_num_array, learn_rate=0.01, lambda_r = 0.01,
+            max_iteration = 1000,  error = 0.0005):
 
         self._learn_rate = learn_rate
         self._lambda = lambda_r
@@ -49,12 +50,15 @@ class NeuralNet:
         self._layer_unit_num_array = layer_unit_num_array
         self._parameter_num = 0
 
+        self._max_iteration = max_iteration
+        self._error = error
+
         print 'Construct Human Neural Net with %d layers' % (len(layer_unit_num_array) - 1)
         print 'Initialize Random Weight and bias Matrix , also Active Function...'
-        for i in range(1,len(self._layer_unit_num_array)):
+        for i in range(0,len(self._layer_unit_num_array)-1):
 
-            col = self._layer_unit_num_array[i-1]
-            row = self._layer_unit_num_array[i]
+            col = self._layer_unit_num_array[i]
+            row = self._layer_unit_num_array[i+1]
 
             self._parameter_num += row * col
 
@@ -73,6 +77,9 @@ class NeuralNet:
 
             layer.Init( w, b, active_func )
             self._layers.append( layer )
+
+        self._input_layer = self._layers[0]
+        self._output_layer = self._layers[-1]
 
         print 'parameter_num is %d' %self._parameter_num
 
@@ -101,7 +108,6 @@ class NeuralNet:
 
         _output_error = - np.multiply( error , np.multiply( _output_layer._a , 1 - _output_layer._a).T )
         _error = _output_layer._W.T * _output_error
-
         dw = _error * _output_layer._a
 
         _output_layer._delta_W += dw.T
@@ -134,7 +140,13 @@ class NeuralNet:
             #print 'BackWard Propagation...'
             self.BackWardPropagation( error )
 
-            #print 'Wait for Util Convergese...'
+        # Update Weight and bias Matrix
+        m = len(train_data)
+        for layer in self._layers:
+            layer._W -= self._learn_rate * ( layer._delta_W / m + self._lambda * layer._W )
+            layer._b -= self._learn_rate * ( layer._delta_b / m )
+
+        #print 'Wait for Util Convergese...'
 
     def train_iterator(self):
         pass
