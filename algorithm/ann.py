@@ -251,8 +251,6 @@ def mutate (m):
         if random.random() < mutation_rate:
             m[i][j][k] = random.uniform(-2.0,2.0)
 
-if __name__ == "__main__":
-    main()
 pat = [
   [[5.1, 3.5, 1.4, 0.2], [-1], ['Iris-setosa']] ,
   [[4.9, 3.0, 1.4, 0.2], [-1], ['Iris-setosa']] ,
@@ -546,3 +544,6 @@ testpat = [
   [[6.2, 3.4, 5.4, 2.3], [1], ['Iris-virginica']] ,
   [[5.9, 3.0, 5.1, 1.8], [1], ['Iris-virginica']]
 ]
+
+if __name__ == "__main__":
+    main()
