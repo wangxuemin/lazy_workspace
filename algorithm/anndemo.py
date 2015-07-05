@@ -1,22 +1,32 @@
 #encoding: utf-8
 
-import os,sys,math
-import copy
+import os,sys
+import copy,json
+
+import math
+
 import numpy as np
+import matplotlib.pyplot as plt
 
 def sigmod(x):
     return 1/(1+math.exp(-x))
 
 #f`(z) = f(z)(1-f(z))
-def converseSigmod(z):
-    pass
+def inverse_sigmod(z):
+    return np.multiply( z , 1-z )
 
 def tanh(x):
     return (math.exp(x)-math.exp(-x))/(math.exp(x)+math.exp(-x))
 
 #f`(z) = 1-(f(z))^2
-def converseTanh(x):
-    pass
+def inverse_tanh(z):
+    return 1 - np.multiply(z, z)
+
+def liner(x):
+    return x.item() * 1
+
+def inverse_liner(z):
+    return 1
 
 def diff_output_target(output,target):
     _output = np.matrix(output)
@@ -29,6 +39,7 @@ class Layer:
         self._W = copy.deepcopy( W )
         self._b = copy.deepcopy( b )
         self._Func = Func
+        self._inverse_func = eval("inverse_%s" %self._Func.__name__)
 
         self._delta_W = np.zeros(W.shape)
         self._delta_b = np.zeros(b.shape)
@@ -40,13 +51,9 @@ class Layer:
         print self._W
         print "---------------"
         print self._b
-        print '---------------'
-        print self._delta_W
-        print "---------------"
-        print self._delta_b
 
 class NeuralNet:
-    def __init__(self,layer_unit_num_array, learn_rate=0.01, lambda_r = 0.005,
+    def __init__(self,layer_unit_num_array, func_list, learn_rate=0.01, lambda_r = 0.005,
             max_iteration = 5000,  allow_error = 0.0005):
 
         self._learn_rate = learn_rate
@@ -68,13 +75,19 @@ class NeuralNet:
 
             self._parameter_num += row * col + row
 
-            w = ( np.matrix(np.random.random( (row,col) )) - 0.5 ) *2
-            b = ( np.matrix(np.random.random( (row,1) )) - 0.5 ) *2
+            # 随机初始化权值
+            w = np.matrix(np.random.random( (row,col) )) - 0.5
+            b = np.matrix(np.random.random( (row,1) )) - 0.5
 
             # Construct activate function i.e. sigmod or tanh or ...
 
             print 'Construct Layer %d' %(i)
-            layer = Layer(w, b, sigmod , i)
+            #if i == 1:
+            #    layer = Layer(w, b, sigmod , i)
+            #else:
+            #    layer = Layer(w, b, liner , i)
+            layer = Layer(w, b, func_list[i] , i)
+
             self._layers.append( layer )
 
         self._output_layer = self._layers[-1]
@@ -95,7 +108,9 @@ class NeuralNet:
                 print _input
 
             _output = w * _input + b
-            _input = map(sigmod,_output)
+            #_input = map(sigmod ,_output)
+            #print _input
+            _input = map( layer._Func ,_output)
             _input = np.matrix( _input ).T
 
             # 保留中间层 输出, BP 计算导数使用
@@ -110,7 +125,8 @@ class NeuralNet:
 
         # 计算输出层 残差
         _output_layer = self._output_layer
-        _output_error = - np.multiply( error , np.multiply( _output_layer._a , 1 - _output_layer._a) )
+        Inverse_Func = _output_layer._inverse_func
+        _output_error = - np.multiply( error , Inverse_Func( _output_layer._a ) )
 
         # 计算隐含层 残差
         _output_idx = len(self._layers) - 1
@@ -128,7 +144,8 @@ class NeuralNet:
             layer._delta_W += delta_W
             layer._delta_b += delta_b
 
-            back_error = np.multiply( w.T * _output_error, np.multiply( prev_layer._a , 1 - prev_layer._a) )
+            Inverse_Func = prev_layer._inverse_func
+            back_error = np.multiply( w.T * _output_error, Inverse_Func( prev_layer._a ) )
             _output_error = back_error
 
         # 更新第一隐层权值
@@ -154,14 +171,9 @@ class NeuralNet:
 
                 #print 'Forward Propagation...'
                 _output = self.ForwardPropagation(_input)
-                prev_in = _input
-                prev_out = _output
 
                 #print 'Calculate residual error...'
-                error = diff_output_target( _output, np.matrix(_target).T )
-                #print "output: %f"%_output.T
-                #print "target: %f"%_target
-                #print "error: %f"%error.T
+                error =  np.matrix(_target).T - _output
                 sum_error += error.T * error
 
                 #print 'BackWard Propagation...'
@@ -178,13 +190,16 @@ class NeuralNet:
                 layer._W -= self._learn_rate * ( layer._delta_W / m + self._lambda * layer._W )
                 layer._b -= self._learn_rate * ( layer._delta_b / m )
 
-                print 'layer'
-                print layer._delta_W
-                print '------------'
-                print layer._delta_b
+                #print 'layer %d' %layer._id
+                #print layer._delta_W
+                #print '------------'
+                #print layer._delta_b
 
                 layer._delta_W = np.zeros(layer._W.shape)
                 layer._delta_b = np.zeros(layer._b.shape)
+
+            if i+1 % 80000 == 0:
+                self.plot()
             #self.dumpLayers()
 
             #print 'Wait for Util Convergese...'
@@ -198,66 +213,48 @@ class NeuralNet:
             print 'layer %d' %(layer._id)
             layer.dump()
 
-    def test(self):
-        pass
+    def plot(self):
+        x = []
+        y = []
+        r = []
+
+        for i in range(0,210):
+            Input = np.matrix(np.random.random( (1,input_unit_num) )) 
+
+            x.append( Input.item() )
+            y.append( self.predict(Input).item() )
+            r.append( math.pow(Input.item(),2)  )
+
+        plt.plot(x, y, 'ro' )
+        plt.plot(x, r, 'go' )
+        plt.show()
 
 if __name__ == '__main__':
-    input_unit_num = 1
-    hidden_layer0_unit_num = 20
-    hidden_layer1_unit_num = 2
-    hidden_layer2_unit_num = 32
-    hidden_layer3_unit_num = 16
-    hidden_layer4_unit_num = 16
-    hidden_layer5_unit_num = 16
-    hidden_layer6_unit_num = 16
-    hidden_layer7_unit_num = 16
-    hidden_layer8_unit_num = 16
-    hidden_layer9_unit_num = 16
-    output_unit_num = 1
 
+    nnconfigfile = '%s.json' %(sys.argv[0][:-3])
+    for i in range(1,len(sys.argv)):
+        if sys.argv[i] == '-conf':
+            nnconfigfile = sys.argv[i+1]
+
+    func_list = []
     layer_unit_num_array = []
-    layer_unit_num_array.append( input_unit_num )
-    layer_unit_num_array.append( hidden_layer0_unit_num )
-    #layer_unit_num_array.append( hidden_layer1_unit_num )
-    #layer_unit_num_array.append( hidden_layer2_unit_num )
-    #layer_unit_num_array.append( hidden_layer3_unit_num )
-    #layer_unit_num_array.append( hidden_layer4_unit_num )
-    #layer_unit_num_array.append( hidden_layer5_unit_num )
-    #layer_unit_num_array.append( hidden_layer6_unit_num )
-    #layer_unit_num_array.append( hidden_layer7_unit_num )
-    #layer_unit_num_array.append( hidden_layer8_unit_num )
-    #layer_unit_num_array.append( hidden_layer9_unit_num )
-    layer_unit_num_array.append( output_unit_num )
+
+    print 'Construct NeuralNet by %s' %nnconfigfile
+    NNConfig = json.load(file( nnconfigfile ))
+
+    for layer_config in NNConfig:
+        layer_unit_num_array.append( layer_config['unit_num'] )
+        func_list.append( eval(layer_config['func']) )
+    input_unit_num = layer_unit_num_array[0]
 
     train_data = []
-    for i in range(0,600):
+    for i in range(0,10):
         Input = np.matrix(np.random.random( (1,input_unit_num) ))
         train_data.append([Input,math.pow(Input,2)])
 
-    #def __init__(self,layer_unit_num_array, learn_rate=0.01, lambda_r = 0.005,
-    #        max_iteration = 5000,  allow_error = 0.0005):
-    dnn = NeuralNet( layer_unit_num_array ,
-            learn_rate=0.1, lambda_r = 0.05, max_iteration = 10, allow_error = 0.01)
+    dnn = NeuralNet( layer_unit_num_array , func_list,
+            learn_rate=0.9, lambda_r = 0, max_iteration = 3000, allow_error = 0.01)
     dnn.train(train_data)
-    #dnn.dumpLayers()
 
-    x = []
-    y = []
-    r = []
-
-    test_data = []
-    for i in range(0,200):
-        Input = np.matrix(np.random.random( (1,input_unit_num) )) 
-
-        x.append( Input.item() )
-        y.append( dnn.predict(Input).item() )
-        r.append( math.pow(Input.item(),2)  )
-
-    #dnn.dumpLayers()
-
-    import matplotlib.pyplot as plt
-
-    plt.plot(x, y, 'ro' )
-    #plt.plot(x, r, 'go' )
-    plt.show()
+    dnn.plot()
 

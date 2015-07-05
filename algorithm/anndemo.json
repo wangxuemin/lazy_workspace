@@ -1,0 +1,18 @@
+[
+{
+    "name" : "input_layer",
+    "unit_num" : 1,
+    "func" : "sigmod"
+
+},
+{
+    "name" : "hidden_layer_0",
+    "unit_num" : 3,
+    "func" : "sigmod"
+},
+{
+    "name" : "output_layer",
+    "unit_num" : 1,
+    "func" : "sigmod"
+}
+]
