@@ -3,16 +3,20 @@
     "name" : "input_layer",
     "unit_num" : 1,
     "func" : "sigmod"
-
 },
 {
     "name" : "hidden_layer_0",
-    "unit_num" : 3,
+    "unit_num" : 4,
+    "func" : "sigmod"
+},
+{
+    "name" : "hidden_layer_1",
+    "unit_num" : 2,
     "func" : "sigmod"
 },
 {
     "name" : "output_layer",
     "unit_num" : 1,
-    "func" : "sigmod"
+    "func" : "tanh"
 }
 ]

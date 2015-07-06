@@ -213,7 +213,7 @@ class NeuralNet:
             print 'layer %d' %(layer._id)
             layer.dump()
 
-    def plot(self):
+    def plot(self,train_data):
         x = []
         y = []
         r = []
@@ -227,6 +227,11 @@ class NeuralNet:
 
         plt.plot(x, y, 'ro' )
         plt.plot(x, r, 'go' )
+
+        x = [ data[0].item() for data in train_data ] 
+        y = [ data[1] for data in train_data ] 
+
+        plt.plot(x, y, 'bo-' )
         plt.show()
 
 if __name__ == '__main__':
@@ -248,13 +253,20 @@ if __name__ == '__main__':
     input_unit_num = layer_unit_num_array[0]
 
     train_data = []
-    for i in range(0,10):
+    for i in range(0,20):
         Input = np.matrix(np.random.random( (1,input_unit_num) ))
         train_data.append([Input,math.pow(Input,2)])
 
+    train_data.sort( key = lambda x: x[0] )
+    x = [ data[0].item() for data in train_data ] 
+    y = [ data[1] for data in train_data ] 
+
+    plt.plot(x, y, 'bo-' )
+    plt.show()
+
     dnn = NeuralNet( layer_unit_num_array , func_list,
-            learn_rate=0.9, lambda_r = 0, max_iteration = 3000, allow_error = 0.01)
+            learn_rate=0.9, lambda_r = 0, max_iteration = 6000, allow_error = 0.01)
     dnn.train(train_data)
 
-    dnn.plot()
+    dnn.plot(train_data)
 
